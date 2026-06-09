@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
+import { useEffect, useMemo, useRef, useState } from "react";
+import styled, { keyframes, css } from "styled-components";
 import Seo from "../components/Seo";
 
-// components
 import TopNavBar from "../components/Nav/TopNavBar";
 import SideBar from "../components/Nav/Sidebar";
 import Footer from "../components/Nav/Footer";
-import ImageSlider from "../components/basic/ImageSlider";
+import { lazy, Suspense } from "react";
+const ImageSlider = lazy(() => import("../components/basic/ImageSlider"));
 
-// assets
 import BackgroundImg from "../assets/img/backgrounds/bg2.webp";
 import OfficeImg from "../assets/img/industries/office.webp";
 import EngineeringImg from "../assets/img/engineering/construction.webp";
@@ -17,537 +16,545 @@ import AnimationImg from "../assets/img/industries/animation.webp";
 import CodingImg from "../assets/img/industries/coding.webp";
 import GlennJacinto from "../assets/img/glennjacinto.webp";
 
-// icons
-import { Users, Target, Award, Clock, Zap, Heart, CheckCircle } from "lucide-react";
+import {
+  Users,
+  Target,
+  Award,
+  Clock,
+  Zap,
+  Heart,
+  CheckCircle,
+  ArrowRight,
+  ArrowUpRight,
+  Linkedin,
+} from "lucide-react";
 
-export default function About() {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800);
+function useReveal(threshold = 0.14) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const io = new IntersectionObserver(
+      ([e]) => e.isIntersecting && setVisible(true),
+      { threshold }
+    );
+
+    io.observe(el);
+    return () => io.disconnect();
+  }, [threshold]);
+
+  return [ref, visible];
+}
+
+function Reveal({ children, delay = 0, ...rest }) {
+  const [ref, visible] = useReveal(0.1);
+
+  return (
+    <RevealDiv ref={ref} $visible={visible} $delay={delay} {...rest}>
+      {children}
+    </RevealDiv>
+  );
+}
+
+export default function About() {
+  useEffect(() => {
     window.scrollTo(0, 0);
-
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
-  const values = [
-    {
-      icon: <Target size={32} />,
-      title: "Excellence",
-      description:
-        "We strive for excellence in every project we undertake, ensuring the highest quality results for our clients.",
-    },
-    {
-      icon: <Users size={32} />,
-      title: "Collaboration",
-      description:
-        "We believe in the power of teamwork and foster collaborative relationships with our clients and partners.",
-    },
-    {
-      icon: <Award size={32} />,
-      title: "Integrity",
-      description:
-        "We uphold the highest standards of integrity and ethics in all our business dealings and relationships.",
-    },
-    {
-      icon: <Zap size={32} />,
-      title: "Innovation",
-      description:
-        "We embrace innovation and continuously seek new ways to improve our services and solutions.",
-    },
-    {
-      icon: <Heart size={32} />,
-      title: "Passion",
-      description:
-        "We are passionate about what we do and committed to helping our clients achieve their goals.",
-    },
-    {
-      icon: <Clock size={32} />,
-      title: "Reliability",
-      description:
-        "We deliver on our promises and are committed to meeting deadlines and exceeding expectations.",
-    },
-  ];
+  const values = useMemo(
+    () => [
+      {
+        icon: <Target size={28} strokeWidth={1.8} />,
+        title: "Excellence",
+        description:
+          "We aim for strong execution and clear results in every engagement.",
+      },
+      {
+        icon: <Users size={28} strokeWidth={1.8} />,
+        title: "Collaboration",
+        description:
+          "We work as an extension of your team, not as a disconnected advisor.",
+      },
+      {
+        icon: <Award size={28} strokeWidth={1.8} />,
+        title: "Integrity",
+        description:
+          "We value direct communication, trust, and responsible execution.",
+      },
+      {
+        icon: <Zap size={28} strokeWidth={1.8} />,
+        title: "Innovation",
+        description:
+          "We look for practical improvements that create real leverage.",
+      },
+      {
+        icon: <Heart size={28} strokeWidth={1.8} />,
+        title: "Passion",
+        description:
+          "We care deeply about helping clients move with confidence.",
+      },
+      {
+        icon: <Clock size={28} strokeWidth={1.8} />,
+        title: "Reliability",
+        description:
+          "We deliver with consistency, clarity, and follow-through.",
+      },
+    ],
+    []
+  );
 
-  const benefits = [
-    "Reduced operational costs",
-    "Access to specialized expertise",
-    "Increased efficiency and productivity",
-    "Focus on core business functions",
-    "Scalable resources to meet changing demands",
-    "Faster time-to-market for products and services",
-  ];
+  const benefits = useMemo(
+    () => [
+      "Reduced operational costs",
+      "Access to specialized expertise",
+      "Increased efficiency and productivity",
+      "Focus on core business functions",
+      "Scalable resources to meet changing demands",
+      "Faster time-to-market for products and services",
+    ],
+    []
+  );
 
   return (
     <Wrapper id="about">
       <Seo
         title="About Hyacinth Industries | Glenn Jacinto, Principal Executive"
         description="Meet Glenn Jacinto, Principal Executive at Hyacinth Industries. Explore leadership experience, industries served, and selected client outcomes."
-        canonicalPath="/about"
+        canonicalPath="/about/"
       />
 
       <TopNavBar />
       <SideBar />
 
-      {/* Hero Section */}
-      <HeaderSection>
+      <HeroSection>
+        <HeroOverlay />
         <HeroInner>
-          <HeroEyebrow>Hyacinth Industries</HeroEyebrow>
-          <Title>Built for operators who need sharper execution.</Title>
-        </HeroInner>
+          <HeroBadge>
+            <BadgeDot /> Hyacinth Industries
+          </HeroBadge>
 
-        <Content style={{ flexDirection: isSmallScreen ? "column" : "row" }}>
-          <LeftColumn style={{ order: isSmallScreen ? 2 : 1, width: "100%" }}>
-            <Caption>
+          <HeroTitle>
+            Built for operators
+            <br />
+            who need <HeroAccent>sharper execution.</HeroAccent>
+          </HeroTitle>
+
+          <HeroRow>
+            <HeroCopy>
               <CaptionLead>Streamline your business.</CaptionLead>
-              <br />
-              Partner with Hyacinth Industries LLC for top-tier outsourcing solutions tailored to
-              your industry&apos;s unique needs. Save time, cut costs, and stay ahead with our
-              expert support. Let&apos;s make success your new standard, start outsourcing smarter
-              today.
-            </Caption>
-          </LeftColumn>
+              <HeroText>
+                Hyacinth Industries helps organizations improve how they
+                operate, communicate, and deliver. Our work is designed to
+                create practical leverage, stronger outcomes, and a more
+                professional standard of execution.
+              </HeroText>
+            </HeroCopy>
 
-          <RightColumn style={{ order: isSmallScreen ? 1 : 2, width: "100%" }}>
-            <ImageSlider
-              images={[OfficeImg, EngineeringImg, HealthcareImg, AnimationImg, CodingImg]}
-              autoPlayInterval={2500}
-              style={{ height: "300px" }}
-            />
-          </RightColumn>
-        </Content>
-      </HeaderSection>
+            <HeroMedia>
+              <Suspense fallback={<div style={{ height: "340px", borderRadius: "20px", background: "#f0f0f0"}} />}>
+                <ImageSlider
+                  images={[
+                    OfficeImg,
+                    EngineeringImg,
+                    HealthcareImg,
+                    AnimationImg,
+                    CodingImg,
+                  ]}
+                  autoPlayInterval={2500}
+                  style={{ height: "340px", borderRadius: "20px" }}
+                />
+              </Suspense>
+            </HeroMedia>
+          </HeroRow>
+        </HeroInner>
+      </HeroSection>
 
-      {/* Mission Statement Section */}
-      <Section>
-        <Container>
-          <SectionTitle>Our Mission</SectionTitle>
-          <MissionStatement>
-            At Hyacinth Industries, our mission is to empower businesses through innovative
-            outsourcing solutions that drive growth, efficiency, and competitive advantage. We are
-            committed to delivering exceptional value by providing access to top-tier talent,
-            cutting-edge technologies, and industry-leading expertise across diverse sectors.
-          </MissionStatement>
-        </Container>
-      </Section>
+      <MissionSection>
+        <SectionInner>
+          <Reveal>
+            <SectionEyebrow>Purpose</SectionEyebrow>
+            <SectionTitle>Our Mission</SectionTitle>
+          </Reveal>
 
-      {/* Executive Leadership Section */}
+          <Reveal delay={60}>
+            <MissionStatement>
+              At Hyacinth Industries, our mission is to help businesses improve
+              performance through practical outsourcing solutions that support
+              growth, efficiency, and competitive strength.
+            </MissionStatement>
+          </Reveal>
+        </SectionInner>
+      </MissionSection>
+
       <ExecutiveSection>
-        <Container>
-          <SectionTitle>Executive Leadership</SectionTitle>
+        <SectionInner>
+          <Reveal>
+            <SectionEyebrow>Leadership</SectionEyebrow>
+            <SectionTitle>Executive Leadership</SectionTitle>
+          </Reveal>
 
-          <ExecutiveShowcase>
-            <ExecutiveCard>
-              <ExecutivePhotoWrap>
-                <ExecutivePhotoCard>
+          <Reveal delay={80}>
+            <ExecWrapper>
+              <ExecPhotoColumn>
+                <ExecPhotoFrame>
                   <ExecutivePhoto
                     src={GlennJacinto}
                     alt="Glenn Jacinto, Principal Executive at Hyacinth Industries"
                   />
-                  <ExecutivePortraitMeta>
-                    <PortraitEyebrow>Executive Profile</PortraitEyebrow>
-                    <PortraitNote>
-                      Senior leadership across growth strategy, commercial partnerships, and
-                      operational execution.
-                    </PortraitNote>
-                  </ExecutivePortraitMeta>
-                </ExecutivePhotoCard>
-              </ExecutivePhotoWrap>
+                </ExecPhotoFrame>
 
-              <ExecutiveContent>
-                <ExecutiveKicker>Principal Executive</ExecutiveKicker>
-                <ExecutiveName>Glenn Jacinto</ExecutiveName>
-                <ExecutiveRole>Principal Executive, Hyacinth Industries</ExecutiveRole>
+                <ExecContactBar>
+                  <ExecContactLink
+                    href="https://www.linkedin.com/in/glenn-jacinto-bb2a87122/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin size={15} />
+                    LinkedIn Profile
+                    <ArrowUpRight size={13} />
+                  </ExecContactLink>
+                </ExecContactBar>
+              </ExecPhotoColumn>
 
-                <ExecutiveIntro>
-                  Glenn Jacinto brings more than 15 years of leadership experience helping
-                  companies sharpen commercial strategy, strengthen delivery discipline, and build
-                  durable client relationships across multiple sectors.
-                </ExecutiveIntro>
+              <ExecContentColumn>
+                <ExecHeader>
+                  <ExecKicker>Chief Executive Officer</ExecKicker>
+                  <ExecName>Glenn Jacinto</ExecName>
+                  <ExecTitleLine>
+                    Chief Executive Officer · Hyacinth Industries LLC
+                  </ExecTitleLine>
+                </ExecHeader>
 
-                <ExecutiveSummary>
-                  His work centers on translating business objectives into practical operating
-                  plans, aligning teams around measurable outcomes, and supporting partners that
-                  need reliable execution alongside strategic judgment.
-                </ExecutiveSummary>
+                <ExecDivider />
 
-                <ExecutiveMeta>
-                  <MetaCard>
-                    <MetaLabel>Experience</MetaLabel>
-                    <MetaValue>15+ years</MetaValue>
-                  </MetaCard>
+                <ExecNarrative>
+                  <p>
+                    Glenn Jacinto brings more than 15 years of leadership
+                    experience helping companies sharpen commercial strategy,
+                    strengthen delivery discipline, and build durable client
+                    relationships across multiple sectors.
+                  </p>
+                  <p>
+                    His work centers on translating business objectives into
+                    practical operating plans, aligning teams around measurable
+                    outcomes, and supporting partners that need reliable
+                    execution alongside strategic judgment.
+                  </p>
+                </ExecNarrative>
 
-                  <MetaCard>
-                    <MetaLabel>Core Discipline</MetaLabel>
-                    <MetaValue>Growth strategy, partnerships, and execution</MetaValue>
-                  </MetaCard>
+                <ExecQuote>
+                  <QuoteBar />
+                  <QuoteText>
+                    Trusted by organizations looking for disciplined leadership,
+                    clearer commercial direction, and execution that holds up
+                    under growth pressure.
+                  </QuoteText>
+                </ExecQuote>
 
-                  <MetaCard>
-                    <MetaLabel>Professional Profile</MetaLabel>
-                    <MetaValue>
-                      <a
-                        href="https://www.linkedin.com/in/glenn-jacinto-bb2a87122/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View Profile
-                      </a>
-                    </MetaValue>
-                  </MetaCard>
-                </ExecutiveMeta>
+                <ExecMetaStrip>
+                  <ExecMetaItem>
+                    <ExecMetaLabel>Years of Experience</ExecMetaLabel>
+                    <ExecMetaValue>15+</ExecMetaValue>
+                  </ExecMetaItem>
+                  <ExecMetaDivider />
+                  <ExecMetaItem>
+                    <ExecMetaLabel>Focus Area</ExecMetaLabel>
+                    <ExecMetaValue>
+                      Growth Strategy &amp; Commercial Execution
+                    </ExecMetaValue>
+                  </ExecMetaItem>
+                  <ExecMetaDivider />
+                  <ExecMetaItem>
+                    <ExecMetaLabel>Coverage</ExecMetaLabel>
+                    <ExecMetaValue>Multi-sector</ExecMetaValue>
+                  </ExecMetaItem>
+                </ExecMetaStrip>
 
-                <ExecutivePositioning>
-                  Trusted by organizations looking for disciplined leadership, clearer commercial
-                  direction, and execution that holds up under growth pressure.
-                </ExecutivePositioning>
+                <ExecColumnsBottom>
+                  <ExecColumnBlock>
+                    <ExecColumnLabel>Sector Experience</ExecColumnLabel>
+                    <ExecTagRow>
+                      {["SaaS", "Technology", "Logistics", "Healthcare", "Professional Services"].map(
+                        (t) => (
+                          <ExecTag key={t}>{t}</ExecTag>
+                        )
+                      )}
+                    </ExecTagRow>
+                  </ExecColumnBlock>
 
-                <ExecutiveBodyGrid>
-                  <ExecutiveBodySection>
-                    <SubHeading>Sector Experience</SubHeading>
-                    <TagList>
-                      <Tag>SaaS</Tag>
-                      <Tag>Technology</Tag>
-                      <Tag>Logistics</Tag>
-                      <Tag>Healthcare</Tag>
-                      <Tag>Professional Services</Tag>
-                    </TagList>
-                  </ExecutiveBodySection>
-
-                  <ExecutiveBodySection>
-                    <SubHeading>Representative Outcomes</SubHeading>
-                    <OutcomesList>
-                      <li>Helped a Series B SaaS company close a $4M partnership deal in 90 days.</li>
+                  <ExecColumnBlock>
+                    <ExecColumnLabel>Representative Outcomes</ExecColumnLabel>
+                    <ExecOutcomes>
                       <li>
-                        Improved proposal win rate by 32% for a logistics provider within two
-                        quarters.
+                        Helped a Series B SaaS company close a{" "}
+                        <strong>$4M partnership deal</strong> in 90 days.
                       </li>
-                      <li>Reduced service turnaround time by 25% for a healthcare team.</li>
-                    </OutcomesList>
-                  </ExecutiveBodySection>
-                </ExecutiveBodyGrid>
-              </ExecutiveContent>
-            </ExecutiveCard>
-          </ExecutiveShowcase>
-        </Container>
+                      <li>
+                        Improved proposal win rate by <strong>32%</strong> for a
+                        logistics provider within two quarters.
+                      </li>
+                      <li>
+                        Reduced service turnaround time by <strong>25%</strong> for
+                        a healthcare team.
+                      </li>
+                    </ExecOutcomes>
+                  </ExecColumnBlock>
+                </ExecColumnsBottom>
+              </ExecContentColumn>
+            </ExecWrapper>
+          </Reveal>
+        </SectionInner>
       </ExecutiveSection>
 
-      {/* Company Values Section */}
       <ValuesSection>
-        <Container>
-          <SectionTitle>Our Values</SectionTitle>
+        <SectionInner>
+          <Reveal>
+            <SectionEyebrow>Principles</SectionEyebrow>
+            <SectionTitle>Our Values</SectionTitle>
+          </Reveal>
+
           <ValueGrid>
-            {values.map((value, index) => (
-              <ValueCard key={index}>
-                <IconContainer>{value.icon}</IconContainer>
-                <ValueTitle>{value.title}</ValueTitle>
-                <ValueDescription>{value.description}</ValueDescription>
-              </ValueCard>
+            {values.map((v, i) => (
+              <Reveal key={v.title} delay={i * 70}>
+                <ValueCard>
+                  <ValueIcon>{v.icon}</ValueIcon>
+                  <ValueTitle>{v.title}</ValueTitle>
+                  <ValueDesc>{v.description}</ValueDesc>
+                </ValueCard>
+              </Reveal>
             ))}
           </ValueGrid>
-        </Container>
+        </SectionInner>
       </ValuesSection>
 
-      {/* Why Choose Us Section */}
-      <Section>
-        <Container>
-          <SectionTitle>Why Choose Us</SectionTitle>
-          <TwoColumnLayout>
-            <LeftContent>
-              <Paragraph>
-                Hyacinth Industries LLC stands out as a premier outsourcing partner because we
-                understand that each business has unique challenges and opportunities. Our approach
-                combines deep industry knowledge with customized solutions designed to address your
-                specific needs.
-              </Paragraph>
-              <Paragraph>
-                With a global network of highly skilled professionals, we deliver exceptional
-                results across various industries including healthcare, engineering, administrative
-                support, and creative services. Our commitment to quality, reliability, and
-                innovation has earned us the trust of clients worldwide.
-              </Paragraph>
-              <Paragraph>
-                We don&apos;t just provide services; we build lasting partnerships focused on your
-                long-term success. Our collaborative approach ensures that we align with your
-                business objectives and work as an extension of your team.
-              </Paragraph>
-            </LeftContent>
+      <WhyUsSection>
+        <SectionInner>
+          <Reveal>
+            <SectionEyebrow>Advantages</SectionEyebrow>
+            <SectionTitle>Why Choose Us</SectionTitle>
+          </Reveal>
 
-            <RightContent>
-              <BenefitsList>
-                {benefits.map((benefit, index) => (
-                  <BenefitItem key={index}>
-                    <CheckCircle size={20} color="#DC143C" />
-                    <span>{benefit}</span>
-                  </BenefitItem>
-                ))}
-              </BenefitsList>
-            </RightContent>
-          </TwoColumnLayout>
-        </Container>
-      </Section>
+          <WhyUsGrid>
+            <Reveal delay={40}>
+              <WhyUsCopy>
+                <Paragraph>
+                  Hyacinth Industries LLC stands out because we understand that
+                  each business has unique challenges and opportunities. Our
+                  approach combines industry awareness with customized support
+                  designed around your specific needs.
+                </Paragraph>
+                <Paragraph>
+                  With experience across multiple sectors, we deliver practical
+                  support in healthcare, engineering, administrative work, and
+                  creative services. Our commitment to quality, reliability, and
+                  innovation helps clients move forward with confidence.
+                </Paragraph>
+                <Paragraph>
+                  We do not just provide services; we build working
+                  relationships focused on clarity, consistency, and long-term
+                  success.
+                </Paragraph>
+              </WhyUsCopy>
+            </Reveal>
 
-      {/* Call to Action Section */}
-      <CTASection>
-        <Container>
-          <CTAContent>
-            <CTATitle>Ready to transform your business?</CTATitle>
-            <CTAText>
-              Partner with Hyacinth Industries LLC and discover how our outsourcing solutions can
-              help you achieve your business goals.
-            </CTAText>
-            <CTAButton href="/contact">Contact Us Today</CTAButton>
-          </CTAContent>
-        </Container>
-      </CTASection>
+            <Reveal delay={120}>
+              <BenefitsCard>
+                <BenefitsHeading>What you get</BenefitsHeading>
+                <BenefitsList>
+                  {benefits.map((b) => (
+                    <BenefitItem key={b}>
+                      <BenefitCheck>
+                        <CheckCircle size={18} />
+                      </BenefitCheck>
+                      <span>{b}</span>
+                    </BenefitItem>
+                  ))}
+                </BenefitsList>
+              </BenefitsCard>
+            </Reveal>
+          </WhyUsGrid>
+        </SectionInner>
+      </WhyUsSection>
+
+      <CtaSection>
+        <SectionInner>
+          <Reveal>
+            <CtaCard>
+              <CtaContent>
+                <CtaTitle>Ready to transform your business?</CtaTitle>
+                <CtaText>
+                  Partner with Hyacinth Industries LLC and discover how our
+                  outsourcing solutions can help you achieve your business
+                  goals.
+                </CtaText>
+              </CtaContent>
+
+              <CtaButton href="/contact/">
+                <span>Contact Us Today</span>
+                <ArrowRight size={18} className="cta-arrow" />
+              </CtaButton>
+            </CtaCard>
+          </Reveal>
+        </SectionInner>
+      </CtaSection>
 
       <Footer />
     </Wrapper>
   );
 }
 
+const fadeUp = keyframes`
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
+
+const RevealDiv = styled.div`
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: ${({ $delay }) => $delay || 0}ms;
+
+  ${({ $visible }) =>
+    $visible &&
+    css`
+      opacity: 1;
+      transform: translateY(0);
+    `}
+`;
+
 const Wrapper = styled.div`
+  --crimson-600: #c41230;
+  --crimson-500: #dc143c;
+  --ink-900: #111218;
+  --ink-800: #1d1e26;
+  --ink-700: #2f3040;
+  --ink-500: #5d5f72;
+  --ink-400: #7c7e92;
+  --ink-200: #c8cad4;
+  --ink-100: #e9eaef;
+  --ink-50: #f5f5f8;
+  --surface: #ffffff;
+  --surface-alt: #f8f8fb;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.04), 0 14px 32px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.04), 0 28px 56px rgba(0, 0, 0, 0.08);
+
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  font-family: var(--font-body);
   padding-top: 110px;
+  background: var(--surface);
+  color: var(--ink-800);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
 
   @media (max-width: 1024px) {
     padding-top: 60px;
   }
 `;
 
-const HeaderSection = styled.div`
-  width: 100%;
-  height: 100%;
+const HeroSection = styled.section`
+  position: relative;
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 7vw, 6rem);
   background-image: url(${BackgroundImg});
   background-size: cover;
   background-position: center;
-  padding: 3rem 0 4.5rem;
-  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.85);
+    inset: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
     z-index: 1;
   }
 
   & > * {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
+`;
+
+const HeroOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 1px 1px, #000 1px, transparent 0);
+  background-size: 18px 18px;
+  pointer-events: none;
 `;
 
 const HeroInner = styled.div`
-  max-width: 860px;
-  margin: 0 auto 3rem;
-  padding: 0 2rem;
-  text-align: center;
+  width: min(1200px, calc(100% - 3rem));
+  margin: 0 auto;
+  animation: ${fadeUp} 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
 
   @media (max-width: 640px) {
-    padding: 0 1.25rem;
-    margin-bottom: 2rem;
+    width: calc(100% - 2rem);
   }
 `;
 
-const HeroEyebrow = styled.p`
-  margin: 0 0 1rem;
-  font-family: var(--font-heading);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: #8b0d2a;
-`;
-
-const Title = styled.h1`
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: #131313;
-  text-align: center;
-  margin: 0;
-  font-size: clamp(3rem, 6vw, 5.1rem);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
-
-  @media (max-width: 560px) {
-    font-size: 2.8rem;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 4px;
-    background: linear-gradient(90deg, #dc143c, #990000);
-    margin: 1rem auto 0;
-    border-radius: 2px;
-  }
-`;
-
-const Content = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  gap: 2.5rem;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.5rem;
-    padding: 0 1.25rem;
-  }
-`;
-
-const LeftColumn = styled.div`
-  flex: 0.4;
-  padding: 0 1rem 0 0;
-`;
-
-const RightColumn = styled.div`
-  flex: 0.6;
-  padding: 0;
-`;
-
-const Caption = styled.p`
-  font-family: var(--font-body);
-  font-weight: 400;
-  color: #2f3137;
-  text-align: left;
-  font-size: clamp(1.1rem, 1.45vw, 1.28rem);
-  line-height: 1.9;
-  max-width: 32rem;
-  margin: 0;
-`;
-
-const CaptionLead = styled.span`
+const BadgeDot = styled.span`
   display: inline-block;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-accent);
-  font-size: clamp(2rem, 4vw, 3.15rem);
-  line-height: 1.02;
-  color: #dc143c;
-  letter-spacing: -0.03em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--crimson-500);
+  margin-right: 8px;
 `;
 
-const Section = styled.section`
-  padding: 6.5rem 0;
-  background-color: #fff;
+const HeroBadge = styled.div`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(196, 18, 48, 0.06);
+  border: 1px solid rgba(196, 18, 48, 0.12);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--crimson-600);
+  margin-bottom: 1.5rem;
 `;
 
-const ExecutiveSection = styled(Section)`
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
-`;
-
-const ValuesSection = styled(Section)`
-  background-color: #f9f9f9;
-`;
-
-const Container = styled.div`
-  width: min(1200px, calc(100% - 2rem));
-  margin: 0 auto;
+const HeroTitle = styled.h1`
+  margin: 0 0 2.2rem;
+  font-size: clamp(2.6rem, 5.8vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--ink-900);
+  max-width: 14ch;
 
   @media (max-width: 640px) {
-    width: min(1200px, calc(100% - 1.25rem));
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    max-width: none;
   }
 `;
 
-const SectionTitle = styled.h2`
-  font-family: var(--font-heading);
-  font-size: clamp(2.1rem, 4vw, 3.1rem);
-  color: #1d1d1f;
-  text-align: center;
-  margin: 0 0 3.25rem;
-  position: relative;
-  letter-spacing: -0.035em;
-  line-height: 1.08;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 84px;
-    height: 4px;
-    background: #dc143c;
-    margin: 1.1rem auto 0;
-    border-radius: 999px;
-  }
+const HeroAccent = styled.span`
+  color: var(--crimson-500);
 `;
 
-const MissionStatement = styled.p`
-  font-family: var(--font-accent);
-  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
-  line-height: 1.9;
-  color: #2f3137;
-  text-align: center;
-  max-width: 860px;
-  margin: 0 auto;
-  font-style: italic;
-`;
-
-const ValueGrid = styled.div`
+const HeroRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const ValueCard = styled.div`
-  background-color: white;
-  padding: 2.1rem 2rem 2rem;
-  border-radius: 18px;
-  box-shadow: 0 12px 32px rgba(17, 17, 17, 0.08);
-  border: 1px solid rgba(20, 20, 20, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.12);
-  }
-`;
-
-const IconContainer = styled.div`
-  color: #dc143c;
-  margin-bottom: 1.25rem;
-`;
-
-const ValueTitle = styled.h3`
-  font-family: var(--font-heading);
-  font-size: 1.42rem;
-  color: #202124;
-  margin: 0 0 0.8rem;
-  letter-spacing: -0.02em;
-`;
-
-const ValueDescription = styled.p`
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #5d6169;
-  margin: 0;
-`;
-
-const TwoColumnLayout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 0.45fr 0.55fr;
+  gap: 2.5rem;
+  align-items: center;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -555,20 +562,501 @@ const TwoColumnLayout = styled.div`
   }
 `;
 
-const LeftContent = styled.div``;
-
-const RightContent = styled.div`
-  display: flex;
-  align-items: center;
+const HeroCopy = styled.div`
+  @media (max-width: 900px) {
+    order: 2;
+  }
 `;
 
+const HeroMedia = styled.div`
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: #fff;
+
+  @media (max-width: 900px) {
+    order: 1;
+  }
+`;
+
+const CaptionLead = styled.p`
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--ink-900);
+`;
+
+const HeroText = styled.p`
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink-500);
+  max-width: 34rem;
+`;
+
+const SectionInner = styled.div`
+  width: min(1140px, calc(100% - 3rem));
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    width: calc(100% - 2rem);
+  }
+`;
+
+const SectionEyebrow = styled.p`
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--crimson-500);
+  text-align: center;
+`;
+
+const SectionTitle = styled.h2`
+  margin: 0 0 2.4rem;
+  font-size: clamp(2rem, 3.8vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--ink-900);
+  text-align: center;
+`;
+
+const MissionSection = styled.section`
+  padding: 5.5rem 0;
+  background: var(--surface);
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+`;
+
+const MissionStatement = styled.blockquote`
+  margin: 0 auto;
+  max-width: 780px;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.85;
+  color: var(--ink-700);
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  padding: 0 1rem;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--crimson-500);
+    opacity: 0.12;
+    font-style: normal;
+  }
+`;
+
+const ExecutiveSection = styled.section`
+  padding: 6rem 0;
+  background: var(--surface-alt);
+
+  @media (max-width: 768px) {
+    padding: 4.2rem 0;
+  }
+`;
+
+const ExecWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+`;
+
+const ExecPhotoColumn = styled.div`
+  position: sticky;
+  top: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+
+  @media (max-width: 960px) {
+    position: static;
+    align-items: center;
+  }
+`;
+
+const ExecPhotoFrame = styled.div`
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-md);
+  background: var(--ink-50);
+
+  @media (max-width: 960px) {
+    max-width: 260px;
+  }
+`;
+
+const ExecutivePhoto = styled.img`
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(0.05);
+`;
+
+const ExecContactBar = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const ExecContactLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  color: var(--ink-700);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    color: var(--crimson-500);
+    border-color: rgba(196, 18, 48, 0.2);
+    box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.05);
+  }
+
+  svg:last-child {
+    margin-left: auto;
+    opacity: 0.4;
+  }
+`;
+
+const ExecContentColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+`;
+
+const ExecHeader = styled.div``;
+
+const ExecKicker = styled.p`
+  margin: 0 0 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--crimson-500);
+`;
+
+const ExecName = styled.h3`
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: var(--ink-900);
+`;
+
+const ExecTitleLine = styled.p`
+  margin: 0.45rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-400);
+  font-weight: 500;
+`;
+
+const ExecDivider = styled.hr`
+  border: none;
+  height: 1px;
+  background: var(--ink-100);
+  margin: 1.5rem 0;
+`;
+
+const ExecNarrative = styled.div`
+  max-width: 44rem;
+
+  p {
+    margin: 0 0 1rem;
+    font-size: 0.98rem;
+    line-height: 1.82;
+    color: var(--ink-700);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+`;
+
+const ExecQuote = styled.div`
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin: 1.6rem 0;
+  padding: 1rem 0;
+`;
+
+const QuoteBar = styled.div`
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--crimson-500), rgba(196, 18, 48, 0.2));
+`;
+
+const QuoteText = styled.p`
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: var(--ink-500);
+  font-style: italic;
+  max-width: 42rem;
+`;
+
+const ExecMetaStrip = styled.div`
+  display: flex;
+  align-items: stretch;
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+`;
+
+const ExecMetaItem = styled.div`
+  flex: 1;
+  padding: 1rem 1.15rem;
+`;
+
+const ExecMetaDivider = styled.div`
+  width: 1px;
+  background: var(--ink-100);
+
+  @media (max-width: 700px) {
+    width: 100%;
+    height: 1px;
+  }
+`;
+
+const ExecMetaLabel = styled.p`
+  margin: 0 0 0.28rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-400);
+`;
+
+const ExecMetaValue = styled.p`
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  line-height: 1.35;
+`;
+
+const ExecColumnsBottom = styled.div`
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  gap: 1.15rem;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const ExecColumnBlock = styled.div`
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.2rem;
+`;
+
+const ExecColumnLabel = styled.h4`
+  margin: 0 0 1rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-400);
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--ink-100);
+`;
+
+const ExecTagRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+`;
+
+const ExecTag = styled.span`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--ink-50);
+  border: 1px solid var(--ink-100);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-700);
+`;
+
+const ExecOutcomes = styled.ul`
+  margin: 0;
+  padding-left: 1.1rem;
+
+  li {
+    font-size: 0.9rem;
+    line-height: 1.72;
+    color: var(--ink-700);
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--ink-900);
+      font-weight: 700;
+    }
+  }
+
+  li::marker {
+    color: var(--crimson-500);
+    font-size: 0.7em;
+  }
+`;
+
+const ValuesSection = styled.section`
+  padding: 5.5rem 0;
+  background: var(--surface);
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+`;
+
+const ValueGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 580px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const ValueCard = styled.div`
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.45rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(196, 18, 48, 0.1);
+  }
+`;
+
+const ValueIcon = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(196, 18, 48, 0.06);
+  color: var(--crimson-500);
+  margin-bottom: 1rem;
+`;
+
+const ValueTitle = styled.h3`
+  margin: 0 0 0.55rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink-900);
+`;
+
+const ValueDesc = styled.p`
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: var(--ink-500);
+`;
+
+const WhyUsSection = styled.section`
+  padding: 5.5rem 0;
+  background: var(--surface-alt);
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+`;
+
+const WhyUsGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const WhyUsCopy = styled.div``;
+
 const Paragraph = styled.p`
-  font-family: var(--font-body);
-  font-size: 1.08rem;
-  line-height: 1.95;
-  color: #30313a;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.15rem;
+  font-size: 1rem;
+  line-height: 1.82;
+  color: var(--ink-500);
   max-width: 38rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const BenefitsCard = styled.div`
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+`;
+
+const BenefitsHeading = styled.p`
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--crimson-500);
 `;
 
 const BenefitsList = styled.ul`
@@ -580,318 +1068,162 @@ const BenefitsList = styled.ul`
 const BenefitItem = styled.li`
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 1.3rem;
-  color: #30313a;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-700);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
-const CTASection = styled.section`
-  background: linear-gradient(135deg, #dc143c, #990000);
-  padding: 6rem 0;
-  color: white;
+const BenefitCheck = styled.span`
+  flex-shrink: 0;
+  color: var(--crimson-500);
+  margin-top: 1px;
 `;
 
-const CTAContent = styled.div`
-  text-align: center;
-  max-width: 800px;
+const CtaSection = styled.section`
+  padding: 0 0 5.5rem;
+  background: var(--surface-alt);
+
+  @media (max-width: 768px) {
+    padding: 0 1rem 3rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 0.85rem 2.5rem;
+  }
+`;
+
+import PetalsImg from "../assets/img/petals.webp";
+
+const CtaCard = styled.div`
+  max-width: 1180px;
   margin: 0 auto;
-`;
-
-const CTATitle = styled.h2`
-  font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  margin: 0 0 1.2rem;
-  letter-spacing: -0.03em;
-`;
-
-const CTAText = styled.p`
-  font-family: var(--font-body);
-  font-size: 1.12rem;
-  line-height: 1.9;
-  margin: 0 auto 2.2rem;
-  max-width: 42rem;
-`;
-
-const CTAButton = styled.a`
-  display: inline-block;
-  background-color: white;
-  color: #dc143c;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 1rem 2.1rem;
-  border-radius: 50px;
-  text-decoration: none;
-  letter-spacing: 0.01em;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-`;
-
-// About Executive
-const ExecutiveShowcase = styled.div`
-  position: relative;
-  padding: 1rem;
-  border-radius: 28px;
-  background: linear-gradient(180deg, #f8f9fb 0%, #eef1f5 100%);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
-
-  @media (max-width: 900px) {
-    padding: 0.75rem;
-    border-radius: 24px;
-  }
-`;
-
-const ExecutiveCard = styled.div`
-  display: grid;
-  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2rem;
-  align-items: stretch;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 24px;
-  padding: 1.5rem;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  padding: 3rem 3rem;
+  background: #1a1d20;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
 
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    padding: 1.25rem;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 380px;
+    background: url(${PetalsImg}) center center/contain no-repeat;
+    opacity: 0.06;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 2.5rem 2rem;
     gap: 1.5rem;
   }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
 `;
 
-const ExecutivePhotoWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const CtaContent = styled.div`
+  flex: 1;
+  min-width: 0;
 `;
 
-const ExecutivePhotoCard = styled.div`
-  width: 100%;
-  max-width: 300px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 20px;
-  padding: 0.75rem;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
-`;
-
-const ExecutivePhoto = styled.img`
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 16px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
-`;
-
-const ExecutivePortraitMeta = styled.div`
-  padding: 0.9rem 0.2rem 0.1rem;
-`;
-
-const PortraitEyebrow = styled.p`
-  margin: 0 0 0.45rem;
-  font-family: var(--font-heading);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #a10f2b;
-`;
-
-const PortraitNote = styled.p`
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  line-height: 1.7;
-  color: #4b5563;
-`;
-
-const ExecutiveContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.35rem 0;
-`;
-
-const ExecutiveKicker = styled.p`
-  margin: 0 0 0.75rem;
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #a10f2b;
-`;
-
-const ExecutiveName = styled.h3`
+const CtaTitle = styled.h2`
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  line-height: 1.04;
-  letter-spacing: -0.035em;
-  color: #111827;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1.15;
 `;
 
-const ExecutiveRole = styled.p`
-  margin: 0.65rem 0 1rem;
+const CtaText = styled.p`
+  margin: 0.5rem 0 0;
   font-family: var(--font-body);
-  font-size: 0.98rem;
-  line-height: 1.7;
-  color: #5b6472;
-  max-width: 42rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 580px;
 `;
 
-const ExecutiveIntro = styled.p`
-  margin: 0 0 1rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.85;
-  color: #1f2937;
-  max-width: 46rem;
-`;
-
-const ExecutiveSummary = styled.p`
-  margin: 0 0 1.35rem;
-  font-family: var(--font-body);
-  font-size: 0.98rem;
-  line-height: 1.82;
-  color: #4b5563;
-  max-width: 46rem;
-`;
-
-const ExecutiveMeta = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
-  margin: 0 0 1.5rem;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const MetaCard = styled.div`
-  background: #f8fafc;
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 16px;
-  padding: 0.95rem 1rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  min-height: 88px;
-`;
-
-const MetaLabel = styled.p`
-  margin: 0 0 0.35rem;
-  font-family: var(--font-body);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #6b7280;
-`;
-
-const MetaValue = styled.p`
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: #111827;
-  line-height: 1.55;
-
-  a {
-    color: #0f4c81;
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-`;
-
-const ExecutivePositioning = styled.p`
-  margin: 0 0 1.5rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid rgba(220, 20, 60, 0.12);
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(220, 20, 60, 0.04), rgba(220, 20, 60, 0.02));
-  font-family: var(--font-accent);
-  font-size: 0.98rem;
-  line-height: 1.75;
-  color: #7a2033;
-`;
-
-const ExecutiveBodyGrid = styled.div`
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 1rem;
-  align-items: start;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-`;
-
-const ExecutiveBodySection = styled.div`
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 16px;
-  padding: 1.15rem 1.2rem;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
-`;
-
-const SubHeading = styled.h4`
-  margin: 0 0 0.9rem;
-  font-family: var(--font-heading);
-  font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #7c2d12;
-`;
-
-const TagList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-`;
-
-const Tag = styled.span`
+const CtaButton = styled.a`
   display: inline-flex;
   align-items: center;
-  background: #f8fafc;
-  color: #334155;
-  border: 1px solid #dbe3ec;
-  border-radius: 999px;
-  padding: 0.5rem 0.85rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 600;
-`;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 52px;
+  padding: 0 1.6rem 0 1.75rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+  position: relative;
+  z-index: 1;
 
-const OutcomesList = styled.ul`
-  margin: 0;
-  padding-left: 1.2rem;
-
-  li {
-    font-family: var(--font-body);
-    font-size: 0.96rem;
-    line-height: 1.78;
-    color: #1f2937;
-    margin-bottom: 0.8rem;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f43f5e 0%, #E11D48 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
   }
 
-  li::marker {
-    color: #dc143c;
+  .cta-arrow {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+    padding: 0 1.5rem 0 1.75rem;
+
+    &::before {
+      opacity: 1;
+    }
+
+    .cta-arrow {
+      transform: translateX(3px);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    min-height: 48px;
+    padding: 0 1.4rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
   }
 `;

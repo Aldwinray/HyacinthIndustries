@@ -15,10 +15,35 @@
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Lexend', sans-serif;
   --font-accent: 'Playfair Display', serif;
+
+  /* Color Variables */
+  /* Color Variables */
+  --primary: #9e1c24;
+  --primary-deep: #6f0f16;
+  --primary-soft: rgba(158, 28, 36, 65%);
+  --primary-hover: rgba(158, 28, 36, 85%);
+  --gold: #c9a227;
+
+  /* Fixed lines */
+  --secondary: #4a6163;
+  --accent: #f9a826;
+  --background: #fff;
+  --surface: #f5f5f5;
+  --text: #333;
+  --text-light: #666;
+  --error: #d32f2f;
+  --success: #388e3c;
+  --warning: #f57c00;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 a {
@@ -83,5 +108,19 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -48,7 +48,7 @@ const structuredData = [
       <Seo
         title="Industries We Support | Logistics, Healthcare, Marketing & More | Hyacinth Industries"
         description="Explore the industries Hyacinth Industries supports, including logistics, healthcare, marketing, administrative support, web design, 3D animation, and general business services."
-        canonicalPath="/industries"
+        canonicalPath="/industries/"
         type="website"
         image="/og-image-v2.webp"
         structuredData={structuredData}

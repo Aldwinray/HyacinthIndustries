@@ -10,9 +10,15 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    cssMinify: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          motion: ['framer-motion'],
+          icons: ['lucide-react', 'react-icons', '@phosphor-icons/react'],
+          styled: ['styled-components'],
+        },
       },
     },
   },

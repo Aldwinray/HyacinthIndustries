@@ -1,12 +1,10 @@
-import React from 'react';
-import { useTheme } from '../context/ThemeContext';
+import ScrollToTop from './ScrollToTop';
 
 const Layout = ({ children }) => {
-  const { theme } = useTheme();
-  
   return (
     <>
       {children}
+      <ScrollToTop />
     </>
   );
 };

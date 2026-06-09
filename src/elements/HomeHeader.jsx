@@ -1,518 +1,624 @@
-import React from "react";
+import { memo } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
-// Assets
+import { ArrowRight } from "lucide-react";
 import HeaderImage from "../assets/img/Logo.webp";
-import bg2 from '../assets/img/backgrounds/bg2.webp';
+import HeaderBackground from "../assets/img/backgrounds/bg2.webp";
 
-export default function HomeHeader() {
+// Animation easing curves
+const EASING = {
+  smooth: [0.22, 1, 0.36, 1],
+  snappy: [0.16, 1, 0.3, 1],
+};
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: "easeOut" }
-  };
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.15,
+    },
+  },
+};
 
-  const fadeInLeft = {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.3 }
-  };
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: EASING.smooth },
+  },
+};
 
-  const fadeInRight = {
-    initial: { opacity: 0, x: 50 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.3 }
-  };
+const titleVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.75, ease: EASING.snappy },
+  },
+};
 
+const HomeHeader = memo(() => {
   return (
-    <MainWrapper>
-      <ParallaxBg />
-      <ContentWrapper>
-        <Wrapper id="home">
-          <LeftSide 
-            as={motion.div}
-            {...fadeInLeft}
-            className="flexCenter"
-          >
-            <div>
-              <HeroEyebrow
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.35 }}
-              >
-                Fractional Executive Consulting
-              </HeroEyebrow>
-              <BrandHeading
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.44 }}
-              >
-                Hyacinth Industries LLC
-              </BrandHeading>
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                Fractional Executive Support That Helps You win bigger deals, build stronger
-                brands, and launch better products
-              </motion.h3>
-              <HeroLead
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.62 }}
-              >
-                Senior leadership support for high-growth teams that need execution power across
-                brand, deals, and product without the cost and drag of a full-time executive hire.
-              </HeroLead>
-              <HeroActionRow
-                as={motion.div}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.74 }}
-              >
-                <HeroCta href="/contact">Schedule a Discovery Call</HeroCta>
-                <HeroMeta>30 minutes. No commitment. Let&apos;s see if we&apos;re a fit.</HeroMeta>
-              </HeroActionRow>
-            </div>
-          </LeftSide>
-          <RightSide
-            as={motion.div}
-            {...fadeInRight}
-          >
-            <ImageWrapper>
-              <Img
-                src={HeaderImage}
-                alt="logo"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 0.4,
-                  ease: [0.6, -0.05, 0.01, 0.99]
-                }}
-                whileHover={{ scale: 1.05 }}
-              />
-            </ImageWrapper>
-          </RightSide>
-        </Wrapper>
-      </ContentWrapper>
-    </MainWrapper>
-  );
-}
+    <HeroSection>
+      <HeroBg />
+      <HeroOverlay />
 
-const MainWrapper = styled.div`
-  width: 100%;
-  min-height: clamp(700px, 92vh, 900px);
-  margin-top: 0;
-  overflow: clip;
+      <HeroInner>
+        <HeroLeft
+          as={motion.div}
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          <Eyebrow as={motion.p} variants={itemVariants}>
+            FRACTIONAL EXECUTIVE SUPPORT
+          </Eyebrow>
+          <EyebrowLine as={motion.div} variants={itemVariants} />
+
+          <HeroTitle as={motion.h1} variants={titleVariants}>
+            Close bigger deals<span className="dot" />
+            <br />
+            Build stronger brands<span className="dot" />
+            <br />
+            Execute faster<span className="dot" />
+          </HeroTitle>
+
+          <HeroSubtitle as={motion.p} variants={itemVariants}>
+            Senior-level execution support for high-growth teams without the cost
+            or drag of a full-time hire.
+          </HeroSubtitle>
+
+          <HeroNote as={motion.p} variants={itemVariants}>
+            Embedded in your operations. Focused on results across brand, deals,
+            and product.
+          </HeroNote>
+
+          <HeroActions as={motion.div} variants={itemVariants}>
+            <PrimaryButton
+              as={motion.a}
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href="/contact/"
+            >
+              BOOK A STRATEGY CALL
+              <ArrowRight size={18} />
+            </PrimaryButton>
+
+            <MetaBlock>
+              <MetaTop>30 min • No commitment</MetaTop>
+              <MetaBottom>See if we&apos;re a fit</MetaBottom>
+            </MetaBlock>
+          </HeroActions>
+        </HeroLeft>
+
+        <HeroRight>
+          <HeroVisual>
+            <LogoContainer
+              as={motion.div}
+              initial={{ opacity: 0, scale: 0.88 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.85,
+                delay: 0.4,
+                ease: EASING.snappy,
+              }}
+            >
+              <LogoGlow />
+              <LogoImage
+                src={HeaderImage}
+                alt="Hyacinth Industries logo"
+                as={motion.img}
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+              />
+            </LogoContainer>
+          </HeroVisual>
+        </HeroRight>
+      </HeroInner>
+
+      <ScrollIndicator
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
+      >
+        <ScrollText>Scroll to explore</ScrollText>
+        <ScrollArrow />
+      </ScrollIndicator>
+    </HeroSection>
+  );
+});
+
+export default HomeHeader;
+
+// ============================================
+// STYLED COMPONENTS
+// ============================================
+
+const HeroSection = styled.section`
   position: relative;
-  margin-bottom: 0;
-  box-sizing: border-box;
-  padding: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 7rem 2rem 5rem;
+  background: #0a0a0f;
 
   @media (max-width: 1024px) {
-    height: auto;
-    min-height: 0;
-    padding: 0 0 24px;
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5.5rem 1.25rem 4rem;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5rem 1rem 3.5rem;
   }
 `;
 
-const ParallaxBg = styled.div`
+const HeroBg = styled.div`
   position: absolute;
-  top: -20%;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background: url(${bg2}) center/cover no-repeat;
-  will-change: transform;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  inset: 0;
+  background-image: url(${HeaderBackground});
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.01);
+`;
+
+const HeroOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 7, 18, 0.85) 0%,
+    rgba(3, 7, 18, 0.7) 40%,
+    rgba(3, 7, 18, 0.4) 70%,
+    rgba(3, 7, 18, 0.2) 100%
+  );
+
+  @media (max-width: 980px) {
     background: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0.05),
-      rgba(0, 0, 0, 0.15)
+      180deg,
+      rgba(3, 7, 18, 0.85) 0%,
+      rgba(3, 7, 18, 0.6) 50%,
+      rgba(3, 7, 18, 0.75) 100%
     );
   }
 `;
 
-const ContentWrapper = styled.div`
+const HeroInner = styled.div`
   position: relative;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-`;
-
-const Wrapper = styled.section`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 760px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: visible;
   z-index: 1;
-  max-width: 1280px;
+  width: min(1500px, 100%);
   margin: 0 auto;
-  padding: 0 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: center;
 
-  @media (max-width: 1160px) {
-    padding: 0 28px;
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
   }
 
-  @media (max-height: 820px) and (min-width: 801px) {
-    min-height: 700px;
-    padding-top: 0.75rem;
-    padding-bottom: 1rem;
-  }
-
-  @media (max-width: 800px) {
-    height: auto;
-    min-height: 0;
+  @media (max-width: 640px) {
+    gap: 1.5rem;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 0.85rem 18px 1.25rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0.75rem 14px 1rem;
   }
 `;
 
-const LeftSide = styled.div`
-  width: 58%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  margin-top: 5rem;
+const HeroLeft = styled.div`
+  width: 100%;
+  max-width: 980px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 76%;
-    top: 0;
-    bottom: -160px;
-    left: -13%;
-    background: rgba(0, 0, 0, 0.42);
-    clip-path: polygon(18% 0%, 100% 0%, 88% 100%, 0% 100%);
-    z-index: -1;
-    overflow-x: visible;
+  @media (max-width: 980px) {
+    max-width: 100%;
+    order: 2;
   }
 
-  > div {
+  @media (max-width: 640px) {
+    order: 2;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 44rem;
-  }
-
-  @media (min-width: 1000px) {
-    h3 {
-      font-size: clamp(1.85rem, 3.35vw, 2.8rem);
-      line-height: 1.02;
-      text-align: left;
-    }
-  }
-
-  @media (max-width: 1160px) {
-    width: 64%;
-
-    &::before {
-      width: 84%;
-      top: 0;
-      bottom: -130px;
-      left: -15%;
-    }
-
-    > div {
-      max-width: 40rem;
-    }
-
-    h3 {
-      font-size: clamp(1.75rem, 3.7vw, 2.5rem);
-    }
-  }
-
-  @media (max-width: 920px) {
-    width: 100%;
-    padding: 1.75rem 1.2rem;
-    min-height: 0;
-
-    &::before {
-      width: 100%;
-      height: 100%;
-      left: 0;
-      clip-path: none;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35));
-    }
-
-    > div {
-      max-width: 100%;
-    }
-  }
-
-  @media (max-height: 820px) and (min-width: 801px) {
-    margin-top: 2.5rem;
-
-    > div {
-      max-width: 38rem;
-    }
-
-    h3 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      max-width: 18ch;
-    }
-  }
-
-  @media (max-width: 800px) {
-    width: 100%;
-    order: 2;
-    margin-top: 0;
-    padding: 0.9rem 0 0;
-    height: auto;
-
-    &::before {
-      width: 100%;
-      left: 0;
-      clip-path: none;
-      top: 0;
-      bottom: 0;
-      border-radius: 20px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.32));
-    }
-
-    > div {
-      max-width: 100%;
-      padding: 0 0.95rem 1rem;
-    }
-  }
-
-  h3 {
-    font-weight: 600;
-    font-size: clamp(1.85rem, 3.45vw, 2rem);
-    line-height: 1.01;
-    letter-spacing: -0.045em;
-    color: #fff;
-    margin: 0;
-    max-width: 30ch;
-  }
-
-  @media (max-width: 800px) {
-    h3 {
-      font-size: clamp(1.7rem, 7vw, 2.4rem);
-      line-height: 1.04;
-      max-width: 18ch;
-    }
-  }
-
-  @media (max-width: 480px) {
-    h3 {
-      font-size: clamp(1.5rem, 8vw, 2rem);
-    }
   }
 `;
 
-const HeroEyebrow = styled(motion.p)`
-  margin: 0 0 0.95rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  color: #f4c44d;
-  font-family: var(--font-heading);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  line-height: 1;
+const HeroRight = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @media (max-width: 480px) {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    padding: 0.45rem 0.7rem;
+  @media (max-width: 980px) {
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 640px) {
+    order: 1;
+    margin-bottom: 0;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
-const BrandHeading = styled(motion.h2)`
-  margin: 0 0 0.7rem;
-  font-family: var(--font-heading);
-  font-size: clamp(2.3rem, 4vw, 3rem);
-  line-height: 0.92;
-  letter-spacing: -0.05em;
+const Eyebrow = styled.p`
+  margin: 0;
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+  letter-spacing: 0.1em;
   font-weight: 800;
-  color: #ffffff;
+  color: #e11d48;
+  text-transform: uppercase;
 
-  @media (max-width: 800px) {
-    font-size: clamp(2rem, 9vw, 2.8rem);
-    line-height: 0.95;
+  @media (max-width: 640px) {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
   }
 `;
 
-const HeroLead = styled(motion.p)`
-  max-width: 31rem;
-  margin: 1rem 0 0;
-  font-family: var(--font-body);
-  font-size: clamp(0.92rem, 1.05vw, 0.98rem);
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.86);
+const EyebrowLine = styled.div`
+  width: clamp(36px, 5vw, 46px);
+  height: 2px;
+  background: #e11d48;
+  margin: 0.9rem 0 1.5rem;
 
-  @media (max-height: 820px) and (min-width: 801px) {
-    max-width: 28rem;
+  @media (max-width: 640px) {
+    margin: 0.75rem 0 1.25rem;
+    width: 40px;
+  }
+`;
+
+const HeroTitle = styled.h1`
+  margin: 0;
+  font-size: clamp(2rem, 3.6vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  color: #f8fafc;
+
+  .dot {
+    display: inline-block;
+    width: 0.15em;
+    height: 0.15em;
+    margin-left: 0.1em;
+    border-radius: 50%;
+    background: #e11d48;
+    vertical-align: 0.1em;
+  }
+
+  @media (max-width: 980px) {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    line-height: 1.08;
+  }
+
+  @media (max-width: 640px) {
+    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    .dot {
+      width: 0.12em;
+      height: 0.12em;
+    }
+  }
+
+  @media (max-width: 380px) {
+    font-size: 1.65rem;
+  }
+`;
+
+const HeroSubtitle = styled.p`
+  margin: 1.25rem 0 0;
+  max-width: 780px;
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  line-height: 1.5;
+  color: #cbd5e1;
+  font-weight: 400;
+
+  @media (max-width: 980px) {
+    margin: 1.5rem auto 0;
+    max-width: 600px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin: 1.25rem 0 0;
+    text-align: left;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 380px) {
+    font-size: 0.95rem;
+  }
+`;
+
+const HeroNote = styled.p`
+  margin: 1.25rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid #e11d48;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
+  color: #b8c0cf;
+  max-width: 900px;
+  font-weight: 400;
+
+  @media (max-width: 980px) {
+    margin: 1.25rem auto 0;
+    max-width: 550px;
+  }
+
+  @media (max-width: 640px) {
+    margin: 1.25rem 0 0;
+    padding-left: 0.875rem;
     font-size: 0.9rem;
     line-height: 1.55;
-  }
-
-  @media (max-width: 800px) {
+    text-align: left;
     max-width: 100%;
-    font-size: 0.94rem;
-    line-height: 1.6;
+    border-left-width: 2px;
   }
 `;
 
-const HeroActionRow = styled.div`
+const HeroActions = styled.div`
+  margin-top: 2rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0.9rem 1rem;
-  margin-top: 1.15rem;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 
-  @media (max-height: 820px) and (min-width: 801px) {
-    margin-top: 0.95rem;
-    gap: 0.75rem 0.85rem;
+  @media (max-width: 980px) {
+    justify-content: center;
+    margin-top: 2.5rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 640px) {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    width: 100%;
   }
 `;
 
-const HeroCta = styled.a`
+const PrimaryButton = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 0 1.15rem;
-  border-radius: 999px;
-  border: 1px solid #5b3cc4;
-  background: linear-gradient(180deg, #6d4ee6, #5637c4);
-  box-shadow: 0 10px 24px rgba(94, 60, 196, 0.22);
+  gap: 0.5rem;
+  min-height: 56px;
+  padding: 0 1.75rem;
+  border-radius: 10px;
+  background: #be123c;
   color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: 0.86rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(190, 18, 60, 0.3);
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 28px rgba(94, 60, 196, 0.28);
-    color: #fff;
+    background: #e11d48;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(190, 18, 60, 0.4);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 640px) {
+    width: 100%;
+    min-height: 52px;
+    font-size: 0.9rem;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    order: 1;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 0.85rem;
+    min-height: 48px;
+  }
+`;
+
+const MetaBlock = styled.div`
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 0;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+  }
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+`;
+
+const MetaTop = styled.p`
+  margin: 0;
+  color: #f1f5f9;
+  font-weight: 700;
+  font-size: 1rem;
+
+  @media (max-width: 640px) {
+    font-size: 0.9rem;
+  }
+`;
+
+const MetaBottom = styled.p`
+  margin: 0.2rem 0 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+
+  @media (max-width: 640px) {
+    font-size: 0.85rem;
+  }
+`;
+
+const HeroVisual = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 980px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 640px) {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+`;
+
+const LogoContainer = styled.div`
+  position: relative;
+  width: min(640px, 100%);
+  aspect-ratio: 1.4 / 1;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+
+  @media (max-width: 980px) {
+    width: min(280px, 50%);
+    aspect-ratio: 1.5 / 1;
+  }
+
+  @media (max-width: 640px) {
+    width: 200px;
+    aspect-ratio: auto;
+    height: auto;
+    border-radius: 0;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 380px) {
+    width: 160px;
+  }
+`;
+
+const LogoGlow = styled.div`
+  position: absolute;
+  inset: 10% 8%;
+  border-radius: 24px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.04) 45%,
+    transparent 75%
+  );
+  filter: blur(20px);
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+`;
+
+const LogoImage = styled.img`
+  position: relative;
+  z-index: 2;
+  width: min(88%, 480px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 35px rgba(0, 0, 0, 0.42));
+
+  @media (max-width: 980px) {
     width: 100%;
   }
-`;
 
-const HeroMeta = styled.p`
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  font-weight: 600;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 18rem;
-
-  @media (max-height: 820px) and (min-width: 801px) {
-    max-width: 15rem;
-    font-size: 0.82rem;
+  @media (max-width: 640px) {
+    width: 100%;
+    max-width: 180px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
   }
 
-  @media (max-width: 800px) {
-    max-width: 100%;
-    font-size: 0.84rem;
+  @media (max-width: 380px) {
+    max-width: 140px;
   }
 `;
 
-const RightSide = styled.div`
-  width: 42%;
-  height: 100%;
+const ScrollIndicator = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0;
+  gap: 0.5rem;
+  z-index: 2;
 
-  @media (min-width: 1000px) {
-    width: 40%;
+  @media (max-width: 768px) {
+    bottom: 1.25rem;
   }
 
-  @media (max-width: 1160px) {
-    width: 36%;
-  }
-
-  @media (max-height: 820px) and (min-width: 801px) {
-    width: 34%;
-  }
-
-  @media (max-width: 920px) {
-    width: 72%;
-    order: 1;
-    margin: 0 auto 1rem;
-  }
-
-  @media (max-width: 800px) {
-    width: 82%;
-  }
-
-  @media (max-width: 560px) {
-    width: 92%;
+  @media (max-width: 640px) {
+    bottom: 1rem;
+    gap: 0.35rem;
   }
 `;
 
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
+const ScrollText = styled.span`
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
 
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 
-  @media (min-width: 1000px) {
-    width: 80%;
-    margin: 0 auto;
+  @media (max-width: 640px) {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
   }
 `;
 
-const Img = styled(motion.img)`
-  width: 100%;
-  height: auto;
-  transform-origin: center;
-  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.18));
+const ScrollArrow = styled.div`
+  width: 18px;
+  height: 18px;
+  border-right: 2px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+  transform: rotate(45deg);
+  animation: bounce 1.8s infinite;
 
-  @media (min-width: 1000px) {
-    filter: drop-shadow(0 30px 70px rgba(0, 0, 0, 0.22));
+  @keyframes bounce {
+    0%, 100% {
+      transform: rotate(45deg) translateY(0);
+    }
+    50% {
+      transform: rotate(45deg) translateY(6px);
+    }
   }
 
-  @media (max-width: 800px) {
-    max-width: 260px;
-    margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 16px;
+    height: 16px;
   }
 
-  @media (max-width: 480px) {
-    max-width: 220px;
+  @media (max-width: 640px) {
+    width: 14px;
+    height: 14px;
+    border-width: 1.5px;
   }
 `;

@@ -19,7 +19,12 @@ const Footer = () => {
         <TopRow>
           <BrandColumn>
             <BrandLockup href="/">
-              <BrandMark src={logo} alt="Hyacinth Industries logo" />
+              <BrandMark
+                src={logo}
+                alt="Hyacinth Industries logo"
+                loading="lazy"
+                decoding="async"
+              />
               <BrandText>
                 <BrandName>Hyacinth Industries</BrandName>
                 <BrandSubhead>Fractional Executive Consulting</BrandSubhead>
@@ -35,41 +40,27 @@ const Footer = () => {
           <LinkColumn>
             <SectionTitle>Quick Links</SectionTitle>
             <LinkList>
-              <ListItem>
-                <FooterLink href="/">Home</FooterLink>
-              </ListItem>
-              <ListItem>
-                <FooterLink href="/about">About</FooterLink>
-              </ListItem>
-              <ListItem>
-                <FooterLink href="/services">Services</FooterLink>
-              </ListItem>
-              <ListItem>
-                <FooterLink href="/contact">Contact</FooterLink>
-              </ListItem>
-              <ListItem>
-                <FooterLink href="/faq">FAQ</FooterLink>
-              </ListItem>
-              {/*<ListItem>
-                <FooterLink href="/reforestation">Reforestation Project</FooterLink>
-                </ListItem>*/}
-              
+              <ListItem><FooterLink href="/">Home</FooterLink></ListItem>
+              <ListItem><FooterLink href="/about/">About</FooterLink></ListItem>
+              <ListItem><FooterLink href="/services/">Services</FooterLink></ListItem>
+              <ListItem><FooterLink href="/contact/">Contact</FooterLink></ListItem>
+              <ListItem><FooterLink href="/faq/">FAQ</FooterLink></ListItem>
             </LinkList>
           </LinkColumn>
 
           <LinkColumn>
-            <SectionTitle>Contacts</SectionTitle>
+            <SectionTitle>Contact</SectionTitle>
             <LinkList>
               <ListItem>
                 <ContactLink href="mailto:info@hyacinthindustriesllc.com">
-                  <EnvelopeSimple size={22} weight="regular"/>
+                  <EnvelopeSimple size={20} weight="regular" />
                   info@hyacinthindustriesllc.com
                 </ContactLink>
               </ListItem>
 
               <ListItem>
                 <ContactLink href="tel:+18132133276">
-                  <Phone size={22} weight="regular"/>
+                  <Phone size={20} weight="regular" />
                   +1 (813) 213-3276
                 </ContactLink>
               </ListItem>
@@ -81,50 +72,44 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                title="Facebook"
               >
-                <FacebookLogo size={22} weight="regular"/>
+                <FacebookLogo size={20} weight="regular" />
               </SocialIconLink>
+
               <SocialIconLink
                 href="https://www.instagram.com/hyacinthindustriesllc/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                title="Instagram"
               >
-                <InstagramLogo size={22} weight="regular"/>
+                <InstagramLogo size={20} weight="regular" />
               </SocialIconLink>
+
               <SocialIconLink
                 href="https://www.linkedin.com/company/hyacinth-industries-llc/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                title="LinkedIn"
               >
-                <LinkedinLogo size={22} weight="regular"/>
+                <LinkedinLogo size={20} weight="regular" />
               </SocialIconLink>
+
               <SocialIconLink
                 href="https://x.com/HyacinthILLC"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
-                title="Twitter"
+                aria-label="X"
               >
-                <FaXTwitter size={22} />
+                <FaXTwitter size={18} />
               </SocialIconLink>
             </SocialIconRow>
-
           </LinkColumn>
 
           <LinkColumn>
             <SectionTitle>Support</SectionTitle>
             <LinkList>
-              <ListItem>
-                <FooterLink href="/#home-faq-heading">Common Questions</FooterLink>
-              </ListItem>
-              <ListItem>
-                <FooterLink href="/contact">Get Support</FooterLink>
-              </ListItem>
+              <ListItem><FooterLink href="/#home-faq-heading">Common Questions</FooterLink></ListItem>
+              <ListItem><FooterLink href="/contact/">Get Support</FooterLink></ListItem>
             </LinkList>
           </LinkColumn>
         </TopRow>
@@ -135,9 +120,7 @@ const Footer = () => {
           </Copyright>
 
           <LegalLinks>
-            <LegalLink
-              href="/privacy-policy">Privacy Policy
-            </LegalLink>
+            <LegalLink href="/privacy-policy/">Privacy Policy</LegalLink>
           </LegalLinks>
         </BottomBar>
       </Container>
@@ -148,43 +131,78 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-  background: #111111;
-  color: rgba(255, 255, 255, 0.88);
-  padding: 4.75rem 0 1.5rem;
+  position: relative;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.9);
+  background:
+    radial-gradient(1000px 520px at 92% 0%, rgba(225, 29, 72, 0.18), transparent 55%),
+    radial-gradient(700px 380px at 0% 100%, rgba(148, 163, 184, 0.08), transparent 60%),
+    linear-gradient(180deg, #0b1018 0%, #090d14 100%);
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(120deg, rgba(255,255,255,0.03) 0%, transparent 30%, rgba(255,255,255,0.02) 100%);
+  }
 `;
 
 const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(1rem, 2vw, 1.5rem);
   position: relative;
   z-index: 1;
 
-  @media (max-width: 640px) {
-    padding: 0 18px;
+  @media (min-width: 1440px) {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 0.75rem;
   }
 `;
 
 const TopRow = styled.div`
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(170px, 0.8fr) minmax(260px, 1fr) minmax(150px, 0.8fr);
-  gap: 2.5rem 3rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr) minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-  @media (max-width: 980px) {
+  @media (min-width: 1440px) {
+    gap: 4rem;
+  }
+
+  @media (max-width: 1100px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  @media (max-width: 320px) {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 `;
 
 const BrandColumn = styled.div`
-  max-width: 370px;
+  max-width: 420px;
 
   @media (max-width: 680px) {
     max-width: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -194,68 +212,106 @@ const BrandLockup = styled.a`
   gap: 1rem;
   text-decoration: none;
   color: inherit;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  } 
 `;
 
 const BrandMark = styled.img`
-  width: 84px;
-  height: 84px;
+  width: clamp(92px, 8vw, 128px);
+  height: clamp(92px, 8vw, 128px);
   object-fit: contain;
   flex-shrink: 0;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35));
+
+  @media (min-width: 1440px) {
+    width: 140px;
+    height: 140px;
+  }
+
+  @media (max-width: 680px) {
+    width: clamp(104px, 28vw, 140px);
+    height: clamp(104px, 28vw, 140px);
+  }
+
+  @media (max-width: 320px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 const BrandText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+
+  @media (max-width: 680px) {
+    align-items: center;
+  }
 `;
 
 const BrandName = styled.span`
   font-family: var(--font-heading);
-  font-size: 1.55rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.7rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ffffff;
   line-height: 1;
+  color: #ffffff;
+
+  @media (min-width: 1440px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1rem;
+  }
 `;
 
 const BrandSubhead = styled.span`
   font-family: var(--font-body);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.66);
+  color: rgba(255, 255, 255, 0.62);
 `;
 
 const Description = styled.p`
-  margin: 1.75rem 0 0;
+  margin: 1.35rem 0 0;
+  max-width: 420px;
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: clamp(0.875rem, 1vw, 0.98rem);
+  line-height: 1.72;
   color: rgba(255, 255, 255, 0.82);
+
+  @media (max-width: 680px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
 `;
 
 const LinkColumn = styled.div`
   min-width: 0;
-
-  @media (max-width: 680px) {
-    width: 100%;
-  }
+  overflow: hidden;
 `;
 
 const SectionTitle = styled.h3`
-  margin: 0 0 1.1rem;
+  margin: 0 0 1rem;
   font-family: var(--font-heading);
-  font-size: 0.96rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #ffffff;
-
-  @media (max-width: 680px) {
-    margin-bottom: 0.9rem;
-  }
+  color: #fff;
 `;
 
 const LinkList = styled.ul`
@@ -264,7 +320,7 @@ const LinkList = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.95rem;
+  gap: 0.75rem;
 `;
 
 const ListItem = styled.li`
@@ -272,30 +328,61 @@ const ListItem = styled.li`
 `;
 
 const FooterLink = styled.a`
-  color: rgba(255, 255, 255, 0.86);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 600;
+  line-height: 1.4;
   transition: color 0.2s ease, transform 0.2s ease;
 
-  &:hover {
-    color: #ffffff;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+    opacity: 0.75;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
     transform: translateX(2px);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(225, 29, 72, 0.8);
+    outline-offset: 4px;
+    border-radius: 6px;
   }
 `;
 
 const ContactLink = styled(FooterLink)`
-  display: inline-flex;
+  white-space: normal;
   align-items: flex-start;
-  gap: 0.65rem;
-  white-space: nowrap;
-  overflow-wrap: normal;
-  line-height: 1.5;
+  gap: 0.6rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 
   svg {
     flex-shrink: 0;
-    margin-top: 0.1rem;
+    margin-top: 0.12rem;
   }
 `;
 
@@ -303,66 +390,90 @@ const SocialIconRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.72rem;
   margin-top: 1rem;
 
   @media (max-width: 680px) {
-    margin-top: 0.85rem;
-    justify-content: flex-start;
+    justify-content: center;
   }
 `;
 
 const SocialIconLink = styled.a`
-  color: rgba(255, 255, 255, 0.82);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.84);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    color: #ffffff;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    border-color: rgba(225, 29, 72, 0.5);
+    background: rgba(225, 29, 72, 0.16);
+    color: #fff;
   }
-`;
 
-const LegalLinks = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-`;
-
-const LegalLink = styled.a`
-  font-family: var(--font-body);
-  font-size: 0.94rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.82);
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #ffffff;
+  &:focus-visible {
+    outline: 2px solid rgba(225, 29, 72, 0.85);
+    outline-offset: 3px;
   }
 `;
 
 const BottomBar = styled.div`
-  margin-top: 3rem;
-  padding-top: 1.35rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
 
   @media (max-width: 680px) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 320px) {
+    padding-top: 1rem;
+    gap: 0.75rem;
   }
 `;
 
 const Copyright = styled.p`
   margin: 0;
   font-family: var(--font-body);
-  font-size: 0.94rem;
-  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.72);
+
+  @media (max-width: 320px) {
+    font-size: 0.75rem;
+  }
+`;
+
+const LegalLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const LegalLink = styled.a`
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  font-weight: 600;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.75rem;
+  }
 `;

@@ -99,7 +99,7 @@ const MedicalOutsourcing = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <img src={Stock1} alt="Healthcare Services" />
+            <img src={Stock1} alt="Healthcare Services" loading="lazy" />
           </ServiceImage>
           
           <ServiceAccordions>

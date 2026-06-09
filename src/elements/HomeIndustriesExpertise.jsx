@@ -1,563 +1,981 @@
-import { useState, useEffect, useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
-import Card4 from '../components/basic/Card4';
-import BackgroundImg from '../assets/img/backgrounds/bg1.webp';
-import { industriesData } from '../data/industriesData';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-// Animation variants
+import { useState, useEffect, useRef, useCallback, memo } from "react";
+import styled, { keyframes, css } from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
+import Card4 from "../components/basic/Card4";
+import BackgroundImg from "../assets/img/backgrounds/bg1.webp";
+import { industriesData } from "../data/industriesData";
+import { ChevronDown, Check } from "lucide-react";
+
+// ============================================
+// PREMIUM ANIMATION VARIANTS (Apple/Linear Inspired)
+// ============================================
+
+const EASING = {
+  smooth: [0.23, 1, 0.32, 1],      // Primary entrance
+  snappy: [0.16, 1, 0.3, 1],       // Exits and quick actions
+  bounce: [0.34, 1.56, 0.64, 1],    // Playful interactions
+};
+
 const dropdownVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.2,
-      staggerChildren: 0.05
+  hidden: { 
+    opacity: 0, 
+    y: 8, 
+    scale: 0.98,
+    transition: { duration: 0.15, ease: EASING.snappy }
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: { 
+      duration: 0.25, 
+      ease: EASING.smooth,
+      staggerChildren: 0.04,
+      delayChildren: 0.03,
     }
   },
-  closed: {
+  exit: {
     opacity: 0,
-    y: -20,
-    transition: {
-      duration: 0.2
-    }
+    y: 4,
+    scale: 0.98,
+    transition: { duration: 0.15, ease: EASING.snappy }
   }
 };
 
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0
+const dropdownItemVariants = {
+  hidden: { opacity: 0, x: -8 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: { duration: 0.2, ease: EASING.smooth }
   },
-  closed: {
-    opacity: 0,
-    y: -10
+  exit: { 
+    opacity: 0, 
+    x: 4,
+    transition: { duration: 0.1 }
   }
 };
 
-const sliderVariants = {
+const cardContainerVariants = {
+  hidden: { opacity: 0 },
   visible: {
+    opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.2 }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24, scale: 0.96 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: { 
+      duration: 0.4, 
+      ease: EASING.smooth 
     }
+  },
+  exit: { 
+    opacity: 0, 
+    y: -12, 
+    scale: 0.98,
+    transition: { duration: 0.2, ease: EASING.snappy }
+  }
+};
+
+const sectionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    }
+  }
+};
+
+const headerItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.5, ease: EASING.smooth }
   }
 };
 
 const industries = Object.keys(industriesData);
 
-const softPulse = keyframes`
-  0% {
-    box-shadow:
-      0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent),
-      0 0 10px color-mix(in srgb, var(--accentSoft) 70%, transparent);
-  }
-  70% {
-    box-shadow:
-      0 0 0 16px color-mix(in srgb, var(--accent) 0%, transparent),
-      0 0 14px color-mix(in srgb, var(--accentSoft) 45%, transparent);
-  }
-  100% {
-    box-shadow:
-      0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent),
-      0 0 0 color-mix(in srgb, var(--accentSoft) 0%, transparent);
-  }
-`;
-
-const idleBob = keyframes`
-  0% { transform: translateY(-50%) translateY(0); }
-  50% { transform: translateY(-50%) translateY(-4px); }
-  100% { transform: translateY(-50%) translateY(0); }
-`;
-
-const IndustriesExpertise = () => {
+const IndustriesExpertise = memo(() => {
   const [selectedIndustry, setSelectedIndustry] = useState(industries[0]);
   const [isOpen, setIsOpen] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
-  const sliderRef = useRef(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(() => window.innerWidth <= 768);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
+  const [isHovering, setIsHovering] = useState(false);
 
+  const sliderRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const listRef = useRef(null);
+
+  // Memoized derived values
+  const currentIndustryData = industriesData[selectedIndustry];
+  const shouldShowScroll = isSmallScreen;
+
+  // Check scroll position for indicators
+  const checkScrollPosition = useCallback(() => {
+    if (!sliderRef.current || !isSmallScreen) return;
+    const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+    // Could use this for scroll indicators if needed
+  }, [isSmallScreen]);
+
+  // Handle resize
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 800);
-      checkArrowVisibility();
+      setIsSmallScreen(window.innerWidth <= 768);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
+
+  // Click outside to close dropdown
   useEffect(() => {
-    // Check arrow visibility when industry changes
-    checkArrowVisibility();
-    // Reset scroll position when industry changes
+    if (!isOpen) return;
+    
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e) => {
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          setFocusedIndex(prev => Math.min(prev + 1, industries.length - 1));
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setFocusedIndex(prev => Math.max(prev - 1, 0));
+          break;
+        case 'Enter':
+          if (focusedIndex >= 0) {
+            setSelectedIndustry(industries[focusedIndex]);
+            setIsOpen(false);
+          }
+          break;
+        case 'Escape':
+          setIsOpen(false);
+          break;
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, focusedIndex]);
+
+  // Reset scroll on industry change
+  useEffect(() => {
     if (sliderRef.current) {
-      sliderRef.current.scrollLeft = 0;
-      setShowLeftArrow(false);
-      setShowRightArrow(true);
+      sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
     }
   }, [selectedIndustry]);
-  
-  const checkArrowVisibility = () => {
-    if (!sliderRef.current) return;
-    
-    const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
-    setShowLeftArrow(scrollLeft > 0);
-    setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
-  };
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
-  
-  const handleScroll = () => {
-    checkArrowVisibility();
-  };
-  
-  const scrollLeft = () => {
-    if (!sliderRef.current) return;
-    const sliderStyles = window.getComputedStyle(sliderRef.current);
-    const gap = parseFloat(sliderStyles.gap || '0');
-    const firstCard = sliderRef.current.querySelector('[data-card="true"]');
-    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 280;
-    const step = isSmallScreen ? 1 : 2;
-    const scrollAmount = (cardWidth + gap) * step;
-    const currentScroll = sliderRef.current.scrollLeft;
-    const targetScroll = Math.max(0, currentScroll - scrollAmount);
-    
-    sliderRef.current.scrollTo({
-      left: targetScroll,
-      behavior: 'smooth'
-    });
-  };
-  
-  const scrollRight = () => {
-    if (!sliderRef.current) return;
-    const sliderStyles = window.getComputedStyle(sliderRef.current);
-    const gap = parseFloat(sliderStyles.gap || '0');
-    const firstCard = sliderRef.current.querySelector('[data-card="true"]');
-    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 280;
-    const step = isSmallScreen ? 1 : 2;
-    const scrollAmount = (cardWidth + gap) * step;
-    const currentScroll = sliderRef.current.scrollLeft;
-    const maxScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
-    const targetScroll = Math.min(maxScroll, currentScroll + scrollAmount);
-    
-    sliderRef.current.scrollTo({
-      left: targetScroll,
-      behavior: 'smooth'
-    });
-  };
+  // Toggle dropdown
+  const toggleDropdown = useCallback(() => {
+    setIsOpen(prev => !prev);
+    if (!isOpen) {
+      setFocusedIndex(industries.indexOf(selectedIndustry));
+    }
+  }, [isOpen, selectedIndustry]);
 
-const cardCount = industriesData[selectedIndustry]?.length ?? 0;
-const shouldShowScroll = isSmallScreen;
-const shouldCenterCards = !isSmallScreen;
-const shouldShowArrows = false;
+  // Select industry
+  const selectIndustry = useCallback((industry) => {
+    setSelectedIndustry(industry);
+    setIsOpen(false);
+  }, []);
 
   return (
-    <Container>
-      <Header>
-        <Title
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+    <Section>
+      <BackgroundLayer />
+      <AmbientGlow />
+      
+      <Inner>
+        <HeaderBlock
+          as={motion.div}
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
-          Industries & Expertise
-        </Title>
-        <TitleUnderline />
-        <Subtitle
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0}}
-        >
-          Discover our comprehensive range of services across various industries
-        </Subtitle>
-        
-        <DropdownContainer>
-          <DropdownButton onClick={toggleDropdown} isOpen={isOpen}>
-            {selectedIndustry}
-          </DropdownButton>
-          <AnimatePresence>
-            {isOpen && (
-              <DropdownList
-                variants={dropdownVariants}
-                initial="closed"
-                animate="open"
-                exit="closed"
-              >
-                {industries.map((industry) => (
-                  <DropdownItem
-                    key={industry}
-                    variants={itemVariants}
-                    selected={selectedIndustry === industry}
-                    onClick={() => {
-                      setSelectedIndustry(industry);
-                      setIsOpen(false);
-                    }}
-                  >
-                    {industry}
-                  </DropdownItem>
-                ))}
-              </DropdownList>
-            )}
-          </AnimatePresence>
-        </DropdownContainer>
+          <Eyebrow variants={headerItemVariants}>
+            <EyebrowDot />
+            <span>What We Do</span>
+          </Eyebrow>
 
-        <SliderContainer>
-          {shouldShowArrows && (
-            <ArrowButton
-              left
-              type="button"
-              onClick={scrollLeft}
-              disabled={!showLeftArrow}
-              aria-label="Scroll cards left"
-            >
-              <ChevronLeft size={24} />
-            </ArrowButton>
-          )}
-          <CardSlider
-            showScroll={shouldShowScroll}
-            shouldCenter={shouldCenterCards}
-            as={motion.div}
-            variants={sliderVariants}
-            key={selectedIndustry}
-            initial="visible"
-            animate="visible"
-            ref={sliderRef}
-            onScroll={handleScroll}
+          <SectionTitle variants={headerItemVariants}>
+            Industries & Expertise
+          </SectionTitle>
+
+          <SectionSubtitle variants={headerItemVariants}>
+            Discover our comprehensive range of services across various industries
+          </SectionSubtitle>
+
+          <DropdownContainer
+            ref={dropdownRef}
+            variants={headerItemVariants}
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
           >
-            {industriesData[selectedIndustry].map((card, index) => (
-              <CardWrapper
-                as={motion.div}
-                key={index}
-                data-card="true"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ 
-                  opacity: 1, 
-                  y: 0,
-                  transition: {
-                    duration: 0.5,
-                    delay: index * 0.1
-                  }
-                }}
-              >
-                <Card4 {...card} />
-              </CardWrapper>
-            ))}
-          </CardSlider>
-          {shouldShowArrows && (
-            <ArrowButton
-              right
+            <DropdownTrigger
+              onClick={toggleDropdown}
+              $isOpen={isOpen}
+              $isHovering={isHovering}
               type="button"
-              onClick={scrollRight}
-              disabled={!showRightArrow}
-              aria-label="Scroll cards right"
+              aria-expanded={isOpen}
+              aria-haspopup="listbox"
             >
-              <ChevronRight size={24} />
-            </ArrowButton>
-          )}
-        </SliderContainer>
-      </Header>
-    </Container>
-  );
-};
+              <SelectedLabel>{selectedIndustry}</SelectedLabel>
+              <ChevronWrapper $isOpen={isOpen}>
+                <ChevronDown size={16} strokeWidth={2} />
+              </ChevronWrapper>
+            </DropdownTrigger>
 
-// Styled Components
-const Container = styled.div`
+            <AnimatePresence>
+              {isOpen && (
+                <DropdownMenu
+                  ref={listRef}
+                  role="listbox"
+                  aria-label="Select an industry"
+                  variants={dropdownVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  {industries.map((industry, index) => (
+                    <DropdownOption
+                      key={industry}
+                      role="option"
+                      aria-selected={selectedIndustry === industry}
+                      $selected={selectedIndustry === industry}
+                      $focused={focusedIndex === index}
+                      variants={dropdownItemVariants}
+                      onClick={() => selectIndustry(industry)}
+                      onMouseEnter={() => setFocusedIndex(index)}
+                    >
+                      <OptionContent>
+                        <OptionText $selected={selectedIndustry === industry}>
+                          {industry}
+                        </OptionText>
+                        {selectedIndustry === industry && (
+                          <CheckIconWrapper
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.2, ease: EASING.smooth }}
+                          >
+                            <Check size={14} strokeWidth={2.5} />
+                          </CheckIconWrapper>
+                        )}
+                      </OptionContent>
+                      {focusedIndex === index && selectedIndustry !== industry && (
+                        <FocusRing layoutId="focusRing" />
+                      )}
+                    </DropdownOption>
+                  ))}
+                </DropdownMenu>
+              )}
+            </AnimatePresence>
+          </DropdownContainer>
+        </HeaderBlock>
+
+        <CardsSection>
+          <AnimatePresence mode="wait">
+            <CardsGrid
+              key={selectedIndustry}
+              ref={sliderRef}
+              $isMobile={shouldShowScroll}
+              variants={cardContainerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              onScroll={checkScrollPosition}
+            >
+              {currentIndustryData.map((card, index) => (
+                <CardContainer
+                  key={`${selectedIndustry}-${index}`}
+                  data-card="true"
+                  variants={cardVariants}
+                  custom={index}
+                >
+                  <Card4 {...card} />
+                </CardContainer>
+              ))}
+            </CardsGrid>
+          </AnimatePresence>
+
+          {shouldShowScroll && (
+            <MobileScrollIndicator
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.4 }}
+            >
+              <SwipeIndicator>
+                <SwipeDot />
+                <SwipeText>Swipe to explore</SwipeText>
+              </SwipeIndicator>
+            </MobileScrollIndicator>
+          )}
+        </CardsSection>
+      </Inner>
+    </Section>
+  );
+});
+
+// ============================================
+// PREMIUM STYLED COMPONENTS
+// ============================================
+
+// Performance: Noise texture removed - too expensive
+
+const ambientPulse = keyframes`
+  0%, 100% { opacity: 0.35; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.5; transform: translateX(-50%) scale(1.05); }
+`;
+
+const swipePulse = keyframes`
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(20px); opacity: 1; }
+`;
+
+// Section with premium layered background
+const Section = styled.section`
   width: 100%;
-  min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 4rem 0;
-  overflow-x: hidden;
+  padding: 8rem 0 9rem;
+  overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+  background: #fafaf9;
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    padding: 4rem 0 5rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    padding: 10rem 0 11rem;
+  }
+`;
+
+const BackgroundLayer = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  
+  /* Base background - REMOVED fixed attachment for performance */
   background-image: url(${BackgroundImg});
   background-size: cover;
   background-position: center;
-
+  
+  /* Simplified gradient overlay - fewer layers */
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.85);
-    z-index: 1;
+    background: 
+      radial-gradient(ellipse 120% 60% at 50% 0%, rgba(166, 29, 74, 0.04) 0%, transparent 60%),
+      linear-gradient(
+        180deg,
+        rgba(250, 250, 249, 0.97) 0%,
+        rgba(250, 249, 247, 0.97) 100%
+      );
   }
-
-  & > * {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  @media (max-width: 640px) {
-    & > * {
-      padding: 0 1rem;
-    }
-  }
-`;
-
-const Header = styled.div`
-  text-align: center;
-  margin-bottom: 3rem;
-`;
-
-const Title = styled(motion.h2)`
-  font-family: "Oswald", sans-serif;
-  font-weight: 600;
-  color: #1e1f24;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 5vw, 4rem);
   
-  @media (max-width: 560px) {
-    font-size: 3rem;
+  /* Performance: Removed noise texture */
+`;
+
+const AmbientGlow = styled.div`
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center, 
+    rgba(166, 29, 74, 0.04) 0%, 
+    rgba(166, 29, 74, 0.02) 40%,
+    transparent 70%
+  );
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: ${ambientPulse} 12s ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(40px);
+`;
+
+const Inner = styled.div`
+  position: relative;
+  z-index: 2;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  /* Small desktop/Tablet landscape - 960px-1024px */
+  @media (max-width: 1024px) {
+    padding: 0 1.5rem;
+  }
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    padding: 0 1.25rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    padding: 0 1rem;
+  }
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    width: min(1400px, 95%);
+    padding: 0 2.5rem;
   }
 `;
 
-const TitleUnderline = styled.div`
-  width: 200px;
-  height: 4px;
-  margin: 0.75rem auto 2rem;
-  border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    ${({ theme }) => theme.colors.primary},
-    #c89b2c
-  );
-  opacity: 0.95;
-  box-shadow: 0 8px 18px rgba(139, 13, 42, 0.12);
+// Header with refined vertical rhythm
+const HeaderBlock = styled(motion.div)`
+  text-align: center;
+  margin-bottom: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    margin-bottom: 2rem;
+  }
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    margin-bottom: 5rem;
+  }
 `;
 
-const Subtitle = styled(motion.p)`
-  font-size: 1.4rem;
-  color: #5a6572;
-  margin-bottom: 2rem;
-  font-family: ${ props => props.theme.typography.learnfont};
+// Minimal eyebrow with brand dot
+const Eyebrow = styled(motion.div)`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.5rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #52525b;
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    font-size: 0.6875rem;
+    margin-bottom: 0.875rem;
+  }
 `;
 
-const DropdownContainer = styled.div`
+const EyebrowDot = styled.span`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a61d4a 0%, #7c1232 100%);
+  box-shadow: 0 0 8px rgba(166, 29, 74, 0.3);
+`;
+
+// Display typography with refined hierarchy
+const SectionTitle = styled(motion.h2)`
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #18181b;
+  max-width: 600px;
+
+  /* Small desktop/Tablet landscape - 960px-1024px */
+  @media (max-width: 1024px) {
+    font-size: clamp(1.875rem, 4.5vw, 2.75rem);
+  }
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    font-size: clamp(1.625rem, 5vw, 2.25rem);
+    line-height: 1.15;
+    max-width: 100%;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    font-size: 3.75rem;
+    max-width: 700px;
+  }
+`;
+
+// Body text with improved readability
+const SectionSubtitle = styled(motion.p)`
+  margin: 1rem 0 0;
+  max-width: 480px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #71717a;
+  font-weight: 400;
+
+  /* Small desktop/Tablet landscape - 960px-1024px */
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+    max-width: 450px;
+  }
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    font-size: 1.125rem;
+    max-width: 520px;
+  }
+`;
+
+// Premium floating dropdown container
+const DropdownContainer = styled(motion.div)`
   position: relative;
-  width: min(300px, 100%);
-  margin: 0 auto 3rem;
+  width: min(320px, 90vw);
+  margin: 2rem auto 0;
+  z-index: 100;
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    margin: 1.5rem auto 0;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    width: min(280px, 85vw);
+    margin: 1.25rem auto 0;
+  }
 `;
 
-const DropdownButton = styled.button`
+// Floating pill trigger button - REMOVED backdrop-filter for performance
+const DropdownTrigger = styled.button`
   width: 100%;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1.5px solid rgba(139, 13, 42, 0.15);
-  border-radius: 14px;
-  color: #1f2430;
-  font-size: 1.05rem;
+  padding: 0.875rem 1.25rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 100px;
+  color: #18181b;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
-  justify-content: center;
-  text-align: center;
   align-items: center;
-  transition: all 0.25s ease;
-  position: relative;
-  box-shadow: 0 16px 28px rgba(17, 17, 17, 0.05);
+  justify-content: space-between;
+  gap: 0.75rem;
+  transition: all 0.2s ${EASING.smooth};
+  /* Performance: Removed backdrop-filter */
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.02),
+    0 4px 12px rgba(0, 0, 0, 0.03);
 
   &:hover {
     background: #ffffff;
-    border-color: rgba(139, 13, 42, 0.32);
-    box-shadow: 0 20px 34px rgba(17, 17, 17, 0.08);
+    border-color: rgba(166, 29, 74, 0.15);
+    box-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.02),
+      0 8px 24px rgba(0, 0, 0, 0.04);
+    transform: translateY(-1px);
   }
 
   &:focus-visible {
-    outline: 3px solid rgba(201, 162, 39, 0.35); 
+    outline: 2px solid rgba(166, 29, 74, 0.3);
     outline-offset: 2px;
   }
 
-  &::after {
-    content: '▼';
-    position: absolute;
-    right: 1rem;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-    transform: ${props => props.isOpen ? 'rotate(180deg)' : 'rotate(0)'};
-    color: #8b0d2a;
-  }
-`;
-
-const DropdownList = styled(motion.div)`
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  margin-top: 0.6rem;
-  overflow: hidden;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(139, 13, 42, 0.12);
-  border-radius: 14px;
-  box-shadow: 0 22px 44px rgba(17, 17, 17, 0.1);
-`;
-
-const DropdownItem = styled(motion.div)`
-  padding: 1rem 1.3rem;
-  color: #2b2f36;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background: transparent;
-
-  &:hover {
-    background: rgba(139, 13, 42, 0.05);
-    color: #8b0d2a;
-    padding-left: 1.6rem;
-  }
-
-  ${props => props.selected && `
-    background: rgba(139, 13, 42, 0.08);
-    color: #8b0d2a;
-    font-weight: 700;
+  ${({ $isOpen }) => $isOpen && css`
+    background: #ffffff;
+    border-color: rgba(166, 29, 74, 0.2);
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.04),
+      0 16px 48px rgba(0, 0, 0, 0.06);
   `}
 `;
 
-const SliderContainer = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  overflow: visible;
-  height: 100%;
+const SelectedLabel = styled.span`
+  flex: 1;
+  text-align: left;
+  letter-spacing: -0.01em;
+  color: #18181b;
+  font-weight: 500;
+`;
+
+const ChevronWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 0;
-  padding-top: 1rem;
-  position: relative;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: ${({ $isOpen }) => $isOpen 
+    ? 'linear-gradient(135deg, #a61d4a 0%, #7c1232 100%)' 
+    : 'rgba(0, 0, 0, 0.04)'};
+  color: ${({ $isOpen }) => $isOpen ? '#ffffff' : '#71717a'};
+  transition: all 0.25s ${EASING.smooth};
+  transform: ${({ $isOpen }) => $isOpen ? 'rotate(180deg)' : 'rotate(0)'};
   
-  @media (max-width: 768px) {
-    padding: 0 0.25rem;
-    padding-top: 1rem;
+  svg {
+    transition: transform 0.25s ease;
   }
 `;
 
-const ArrowButton = styled.button`
+// Dropdown menu - REMOVED glassmorphism/backdrop-filter for performance
+const DropdownMenu = styled(motion.div)`
   position: absolute;
-  top: 50%;
-  translate: translateY(-50%);
-  ${props => (props.left ? "left: -33px;" : "right: -18px;")}
-  z-index: 10;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border-radius: 999px;
-  border: 1px solid rgba(139, 13, 42, 0.14);
-  background: rgba(255, 255, 255, 0.96);
-  color: #8b0d2a;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 16px 28px rgba(17, 17, 17, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.02),
+    0 24px 48px rgba(0, 0, 0, 0.08);
+  padding: 6px;
+  /* Performance: Removed backdrop-filter */
+  transform-origin: top center;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
-  &:hover {
-    transform: translateY(-50%) scale(1.06);
-    background: #fffaf5;
-    box-shadow: 0 20px 32px rgba(17, 17, 17, 0.12);
-  }
-
-  &:focus-visible {
-    outline: 3px solid rgba(201, 162, 39, 0.28);
-    outline-offset: 4px;
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    pointer-events: none;
-    box-shadow: none;
-  }
-
-  @media (max-width: 768px) {
-    width: 36px;
-    height: 36px;
-    ${props => (props.left ? "left: 0;" : "right: 0;")}
-  }
-
-  @media (max-width: 640px) {
+  &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-const CardSlider = styled.div`
+// Dropdown option with focus ring animation
+const DropdownOption = styled(motion.div)`
+  position: relative;
+  padding: 0.75rem 1rem;
+  color: #52525b;
+  cursor: pointer;
+  border-radius: 14px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
   display: flex;
-  gap: 1.5rem;
-  padding: 2rem 0 1rem;
-  width: 100%;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
 
-  flex-wrap: ${({ showScroll }) => (showScroll ? "nowrap" : "wrap")};
-  justify-content: ${({ shouldCenter, showScroll }) => 
-    showScroll ? "flex-start" : shouldCenter ? "center" : "flex-start"};
-
-  overflow-x: ${({ showScroll }) => (showScroll ? "auto" : "visible")};
-  overflow-y: visible;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-
-  ${({ showScroll }) => 
-    showScroll
-    ? `
-      scroll-snap-type: x mandatory;
-      scroll-padding-inline: 0.25rem;
-      cursor: grab;
-    `
-      
-    : `
-      scroll-snap-type: none;
-      cursor: default;
-    `}
-
-  &:active {
-    cursor: ${({ showScroll }) => (showScroll ? "grabbing" : "default")};
+  &:hover {
+    background: rgba(166, 29, 74, 0.04);
+    color: #18181b;
   }
 
-  &::-webkit-scrollbar {
-    height: ${({ showScroll }) => (showScroll ? "8px" : "0")};
-    width: 0;
-  }
+  ${({ $selected }) => $selected && css`
+    background: rgba(166, 29, 74, 0.08);
+    color: #7c1232;
+    font-weight: 600;
+  `}
 
-  &::-webkit-scrollbar-track {
-    background: rgba(42, 42, 42, 0.6);
-    border-radius: 4px;
-  }
+  ${({ $focused }) => $focused && css`
+    outline: none;
+  `}
+`;
 
-  &::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.primarySoft};
-    border-radius: 4px;
+const OptionContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1;
+`;
 
-    &:hover {
-      background: ${({ theme }) => theme.colors.primaryHover};
-    }
-  }
+const OptionText = styled.span`
+  flex: 1;
+  letter-spacing: -0.01em;
+  ${({ $selected }) => $selected && 'font-weight: 600;'}
+`;
 
+const CheckIconWrapper = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #a61d4a;
+`;
+
+// Animated focus ring
+const FocusRing = styled(motion.div)`
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 2px solid rgba(166, 29, 74, 0.3);
+  pointer-events: none;
+`;
+
+// Cards section with improved spacing
+const CardsSection = styled.div`
+  position: relative;
+  margin-top: 3rem;
+
+  /* Tablet - 768px */
   @media (max-width: 768px) {
-    gap: 1rem;
-    padding: 1.5rem 0.5rem 1rem;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
+    margin-top: 1.5rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    margin-top: 1.25rem;
+  }
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    margin-top: 3.5rem;
   }
 `;
 
-const CardWrapper = styled(motion.div)`
-  flex: 0 0 auto;
-  width: 280px;
-  user-select: none;
+// Responsive cards grid
+const CardsGrid = styled(motion.div)`
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+
+  /* Desktop: 4-column grid */
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* Small desktop/Tablet landscape - 960px-1024px */
+  @media (max-width: 1024px) {
+    gap: 1.25rem;
+  }
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+    gap: 1rem;
+    padding: 0.5rem 1.25rem 1.5rem;
+    margin: 0 -1.25rem;
+    width: calc(100% + 2.5rem);
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  /* Mobile: Horizontal scroll */
+  ${({ $isMobile }) => $isMobile && css`
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+    gap: 1rem;
+    padding: 0.5rem 1.25rem 1.5rem;
+    margin: 0 -1.25rem;
+    width: calc(100% + 2.5rem);
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  `}
+
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    gap: 1.75rem;
+    padding: 0.75rem 0;
+  }
+`;
+
+// Card container with responsive sizing
+const CardContainer = styled(motion.div)`
   display: flex;
   align-items: stretch;
-  scroll-snap-align: start;
+  min-width: 0;
+  scroll-snap-align: center;
+  user-select: none;
+  will-change: transform;
 
-  @media (min-width: 769px) {
-    width: min(280px, calc(25% - 1.125rem));
+  /* Ultra-wide - 1440px+ */
+  @media (min-width: 1440px) {
+    flex: 0 0 calc((100% - 5.25rem) / 4);
+    width: calc((100% - 5.25rem) / 4);
   }
-  
-  &:last-child {
-    margin-right: 0;
+
+  /* Desktop - 1280px-1439px */
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    flex: 0 0 calc((100% - 4.5rem) / 4);
+    width: calc((100% - 4.5rem) / 4);
+  }
+
+  /* Small desktop - 1024px-1279px */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    flex: 0 0 calc((100% - 3rem) / 3);
+    width: calc((100% - 3rem) / 3);
+  }
+
+  /* Tablet landscape - 768px-1023px */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+    width: calc((100% - 1.5rem) / 2);
+  }
+
+  /* Mobile sizing with peek preview - 768px and below */
+  @media (max-width: 767px) {
+    flex: 0 0 clamp(280px, 85vw, 340px);
+    width: clamp(280px, 85vw, 340px);
+    scroll-snap-align: center;
+  }
+
+  /* Small mobile - 480px */
+  @media (max-width: 480px) {
+    flex: 0 0 clamp(260px, 82vw, 320px);
+    width: clamp(260px, 82vw, 320px);
+  }
+
+  & > * {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+// Mobile scroll indicator with refined animation
+const MobileScrollIndicator = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  /* Tablet - 768px */
+  @media (max-width: 768px) {
+    margin-top: 1.25rem;
+  }
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+  }
+`;
+
+const SwipeIndicator = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 100px;
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    padding: 0.375rem 0.875rem;
+    gap: 0.5rem;
+  }
+`;
+
+const SwipeDot = styled.div`
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a61d4a 0%, #7c1232 100%);
+  animation: ${swipePulse} 2s ease-in-out infinite;
+`;
+
+const SwipeText = styled.span`
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  color: #71717a;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  /* Mobile - 480px */
+  @media (max-width: 480px) {
+    font-size: 0.6875rem;
   }
 `;
 

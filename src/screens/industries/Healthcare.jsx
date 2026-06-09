@@ -18,7 +18,7 @@ export default function Healthcare() {
       <Seo
         title="Healthcare Support Services | Hyacinth Industries LLC"
         description="Healthcare support services from Hyacinth Industries LLC focused on reliable assistance, operational excellence, and improved patient-service workflows."
-        canonicalPath="/healthcare"
+        canonicalPath="/healthcare/"
       />
       <TopNavBar />
       <SideBar />
@@ -30,5 +30,5 @@ export default function Healthcare() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px; /* Account for fixed navbar height */
+  padding-top: 0;
 `;

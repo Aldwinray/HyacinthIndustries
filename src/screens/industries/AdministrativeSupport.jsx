@@ -18,7 +18,7 @@ export default function AdministrativeSupport() {
       <Seo
         title="Administrative Support Services | Hyacinth Industries LLC"
         description="Administrative support services from Hyacinth Industries LLC to streamline operations, improve productivity, and keep teams focused on growth."
-        canonicalPath="/administrative-support"
+        canonicalPath="/administrative-support/"
       />
       
       <TopNavBar />
@@ -31,5 +31,5 @@ export default function AdministrativeSupport() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px; /* Account for fixed navbar height */
+  padding-top: 0;
 `;

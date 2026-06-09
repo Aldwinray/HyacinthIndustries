@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { 
   Heart, Activity, Stethoscope,
   BriefcaseMedical, Ambulance, PhoneForwarded, HandCoins, 
   ClipboardPlus, SquareActivity, LayoutList, Headset,
-  Users, Clock, Shield, TrendingUp, CheckCircle2
+  Users, Clock, Shield, TrendingUp, CheckCircle2, ArrowRight
 } from "lucide-react";
 
 // Import components
@@ -20,15 +20,10 @@ import HealthcareImg3 from '../../../assets/img/Healthcare/stock3.webp';
 import HealthcareAbstract from '../../../assets/img/Healthcare/abstract.webp';
 import HealthcareSecurity from '../../../assets/img/Healthcare/security.webp';
 import ProcessImg from '../../../assets/img/HomeBusinessTransformationActions/process.webp';
-import {
-  heroContent,
-  heroEyebrow,
-  heroOverlay,
-  heroSubtitle,
-  heroTitle,
-  primaryButton,
-  sectionTitle
-} from '../../../styles/premiumPageStyles';
+import BGhealtcare from "../../../assets/img/bgservices/Healthcare.webp";
+
+const RPM = HealthcareAbstract;
+
 
 const HealthcareOverview = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(() => window.innerWidth < 800);
@@ -67,32 +62,44 @@ const HealthcareOverview = () => {
     <Wrapper>
       {/* Hero Section */}
       <HeroSection>
-        <HeroImage src={HealthcareHero} alt="Healthcare Services" />
-        <HeroOverlay>
+        <HeroBg src={HealthcareHero} aria-hidden />
+        <HeroOverlay />
+        <HeroVignette />
+        <HeroInner>
           <HeroContent>
-            <HeroEyebrow>Hyacinth Industries</HeroEyebrow>
-            <HeroTitle>Healthcare Solutions</HeroTitle>
+            <HeroEyebrow>
+              <EyebrowText>Hyacinth Industries</EyebrowText>
+              <EyebrowLine />
+            </HeroEyebrow>
+            <HeroTitle>Healthcare <span>Solutions</span></HeroTitle>
             <HeroSubtitle>
               Advanced medical support and technology services designed for reliable care delivery and stronger operations.
             </HeroSubtitle>
+            <HeroNote>
+              End-to-end support for virtual care, administration, billing, and compliance operations.
+            </HeroNote>
+            <HeroActions>
+              <HeroPrimaryButton
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById("healthcare-overview");
+                  const offset = 115;
+                  if (el) {
+                    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+              >
+                Explore Our Solutions
+                <ArrowRight size={18} />
+              </HeroPrimaryButton>
+              <HeroMeta>
+                <MetaTop>3 Core Services</MetaTop>
+                <MetaBottom>Enterprise-grade support</MetaBottom>
+              </HeroMeta>
+            </HeroActions>
           </HeroContent>
-          <HeroButton
-            onClick={(e) => {
-              e.preventDefault();
-              const el = document.getElementById("healthcare-overview");
-              const offset = 115; // navbar height
-
-              if (el) {
-                const y =
-                  el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-                window.scrollTo({ top: y, behavior: "smooth" });
-              }
-            }}
-          >
-            Explore Our Solutions
-          </HeroButton>
-        </HeroOverlay>
+        </HeroInner>
       </HeroSection>
       
       {/* Overview Section */}
@@ -120,44 +127,48 @@ const HealthcareOverview = () => {
 
       {/* Services Section */}
       <ServicesSection>
+        <SectionDivider />
         <SectionTitle>Our Healthcare Services</SectionTitle>
         <ServicesGrid>
           <ServiceCard>
-            <ServiceIcon><BriefcaseMedical size={40} /></ServiceIcon>
+            <ServiceNumber>01</ServiceNumber>
+            <ServiceIcon><BriefcaseMedical size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Virtual Healthcare</ServiceTitle>
             <ServiceCardDescription>
               Comprehensive telehealth solutions including remote consultations, monitoring, and digital health platforms.
             </ServiceCardDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Remote Consultations</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Patient Monitoring</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Digital Health Platforms</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Remote Consultations</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Patient Monitoring</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Digital Health Platforms</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
           
           <ServiceCard>
-            <ServiceIcon><PhoneForwarded size={40} /></ServiceIcon>
+            <ServiceNumber>02</ServiceNumber>
+            <ServiceIcon><PhoneForwarded size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Administrative Support</ServiceTitle>
             <ServiceCardDescription>
               Streamlined administrative support for healthcare organizations, including billing, documentation, and compliance.
             </ServiceCardDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Billing Management</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Documentation Support</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Compliance Management</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Billing Management</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Documentation Support</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Compliance Management</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
           
           <ServiceCard>
-            <ServiceIcon><HandCoins size={40} /></ServiceIcon>
+            <ServiceNumber>03</ServiceNumber>
+            <ServiceIcon><HandCoins size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Medical Billing</ServiceTitle>
             <ServiceCardDescription>
               Streamlined medical billing and revenue cycle management to optimize healthcare finances.
             </ServiceCardDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Claims Processing</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Revenue Optimization</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Compliance Management</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Claims Processing</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Revenue Optimization</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Compliance Management</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
         </ServicesGrid>
@@ -168,7 +179,7 @@ const HealthcareOverview = () => {
         <SectionTitle>Why Choose Our Healthcare Services</SectionTitle>
         <BenefitsGrid>
           <BenefitCard>
-            <BenefitIcon><Clock size={32} /></BenefitIcon>
+            <BenefitIcon><Clock size={24} strokeWidth={1.5} /></BenefitIcon>
             <BenefitTitle>Time Efficiency</BenefitTitle>
             <BenefitDescription>
               Optimize patient care time and reduce administrative burden with our streamlined healthcare solutions.
@@ -176,7 +187,7 @@ const HealthcareOverview = () => {
           </BenefitCard>
           
           <BenefitCard>
-            <BenefitIcon><TrendingUp size={32} /></BenefitIcon>
+            <BenefitIcon><TrendingUp size={24} strokeWidth={1.5} /></BenefitIcon>
             <BenefitTitle>Cost Reduction</BenefitTitle>
             <BenefitDescription>
               Lower operational costs through efficient resource allocation and optimized healthcare processes.
@@ -184,7 +195,7 @@ const HealthcareOverview = () => {
           </BenefitCard>
           
           <BenefitCard>
-            <BenefitIcon><Shield size={32} /></BenefitIcon>
+            <BenefitIcon><Shield size={24} strokeWidth={1.5} /></BenefitIcon>
             <BenefitTitle>Quality Assurance</BenefitTitle>
             <BenefitDescription>
               Maintain the highest standards of patient care with our quality-focused healthcare solutions.
@@ -223,6 +234,7 @@ const HealthcareOverview = () => {
 
       {/* Process Section */}
       <ProcessSection>
+        <SectionDivider />
         <SectionTitle>Our Healthcare Process</SectionTitle>
         <ProcessDescription>
           We follow a systematic approach to deliver exceptional healthcare services that meet the highest standards of quality and patient care.
@@ -230,12 +242,12 @@ const HealthcareOverview = () => {
         
         <ProcessStepsContainer>
           <ProcessImage>
-            <img src={ProcessImg} alt="Healthcare Process" />
+            <img src={ProcessImg} alt="Healthcare Process" loading="lazy" />
           </ProcessImage>
           
           <ProcessSteps>
             <ProcessStep>
-              <ProcessStepNumber>1</ProcessStepNumber>
+              <ProcessStepNumber>01</ProcessStepNumber>
               <ProcessStepContent>
                 <ProcessStepTitle>Assessment</ProcessStepTitle>
                 <ProcessStepDescription>
@@ -245,7 +257,7 @@ const HealthcareOverview = () => {
             </ProcessStep>
             
             <ProcessStep>
-              <ProcessStepNumber>2</ProcessStepNumber>
+              <ProcessStepNumber>02</ProcessStepNumber>
               <ProcessStepContent>
                 <ProcessStepTitle>Planning</ProcessStepTitle>
                 <ProcessStepDescription>
@@ -255,7 +267,7 @@ const HealthcareOverview = () => {
             </ProcessStep>
             
             <ProcessStep>
-              <ProcessStepNumber>3</ProcessStepNumber>
+              <ProcessStepNumber>03</ProcessStepNumber>
               <ProcessStepContent>
                 <ProcessStepTitle>Implementation</ProcessStepTitle>
                 <ProcessStepDescription>
@@ -265,7 +277,7 @@ const HealthcareOverview = () => {
             </ProcessStep>
             
             <ProcessStep>
-              <ProcessStepNumber>4</ProcessStepNumber>
+              <ProcessStepNumber>04</ProcessStepNumber>
               <ProcessStepContent>
                 <ProcessStepTitle>Monitoring</ProcessStepTitle>
                 <ProcessStepDescription>
@@ -282,15 +294,17 @@ const HealthcareOverview = () => {
 
       {/* Call to Action Section */}
       <CtaSection>
-        <CtaOverlay>
-          <CtaContent>
-            <CtaTitle>Ready to Transform Your Healthcare Operations?</CtaTitle>
-            <CtaDescription>
-              Partner with us to optimize your healthcare processes, reduce costs, and improve patient care quality.
-            </CtaDescription>
-            <CtaButton href="/contact">Contact Us Today</CtaButton>
-          </CtaContent>
-        </CtaOverlay>
+        <CtaOverlay />
+        <CtaContent>
+          <CtaTitle>Ready to Transform Your Healthcare Operations?</CtaTitle>
+          <CtaDescription>
+            Partner with us to optimize your healthcare processes, reduce costs, and improve patient care quality.
+          </CtaDescription>
+          <CtaButton href="/contact/">
+            Contact Us Today
+            <ArrowRight size={18} />
+          </CtaButton>
+        </CtaContent>
       </CtaSection>
     </Wrapper>
   );
@@ -364,126 +378,322 @@ const benefits = [
   }
 ];
 
-// Styled Components
+// Styled Components - World-Class Enterprise Design System
 const Wrapper = styled.div`
   width: 100%;
+  background: #ffffff;
   overflow-x: hidden;
 `;
 
 const Section = styled.section`
-  padding: 3.5rem 2rem;
-  background-color: ${props => props.background || '#ffffff'};
-  scroll-margin-top: 140px;
-  
+  padding: 7rem 2rem;
+  background-color: ${props => props.background || '#fafbfc'};
+  scroll-margin-top: 100px;
+
   @media (max-width: 768px) {
-    padding: 2.5rem 1.5rem;
-    scroll-margin-top: 110px;
+    padding: 5rem 1.25rem;
+    scroll-margin-top: 80px;
   }
 `;
 
+// Hero Section - World-Class Enterprise
 const HeroSection = styled.section`
   position: relative;
-  height: 655px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  
+  background: #020617;
+
   @media (max-width: 768px) {
-    height: 400px;
+    min-height: auto;
+    padding: 8rem 0 5rem;
   }
 `;
 
-const HeroImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+const HeroBg = styled.div`
+  position: absolute;
+  inset: 0;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  opacity: 0.5;
+
+  @media (max-width: 768px) {
+    background-position: 65% center;
+    opacity: 0.45;
+  }
 `;
 
 const HeroOverlay = styled.div`
-  ${heroOverlay};
-  flex-direction: column;
-  gap: 2rem;
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(2, 6, 23, 0.98) 0%, transparent 60%),
+    linear-gradient(
+      115deg,
+      rgba(2, 6, 23, 0.97) 0%,
+      rgba(2, 6, 23, 0.92) 30%,
+      rgba(2, 6, 23, 0.78) 50%,
+      rgba(2, 6, 23, 0.45) 70%,
+      rgba(2, 6, 23, 0.15) 100%
+    );
+
+  @media (max-width: 1024px) {
+    background: 
+      radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.1) 0%, transparent 40%),
+      linear-gradient(
+        115deg,
+        rgba(2, 6, 23, 0.98) 0%,
+        rgba(2, 6, 23, 0.95) 40%,
+        rgba(2, 6, 23, 0.82) 65%,
+        rgba(2, 6, 23, 0.5) 100%
+      );
+  }
+
+  @media (max-width: 768px) {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 6, 23, 0.96) 0%,
+      rgba(2, 6, 23, 0.92) 40%,
+      rgba(2, 6, 23, 0.75) 100%
+    );
+  }
+`;
+
+const HeroVignette = styled.div`
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 6, 23, 0.4) 100%);
+  pointer-events: none;
+`;
+
+const HeroInner = styled.div`
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 4rem 0 1.5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
 `;
 
 const HeroContent = styled.div`
-  ${heroContent};
+  max-width: 720px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+  }
 `;
 
-const HeroEyebrow = styled.p`
-  ${heroEyebrow};
-  color: rgba(255, 255, 255, 0.9);
+const HeroEyebrow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+`;
+
+const EyebrowText = styled.span`
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+`;
+
+const EyebrowLine = styled.div`
+  width: 60px;
+  height: 1px;
+  background: #8b0d2a;
 `;
 
 const HeroTitle = styled.h1`
-  ${heroTitle};
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+
+  span {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+    margin-top: 0.25rem;
+    font-size: 0.5em;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: clamp(3rem, 10vw, 4rem);
+    line-height: 1;
+
+    span {
+      margin-top: 0.5rem;
+    }
+  }
 `;
 
 const HeroSubtitle = styled.p`
-  ${heroSubtitle};
-`;
+  margin: 2.25rem 0 0;
+  max-width: 560px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
 
-const HeroButton = styled.a`
-  ${primaryButton};
-`;
-
-/*const StatsSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: #f8f9fa;
-  
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    font-size: 1.125rem;
+    margin: 1.75rem auto 0;
+    max-width: 480px;
   }
 `;
 
-const StatsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @media (max-width: 576px) {
-    grid-template-columns: 1fr;
+const HeroNote = styled.p`
+  margin: 1.5rem 0 0;
+  max-width: 560px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(139, 13, 42, 0.5);
+
+  @media (max-width: 768px) {
+    margin: 1.25rem auto 0;
+    max-width: 420px;
+    padding-left: 1rem;
+    font-size: 0.9rem;
   }
 `;
 
-const StatCard = styled.div`
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-  
+const HeroActions = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 0;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 2.5rem;
+  }
+`;
+
+const HeroPrimaryButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  height: 64px;
+  padding: 0 2.5rem;
+  background: #8b0d2a;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+
   &:hover {
-    transform: translateY(-10px);
+    background: #9f1239;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.35);
+  }
+
+  svg {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover svg {
+    transform: translateX(5px);
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    justify-content: center;
+    height: 56px;
   }
 `;
 
-const StatIcon = styled.div`
-  color: #DC143C;
-  margin-bottom: 1rem;
+const HeroMeta = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  margin-left: 2rem;
+
+  @media (max-width: 640px) {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-left: 0;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
 `;
 
-const StatValue = styled.div`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-family: var(--font-heading);
+const MetaTop = styled.span`
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 `;
 
-const StatLabel = styled.div`
-  font-size: 1rem;
-  color: #666;
-  font-family: var(--font-body);
-`;*/
+const MetaBottom = styled.span`
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.25rem;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 640px) {
+    margin-top: 0;
+  }
+`;
+
+const SectionDivider = styled.div`
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.2), transparent);
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
+`;
 
 const SectionTitle = styled.h2`
-  ${sectionTitle};
-  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a1628;
+  margin-bottom: 4rem;
+  text-align: center;
+  line-height: 1.15;
 `;
 
 const ContentGrid = styled.div`
@@ -491,43 +701,37 @@ const ContentGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  
+  max-width: 1180px;
+  margin: 0 auto;
+
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 `;
 
-const ContentColumn = styled.div`
-  @media (max-width: 1024px) {
-    order: 2;
-  }
-`;
+const ContentColumn = styled.div``;
 
 const ImageColumn = styled.div`
   display: flex;
   justify-content: center;
-  
-  @media (max-width: 1024px) {
-    order: 1;
-  }
 `;
 
 const StyledImage = styled.img`
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 `;
 
 const Paragraph = styled.p`
   font-family: var(--font-body);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 1.5rem;
-  scroll-margin-top: 140px;
+  font-size: 1.02rem;
+  line-height: 1.72;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  scroll-margin-top: 120px;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -535,93 +739,141 @@ const Paragraph = styled.p`
   }
 `;
 
+// Services Section - World-Class Enterprise Modules
 const ServicesSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: white;
-  
+  padding: 7rem 2rem;
+  background: #fafbfc;
+
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.25rem;
   }
 `;
 
 const ServicesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `;
 
 const ServiceCard = styled.div`
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e9ed;
+  padding: 2rem 1.75rem 1.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   &:hover {
-    transform: translateY(-10px);
+    border-color: #8b0d2a;
+    box-shadow: 0 20px 50px rgba(10, 22, 40, 0.1);
+    transform: translateY(-6px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.75rem 1.5rem 1.5rem;
+  }
+`;
+
+const ServiceNumber = styled.span`
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8b0d2a;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    right: 1rem;
   }
 `;
 
 const ServiceIcon = styled.div`
-  color: #DC143C;
+  width: 48px;
+  height: 48px;
+  background: #f8fafc;
+  border: 1px solid #e5e9ed;
+  color: #8b0d2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${ServiceCard}:hover & {
+    background: #8b0d2a;
+    border-color: #8b0d2a;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
 `;
 
 const ServiceTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
+  margin: 0 0 0.75rem;
   font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0a1628;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 `;
 
 const ServiceCardDescription = styled.p`
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-  font-family: var(--font-body);
+  color: #5a6578;
+  flex-grow: 1;
 `;
 
 const ServiceFeatures = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e9ed;
 `;
 
 const ServiceFeature = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #333;
-  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #5a6578;
+  line-height: 1.5;
   
   svg {
-    color: #DC143C;
+    color: #8b0d2a;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
   }
 `;
 
 const InnovationsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
+  gap: 1.5rem;
+  max-width: 1180px;
   margin: 0 auto;
-  
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @media (max-width: 600px) {
+
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -629,14 +881,8 @@ const InnovationsGrid = styled.div`
 const InnovationCard = styled.div`
   position: relative;
   height: 300px;
-  border-radius: 8px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-10px);
-  }
 `;
 
 const InnovationImage = styled.img`
@@ -647,43 +893,45 @@ const InnovationImage = styled.img`
 
 const InnovationOverlay = styled.div`
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
-  color: white;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.74) 100%);
+  color: #ffffff;
 `;
 
 const InnovationTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
   font-family: var(--font-heading);
 `;
 
 const InnovationDescription = styled.p`
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.6;
   font-family: var(--font-body);
 `;
 
+// Process Section - Professional Process
 const ProcessSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: #f8f9fa;
+  padding: 7rem 2rem;
+  background: #ffffff;
+  position: relative;
   
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.25rem;
   }
 `;
 
 const ProcessDescription = styled.p`
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 800px;
+  font-size: 1.125rem;
+  color: #5a6578;
+  max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
-  line-height: 1.6;
-  font-family: var(--font-body);
+  line-height: 1.7;
 `;
 
 const ProcessStepsContainer = styled.div`
@@ -695,6 +943,7 @@ const ProcessStepsContainer = styled.div`
   
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 `;
 
@@ -703,8 +952,8 @@ const ProcessImage = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: 0 16px 48px rgba(10, 22, 40, 0.1);
   }
   
   @media (max-width: 992px) {
@@ -723,18 +972,26 @@ const ProcessStep = styled.div`
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  padding: 1.5rem;
+  background: #fafbfc;
+  border: 1px solid #e5e9ed;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: #8b0d2a;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(10, 22, 40, 0.06);
+  }
 `;
 
 const ProcessStepNumber = styled.div`
-  background-color: #DC143C;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8b0d2a;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  background: rgba(139, 13, 42, 0.1);
   flex-shrink: 0;
 `;
 
@@ -743,332 +1000,253 @@ const ProcessStepContent = styled.div`
 `;
 
 const ProcessStepTitle = styled.h3`
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: #0a1628;
   font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 `;
 
 const ProcessStepDescription = styled.p`
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.6;
-  font-family: var(--font-body);
+  font-size: 0.925rem;
+  color: #5a6578;
+  line-height: 1.65;
+  margin: 0;
 `;
 
+// Benefits Section - Strategic Value
 const BenefitsSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: #f8f9fa;
+  padding: 7rem 2rem;
+  background: #fafbfc;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.15), transparent);
+  }
   
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.25rem;
   }
 `;
 
 const BenefitsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 `;
 
 const BenefitCard = styled.div`
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid #e5e9ed;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: #8b0d2a;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   &:hover {
-    transform: translateY(-10px);
+    border-color: #8b0d2a;
+    box-shadow: 0 16px 48px rgba(10, 22, 40, 0.08);
+
+    &::before {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.25rem;
   }
 `;
 
 const BenefitIcon = styled.div`
-  color: #DC143C;
-  margin-bottom: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: #f8fafc;
+  border: 1px solid #e5e9ed;
+  color: #8b0d2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${BenefitCard}:hover & {
+    background: #8b0d2a;
+    border-color: #8b0d2a;
+    color: #ffffff;
+  }
 `;
 
 const BenefitTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: #0a1628;
   font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 `;
 
 const BenefitDescription = styled.p`
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.6;
-  font-family: var(--font-body);
+  font-size: 0.925rem;
+  color: #5a6578;
+  line-height: 1.65;
+  margin: 0;
 `;
 
+// CTA Section - World-Class Enterprise Conversion
 const CtaSection = styled.section`
-min-height: 300px;  
+  padding: 7rem 2rem;
+  background: #020617;
   position: relative;
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #005792 0%, #00205B 100%);
-  background-image: url(${HealthcareImg2});
-  background-size: cover;
-  background-position: center;
-  margin-top: 3rem;
-  
+  overflow: hidden;
+
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
-    margin-top: 2rem;
+    padding: 5rem 1.25rem;
   }
 `;
 
 const CtaOverlay = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(139, 13, 42, 0.08) 0%, transparent 60%),
+    url(${BGhealtcare}) center / cover no-repeat;
+  opacity: 0.12;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(2, 6, 23, 0.95) 0%,
+      rgba(2, 6, 23, 0.85) 50%,
+      rgba(2, 6, 23, 0.95) 100%
+    );
+  }
 `;
 
 const CtaContent = styled.div`
-  max-width: 800px;
-  text-align: center;
-  color: white;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.5rem 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    padding: 2.5rem 1.5rem;
+  }
 `;
 
 const CtaTitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
   font-family: var(--font-heading);
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
+  letter-spacing: -0.01em;
 `;
 
 const CtaDescription = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  font-family: var(--font-body);
-  
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const CtaButton = styled.a`
-  background-color: #DC143C;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 60px;
+  padding: 0 3rem;
+  background: #8b0d2a;
+  color: #ffffff;
   border: none;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-family: var(--font-body);
+  font-size: 0.9rem;
   font-weight: 600;
-  
-  &:hover {
-    background-color: #B01030;
-  }
-`;
-
-const FocusAreasContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
-const FocusArea = styled.div`
-  display: flex;
-  flex-direction: ${props => props.isSmallScreen ? 'column' : 'row'};
-  align-items: center;
-  background-color: #f8f9fa;
-  border-radius: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
-`;
 
-const FocusAreaContent = styled.div`
-  padding: 2rem;
-  flex: 1;
-`;
-
-const FocusAreaTitle = styled.h3`
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-`;
-
-const FocusAreaDescription = styled.p`
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-`;
-
-const FocusAreaImageContainer = styled.div`
-  flex: 1;
-  height: 100%;
-  min-height: 200px;
-  max-height: 300px;
-  
-  @media (max-width: 800px) {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    transition: left 0.5s ease;
   }
-`;
 
-const FocusAreaImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-const SectionDescription = styled.p`
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #444;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-  
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-`;
-
-const OutsourcingGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-  
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-`;
-
-const OutsourcingImage = styled.div`
-  @media (max-width: 1024px) {
-    order: 1;
-  }
-`;
-
-const BenefitsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-  
-  @media (max-width: 1024px) {
-    order: 2;
-  }
-`;
-
-const OutsourcingBenefitCard = styled.div`
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  
   &:hover {
-    transform: translateY(-5px);
+    background: #9f1239;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.4);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  svg {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
   }
 `;
-
-const StyledImageSlider = styled(ImageSlider)`
-  height: 350px;
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  
-  @media (max-width: 768px) {
-    height: 250px;
-  }
-`;
-
-const ServicesContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-  
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-`;
-
-const ServiceImage = styled.div`
-  img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  @media (max-width: 1024px) {
-    order: 1;
-  }
-`;
-
-const ServiceAccordions = styled.div`
-  @media (max-width: 1024px) {
-    order: 2;
-  }
-`;
-
-const StyledAccordionWrapper = styled(AccordionWrapper)`
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-`;
-
-const AccordionCaption = styled.p`
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 1.5rem;
-`;
-
-const CardHolder = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-// CTA styled components are already defined above
-
 
 export default HealthcareOverview;
+
+

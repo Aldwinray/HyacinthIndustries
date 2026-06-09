@@ -18,7 +18,7 @@ export default function ThreeDAnimation() {
       <Seo
         title="3D Animation Services | Hyacinth Industries LLC"
         description="3D animation services from Hyacinth Industries LLC delivering high-quality visual storytelling and professional animation solutions."
-        canonicalPath="/3d-animation"
+        canonicalPath="/3d-animation/"
       />
       
       <TopNavBar />
@@ -31,5 +31,5 @@ export default function ThreeDAnimation() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px; /* Account for fixed navbar height */
+  padding-top: 0;
 `;

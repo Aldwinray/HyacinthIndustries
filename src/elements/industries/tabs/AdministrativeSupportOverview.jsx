@@ -1,102 +1,115 @@
-import React from 'react';
 import styled from 'styled-components';
 import { 
   ClipboardList, 
   FileText, 
   Calendar, 
   Mail, 
-  Phone, 
   Users,
   CheckCircle2,
   Clock,
   TrendingUp,
   Shield,
-  Workflow
+  Workflow,
+  ArrowRight
 } from 'lucide-react';
-import {
-  heroContent,
-  heroEyebrow,
-  heroOverlay,
-  heroSubtitle,
-  heroTitle,
-  primaryButton,
-  sectionTitle
-} from '../../../styles/premiumPageStyles';
 
 // Images
 import bgImage from '../../../assets/img/industries/office.webp';
+import BGadministrative from "../../../assets/img/bgservices/Administrative Support.webp";
 
 const AdministrativeSupportOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
       <HeroSection>
-        <HeroImage src={bgImage} alt="Administrative Support Services" />
-        <HeroOverlay>
+        <HeroBg src={bgImage} aria-hidden />
+        <HeroOverlay />
+        <HeroVignette />
+        <HeroInner>
           <HeroContent>
-            <HeroEyebrow>Hyacinth Industries</HeroEyebrow>
-            <HeroTitle>Administrative Support</HeroTitle>
+            <HeroEyebrow>
+              <EyebrowText>Hyacinth Industries</EyebrowText>
+              <EyebrowLine />
+            </HeroEyebrow>
+            <HeroTitle>Administrative <span>Support</span></HeroTitle>
             <HeroSubtitle>
               Professional business administration built to reduce operational drag and keep teams focused on execution.
             </HeroSubtitle>
+            <HeroNote>
+              End-to-end support for office management, documents, scheduling, and correspondence.
+            </HeroNote>
+            <HeroActions>
+              <HeroPrimaryButton href="#administrative-services">
+                Get Started
+                <ArrowRight size={18} />
+              </HeroPrimaryButton>
+              <HeroMeta>
+                <MetaTop>4 Core Services</MetaTop>
+                <MetaBottom>Enterprise-grade support</MetaBottom>
+              </HeroMeta>
+            </HeroActions>
           </HeroContent>
-          <HeroButton href="#administrative-services">Get Started</HeroButton>
-        </HeroOverlay>
+        </HeroInner>
       </HeroSection>
 
       {/* Services Section */}
       <ServicesSection id="administrative-services">
+        <SectionDivider />
         <SectionTitle>Our Administrative Services</SectionTitle>
         <ServicesGrid>
           <ServiceCard>
-            <ServiceIcon><ClipboardList size={40} /></ServiceIcon>
+            <ServiceNumber>01</ServiceNumber>
+            <ServiceIcon><ClipboardList size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Office Management</ServiceTitle>
             <ServiceDescription>
               Comprehensive office management solutions to streamline your business operations.
             </ServiceDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Workflow Optimization</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Resource Allocation</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Office Coordination</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Workflow Optimization</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Resource Allocation</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Office Coordination</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
           
           <ServiceCard>
-            <ServiceIcon><FileText size={40} /></ServiceIcon>
+            <ServiceNumber>02</ServiceNumber>
+            <ServiceIcon><FileText size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Document Processing</ServiceTitle>
             <ServiceDescription>
               Efficient document management and processing services for your business needs.
             </ServiceDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Document Creation</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Filing & Organization</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Data Entry</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Document Creation</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Filing & Organization</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Data Entry</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
           
           <ServiceCard>
-            <ServiceIcon><Calendar size={40} /></ServiceIcon>
+            <ServiceNumber>03</ServiceNumber>
+            <ServiceIcon><Calendar size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Scheduling & Planning</ServiceTitle>
             <ServiceDescription>
               Professional scheduling and planning services to optimize your time and resources.
             </ServiceDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Appointment Setting</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Meeting Coordination</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Event Planning</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Appointment Setting</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Meeting Coordination</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Event Planning</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
           
           <ServiceCard>
-            <ServiceIcon><Mail size={40} /></ServiceIcon>
+            <ServiceNumber>04</ServiceNumber>
+            <ServiceIcon><Mail size={24} strokeWidth={1.5} /></ServiceIcon>
             <ServiceTitle>Correspondence Management</ServiceTitle>
             <ServiceDescription>
               Efficient handling of business correspondence to maintain professional communications.
             </ServiceDescription>
             <ServiceFeatures>
-              <ServiceFeature><CheckCircle2 size={16} /> Email Management</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Letter Drafting</ServiceFeature>
-              <ServiceFeature><CheckCircle2 size={16} /> Response Handling</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Email Management</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Letter Drafting</ServiceFeature>
+              <ServiceFeature><CheckCircle2 size={14} strokeWidth={2} /> Response Handling</ServiceFeature>
             </ServiceFeatures>
           </ServiceCard>
         </ServicesGrid>
@@ -104,6 +117,7 @@ const AdministrativeSupportOverview = () => {
 
       {/* Process Section */}
       <ProcessSection>
+        <SectionDivider />
         <SectionTitle>Our Administrative Process</SectionTitle>
         <ProcessDescription>
           We follow a systematic approach to deliver exceptional administrative support that meets your business needs.
@@ -111,7 +125,8 @@ const AdministrativeSupportOverview = () => {
         
         <ProcessSteps>
           <ProcessStep>
-            <ProcessStepIcon><ClipboardList size={32} /></ProcessStepIcon>
+            <ProcessStepNumber>01</ProcessStepNumber>
+            <ProcessStepIcon><ClipboardList size={24} strokeWidth={1.5} /></ProcessStepIcon>
             <ProcessStepTitle>Assessment</ProcessStepTitle>
             <ProcessStepDescription>
               We evaluate your current administrative processes and identify areas for improvement.
@@ -119,7 +134,8 @@ const AdministrativeSupportOverview = () => {
           </ProcessStep>
           
           <ProcessStep>
-            <ProcessStepIcon><Workflow size={32} /></ProcessStepIcon>
+            <ProcessStepNumber>02</ProcessStepNumber>
+            <ProcessStepIcon><Workflow size={24} strokeWidth={1.5} /></ProcessStepIcon>
             <ProcessStepTitle>Planning</ProcessStepTitle>
             <ProcessStepDescription>
               We develop a customized administrative support plan tailored to your specific requirements.
@@ -127,7 +143,8 @@ const AdministrativeSupportOverview = () => {
           </ProcessStep>
           
           <ProcessStep>
-            <ProcessStepIcon><Users size={32} /></ProcessStepIcon>
+            <ProcessStepNumber>03</ProcessStepNumber>
+            <ProcessStepIcon><Users size={24} strokeWidth={1.5} /></ProcessStepIcon>
             <ProcessStepTitle>Implementation</ProcessStepTitle>
             <ProcessStepDescription>
               We assign dedicated administrative professionals to execute the plan with precision.
@@ -135,7 +152,8 @@ const AdministrativeSupportOverview = () => {
           </ProcessStep>
           
           <ProcessStep>
-            <ProcessStepIcon><TrendingUp size={32} /></ProcessStepIcon>
+            <ProcessStepNumber>04</ProcessStepNumber>
+            <ProcessStepIcon><TrendingUp size={24} strokeWidth={1.5} /></ProcessStepIcon>
             <ProcessStepTitle>Optimization</ProcessStepTitle>
             <ProcessStepDescription>
               We continuously monitor performance and optimize processes for maximum efficiency.
@@ -149,7 +167,7 @@ const AdministrativeSupportOverview = () => {
         <SectionTitle>Why Choose Our Administrative Support</SectionTitle>
         <BenefitsGrid>
           <BenefitCard>
-            <BenefitIcon><Clock size={32} /></BenefitIcon>
+            <BenefitIcon><Clock size={24} strokeWidth={1.5} /></BenefitIcon>
             <BenefitTitle>Time Efficiency</BenefitTitle>
             <BenefitDescription>
               Free up valuable time for core business activities by outsourcing administrative tasks to our experts.
@@ -157,7 +175,7 @@ const AdministrativeSupportOverview = () => {
           </BenefitCard>
           
           <BenefitCard>
-            <BenefitIcon><TrendingUp size={32} /></BenefitIcon>
+            <BenefitIcon><TrendingUp size={24} strokeWidth={1.5} /></BenefitIcon>
             <BenefitTitle>Cost Reduction</BenefitTitle>
             <BenefitDescription>
               Lower operational costs through efficient resource allocation and streamlined administrative processes.
@@ -165,7 +183,7 @@ const AdministrativeSupportOverview = () => {
           </BenefitCard>
           
           <BenefitCard>
-            <BenefitIcon><Shield size={32} /></BenefitIcon>
+            <BenefitIcon><Shield size={24} strokeWidth={1.5} /></BenefitIcon>
             <BenefitTitle>Professional Quality</BenefitTitle>
             <BenefitDescription>
               Ensure consistent, high-quality administrative support from experienced professionals.
@@ -176,362 +194,785 @@ const AdministrativeSupportOverview = () => {
 
       {/* Contact Section */}
       <ContactSection>
+        <ContactOverlay />
         <ContactContent>
           <ContactTitle>Ready to Streamline Your Administrative Processes?</ContactTitle>
           <ContactDescription>
             Contact us today to learn how our administrative support services can help your business thrive.
           </ContactDescription>
-          <ContactButton href="/contact">Contact Us</ContactButton>
+          <ContactButton href="/contact/">
+            Contact Us
+            <ArrowRight size={18} />
+          </ContactButton>
         </ContactContent>
       </ContactSection>
     </Wrapper>
   );
 };
 
-// Styled Components
+// Styled Components - World-Class Enterprise Design System
 const Wrapper = styled.div`
   width: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
 `;
 
+// Hero Section - World-Class Enterprise
 const HeroSection = styled.section`
   position: relative;
-  height: 655px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  
+  background: #020617;
+
   @media (max-width: 768px) {
-    height: 400px;
+    min-height: auto;
+    padding: 8rem 0 5rem;
   }
 `;
 
-const HeroImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+const HeroBg = styled.div`
+  position: absolute;
+  inset: 0;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  opacity: 0.5;
+
+  @media (max-width: 768px) {
+    background-position: 65% center;
+    opacity: 0.45;
+  }
 `;
 
 const HeroOverlay = styled.div`
-  ${heroOverlay};
-  flex-direction: column;
-  gap: 2rem;
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(2, 6, 23, 0.98) 0%, transparent 60%),
+    linear-gradient(
+      115deg,
+      rgba(2, 6, 23, 0.97) 0%,
+      rgba(2, 6, 23, 0.92) 30%,
+      rgba(2, 6, 23, 0.78) 50%,
+      rgba(2, 6, 23, 0.45) 70%,
+      rgba(2, 6, 23, 0.15) 100%
+    );
+
+  @media (max-width: 1024px) {
+    background: 
+      radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.1) 0%, transparent 40%),
+      linear-gradient(
+        115deg,
+        rgba(2, 6, 23, 0.98) 0%,
+        rgba(2, 6, 23, 0.95) 40%,
+        rgba(2, 6, 23, 0.82) 65%,
+        rgba(2, 6, 23, 0.5) 100%
+      );
+  }
+
+  @media (max-width: 768px) {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 6, 23, 0.96) 0%,
+      rgba(2, 6, 23, 0.92) 40%,
+      rgba(2, 6, 23, 0.75) 100%
+    );
+  }
+`;
+
+const HeroVignette = styled.div`
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 6, 23, 0.4) 100%);
+  pointer-events: none;
+`;
+
+const HeroInner = styled.div`
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 4rem 0 1.5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
 `;
 
 const HeroContent = styled.div`
-  ${heroContent};
+  max-width: 720px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+  }
 `;
 
-const HeroEyebrow = styled.p`
-  ${heroEyebrow};
-  color: rgba(255, 255, 255, 0.9);
+const HeroEyebrow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+`;
+
+const EyebrowText = styled.span`
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+`;
+
+const EyebrowLine = styled.div`
+  width: 60px;
+  height: 1px;
+  background: #8b0d2a;
 `;
 
 const HeroTitle = styled.h1`
-  ${heroTitle};
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+
+  span {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+    margin-top: 0.25rem;
+    font-size: 0.5em;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: clamp(3rem, 10vw, 4rem);
+    line-height: 1;
+
+    span {
+      margin-top: 0.5rem;
+    }
+  }
 `;
 
 const HeroSubtitle = styled.p`
-  ${heroSubtitle};
+  margin: 2.25rem 0 0;
+  max-width: 560px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+    margin: 1.75rem auto 0;
+    max-width: 480px;
+  }
 `;
 
-const HeroButton = styled.a`
-  ${primaryButton};
+const HeroNote = styled.p`
+  margin: 1.5rem 0 0;
+  max-width: 560px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(139, 13, 42, 0.5);
+
+  @media (max-width: 768px) {
+    margin: 1.25rem auto 0;
+    max-width: 420px;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+`;
+
+const HeroActions = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 0;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 2.5rem;
+  }
+`;
+
+const HeroPrimaryButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  height: 64px;
+  padding: 0 2.5rem;
+  background: #8b0d2a;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+
+  &:hover {
+    background: #9f1239;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.35);
+  }
+
+  svg {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover svg {
+    transform: translateX(5px);
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    justify-content: center;
+    height: 56px;
+  }
+`;
+
+const HeroMeta = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  margin-left: 2rem;
+
+  @media (max-width: 640px) {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-left: 0;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+`;
+
+const MetaTop = styled.span`
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+`;
+
+const MetaBottom = styled.span`
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.25rem;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 640px) {
+    margin-top: 0;
+  }
+`;
+
+const SectionDivider = styled.div`
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.2), transparent);
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 `;
 
 const SectionTitle = styled.h2`
-  ${sectionTitle};
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a1628;
+  margin-bottom: 4rem;
+  text-align: center;
+  line-height: 1.15;
 `;
 
+// Services Section - World-Class Enterprise Modules
 const ServicesSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: white;
-  scroll-margin-top: 115px;
+  padding: 7rem 2rem;
+  background-color: #fafbfc;
+  scroll-margin-top: 100px;
   
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
-    scroll-margin-top: 110px;
+    padding: 5rem 1.5rem;
+    scroll-margin-top: 80px;
   }
 `;
 
 const ServicesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
+  gap: 1.5rem;
+  max-width: 1000px;
   margin: 0 auto;
-  
-  @media (max-width: 1024px) {
+
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 `;
 
 const ServiceCard = styled.div`
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e9ed;
+  padding: 2rem 1.75rem 1.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   &:hover {
-    transform: translateY(-10px);
+    border-color: #8b0d2a;
+    box-shadow: 0 20px 50px rgba(10, 22, 40, 0.1);
+    transform: translateY(-6px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.75rem 1.5rem 1.5rem;
+  }
+`;
+
+const ServiceNumber = styled.span`
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8b0d2a;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    right: 1rem;
   }
 `;
 
 const ServiceIcon = styled.div`
-  color: #DC143C;
+  width: 48px;
+  height: 48px;
+  background: #f8fafc;
+  border: 1px solid #e5e9ed;
+  color: #8b0d2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${ServiceCard}:hover & {
+    background: #8b0d2a;
+    border-color: #8b0d2a;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
 `;
 
 const ServiceTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
+  margin: 0 0 0.75rem;
   font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0a1628;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 `;
 
 const ServiceDescription = styled.p`
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-  font-family: var(--font-body);
+  color: #5a6578;
+  flex-grow: 1;
 `;
 
 const ServiceFeatures = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e9ed;
 `;
 
 const ServiceFeature = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #333;
-  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #5a6578;
+  line-height: 1.5;
   
   svg {
-    color: #DC143C;
+    color: #8b0d2a;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
   }
 `;
 
+// Process Section - Professional Process
 const ProcessSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: #f0f0f0;
+  padding: 7rem 2rem;
+  background-color: #ffffff;
+  position: relative;
   
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem;
   }
 `;
 
 const ProcessDescription = styled.p`
   text-align: center;
-  max-width: 800px;
+  max-width: 640px;
   margin: 0 auto 3rem;
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
-  font-family: var(--font-body);
-  
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
+  font-size: 1.125rem;
+  color: #5a6578;
+  line-height: 1.7;
 `;
 
 const ProcessSteps = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 10%;
-    right: 10%;
-    height: 2px;
-    background-color: #ddd;
-    z-index: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 2rem;
-    
-    &:before {
-      display: none;
-    }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 `;
 
 const ProcessStep = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   position: relative;
-  z-index: 1;
-  width: 22%;
-  
-  @media (max-width: 768px) {
-    width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e9ed;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: #8b0d2a;
+    box-shadow: 0 16px 40px rgba(10, 22, 40, 0.08);
+    transform: translateY(-4px);
   }
 `;
 
-{/*const ProcessStepNumber = styled.div`
-  background-color: #DC143C;
-  color: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  margin-bottom: 1rem;
+const ProcessStepNumber = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8b0d2a;
   font-family: var(--font-heading);
-`;*/}
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+`;
 
 const ProcessStepIcon = styled.div`
-  background-color: white;
-  color: #DC143C;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e5e9ed;
+  color: #8b0d2a;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${ProcessStep}:hover & {
+    background: #8b0d2a;
+    border-color: #8b0d2a;
+    color: #ffffff;
+  }
 `;
 
 const ProcessStepTitle = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #0a1628;
   font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 `;
 
 const ProcessStepDescription = styled.p`
   font-size: 0.9rem;
-  color: #666;
-  line-height: 1.6;
-  font-family: var(--font-body);
+  color: #5a6578;
+  line-height: 1.65;
+  margin: 0;
 `;
 
+// Benefits Section - Strategic Value
 const BenefitsSection = styled.section`
-  padding: 5rem 2rem;
-  background-color: #f8f9fa;
+  padding: 7rem 2rem;
+  background-color: #fafbfc;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.15), transparent);
+  }
   
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem;
   }
 `;
 
 const BenefitsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 `;
 
 const BenefitCard = styled.div`
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-  
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid #e5e9ed;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: #8b0d2a;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   &:hover {
-    transform: translateY(-10px);
+    border-color: #8b0d2a;
+    box-shadow: 0 16px 48px rgba(10, 22, 40, 0.08);
+
+    &::before {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.25rem;
   }
 `;
 
 const BenefitIcon = styled.div`
-  color: #DC143C;
-  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  background: #f8fafc;
+  border: 1px solid #e5e9ed;
+  color: #8b0d2a;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${BenefitCard}:hover & {
+    background: #8b0d2a;
+    border-color: #8b0d2a;
+    color: #ffffff;
+  }
 `;
 
 const BenefitTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: #0a1628;
   font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 `;
 
 const BenefitDescription = styled.p`
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.6;
-  font-family: var(--font-body);
+  font-size: 0.925rem;
+  color: #5a6578;
+  line-height: 1.65;
+  margin: 0;
 `;
 
+// Contact Section - World-Class Enterprise Conversion
 const ContactSection = styled.section`
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%);
-  
+  padding: 7rem 2rem;
+  background: #020617;
+  position: relative;
+  overflow: hidden;
+
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem;
+  }
+`;
+
+const ContactOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(139, 13, 42, 0.08) 0%, transparent 60%),
+    url(${BGadministrative}) center / cover no-repeat;
+  opacity: 0.12;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(2, 6, 23, 0.95) 0%,
+      rgba(2, 6, 23, 0.85) 50%,
+      rgba(2, 6, 23, 0.95) 100%
+    );
   }
 `;
 
 const ContactContent = styled.div`
-  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
-  color: white;
+  padding: 3.5rem 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    padding: 2.5rem 1.5rem;
+  }
 `;
 
 const ContactTitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
   font-family: var(--font-heading);
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
+  letter-spacing: -0.01em;
 `;
 
 const ContactDescription = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  font-family: var(--font-body);
-  
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const ContactButton = styled.a`
-  background-color: white;
-  color: #DC143C;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 60px;
+  padding: 0 3rem;
+  background: #8b0d2a;
+  color: #ffffff;
   border: none;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: var(--font-body);
+  font-size: 0.9rem;
   font-weight: 600;
-  
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
   &:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-5px);
+    background: #9f1239;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.4);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  svg {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
   }
 `;
 
 export default AdministrativeSupportOverview;
+
+

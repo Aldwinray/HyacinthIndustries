@@ -17,7 +17,7 @@ export default function GeneralServices() {
       <Seo
         title="General Business Services | Hyacinth Industries LLC"
         description="General business services from Hyacinth Industries LLC designed to strengthen operations, support teams, and accelerate business growth."
-        canonicalPath="/general-services"
+        canonicalPath="/general-services/"
       />
       <TopNavBar />
       <SideBar />
@@ -29,5 +29,5 @@ export default function GeneralServices() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px; /* Account for fixed navbar height */
+  padding-top: 0;
 `;

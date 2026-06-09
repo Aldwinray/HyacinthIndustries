@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "hyacinth-industries-website"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }

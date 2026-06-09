@@ -183,7 +183,7 @@ const HealthcareContentWrapper = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <img src={HealthcareImg1} alt="Healthcare Services" />
+            <img src={HealthcareImg1} alt="Healthcare Services" loading="lazy" />
           </ServiceImage>
           
           <ServiceAccordions>

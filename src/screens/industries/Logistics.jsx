@@ -17,7 +17,7 @@ export default function Logistics() {
       <Seo
         title="Logistics Services | Hyacinth Industries LLC"
         description="Logistics services from Hyacinth Industries LLC to improve shipment visibility, coordination, operational efficiency, and business performance."
-        canonicalPath="/logistics"
+        canonicalPath="/logistics/"
       />
 
       <TopNavBar />
@@ -30,5 +30,5 @@ export default function Logistics() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px; /* Account for fixed navbar height */
+  padding-top: 0;
 `;

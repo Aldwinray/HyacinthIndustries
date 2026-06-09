@@ -2,27 +2,14 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowBigRightDash } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Card3 = ({ image, title, description, tag, link, icon: Icon }) => {
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
-  const [isOverflowing, setIsOverflowing] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
   const [isActiveMobile, setIsActiveMobile] = useState(false);
-  const contentRef = React.useRef(null);
-
-  useEffect(() => {
-    const checkOverflow = () => {
-      if (contentRef.current) {
-        const isContentOverflowing =
-          contentRef.current.scrollHeight > contentRef.current.clientHeight;
-        setIsOverflowing(isContentOverflowing);
-      }
-    };
-
-    checkOverflow();
-    window.addEventListener("resize", checkOverflow);
-    return () => window.removeEventListener("resize", checkOverflow);
-  }, [title, description]);
+  const isExternal = (url) => /^https?:\/\//i.test(url);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,7 +21,6 @@ const Card3 = ({ image, title, description, tag, link, icon: Icon }) => {
       }
     };
 
-    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -42,6 +28,11 @@ const Card3 = ({ image, title, description, tag, link, icon: Icon }) => {
   const isActive = isMobile ? isActiveMobile : isHovered;
 
   const handleClick = () => {
+    if (!link && isMobile) {
+      setIsActiveMobile((prev) => !prev);
+      return;
+    }
+
     if (!link) return;
 
     if (isMobile && !isActiveMobile) {
@@ -49,70 +40,111 @@ const Card3 = ({ image, title, description, tag, link, icon: Icon }) => {
       return;
     }
 
-    window.location.href = link;
+    if (isExternal(link)) {
+      window.location.assign(link);
+      return;
+    }
+    navigate(link);
   };
 
   return (
     <CardWrapper
-      as={motion.div}
+      as={motion.article}
       onHoverStart={() => !isMobile && setIsHovered(true)}
       onHoverEnd={() => !isMobile && setIsHovered(false)}
       onClick={handleClick}
-      style={{ cursor: link ? 'pointer' : 'default' }}
+      style={{ cursor: link || isMobile ? "pointer" : "default" }}
+      initial={false}
+      animate={{ y: isActive ? -4 : 0 }}
+      transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}
     >
+      <BackgroundImage
+        as={motion.div}
+        image={image}
+        animate={{
+          opacity: isActive ? 1 : 0,
+          scale: isActive ? 1.03 : 1,
+        }}
+        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+      />
+
       <CardContent
         as={motion.div}
         initial={false}
         animate={{
-          backgroundColor: isActive ? "transparent" : "#fff",
+          backgroundColor: isActive
+            ? "rgba(18, 18, 20, 0.2)"
+            : "rgba(255, 255, 255, 0.97)",
+          borderColor: isActive
+            ? "rgba(255,255,255,0.14)"
+            : "rgba(0,0,0,0.06)",
         }}
-        transition={{ 
-          duration: isActive ? 0.6 : 0.8,
-          ease: "easeOut"
+        transition={{
+          duration: isActive ? 0.35 : 0.28,
+          ease: [0.23, 1, 0.32, 1],
         }}
       >
-        <ContentWrapper ref={contentRef} isOverflowing={isOverflowing} style={{ color: isActive ? "#fff" : "#333" }}>
+        <ContentWrapper>
           {Icon && (
-            <IconWrapper>
-              <Icon size={24} />
+            <IconWrapper
+              as={motion.div}
+              animate={{
+                backgroundColor: isActive
+                  ? "rgba(255,255,255,0.16)"
+                  : "#f7f7f8",
+                borderColor: isActive
+                  ? "rgba(255,255,255,0.14)"
+                  : "rgba(0,0,0,0.05)",
+              }}
+              transition={{ duration: 0.25 }}
+            >
+              <Icon size={22} />
             </IconWrapper>
           )}
-          <Title>
-            {title}
-          </Title>
-          <Description>
-            {description}
-          </Description>
-        </ContentWrapper>
-        <AnimatePresence>
-          {isActive && (
-            <TagWrapper
-              as={motion.div}
-              initial={{ opacity: 0, y: 20 }}
+
+          <TextArea>
+            <Title
+              as={motion.h3}
               animate={{
-                opacity: 1,
-                y: 0,
-                backgroundColor: "rgba(255, 0, 51, 0.6)",
+                color: isActive ? "#ffffff" : "#23262f",
               }}
-              exit={{
-                opacity: 0,
-                y: 20,
-              }}
-              transition={{ 
-                duration: 0.6,
-                ease: "easeOut",
-                delay: 0.1
-              }}
+              transition={{ duration: 0.24 }}
             >
-              <Tag>
-                {tag}
-              </Tag>
-              <StyledArrowIcon size={20} color="#fff"/>
-            </TagWrapper>
-          )}
-        </AnimatePresence>
+              {title}
+            </Title>
+
+            <Description
+              as={motion.p}
+              animate={{
+                color: isActive ? "rgba(255,255,255,0.86)" : "#667085",
+              }}
+              transition={{ duration: 0.24 }}
+            >
+              {description}
+            </Description>
+          </TextArea>
+
+          <BottomArea>
+            <AnimatePresence mode="wait">
+              {isActive ? (
+                <TagWrapper
+                  as={motion.div}
+                  key="cta"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.24 }}
+                >
+                  <Tag>{tag}</Tag>
+                  <StyledArrowIcon size={18} />
+                </TagWrapper>
+              ) : (
+                <BottomSpacer key="spacer" />
+              )}
+            </AnimatePresence>
+          </BottomArea>
+        </ContentWrapper>
       </CardContent>
-      <BackgroundImage isHovered={isActive} image={image} />
     </CardWrapper>
   );
 };
@@ -121,194 +153,177 @@ export default Card3;
 
 const CardWrapper = styled.div`
   position: relative;
-  min-width: 250px;
-  max-width: 250px;
-  min-height: 350px;
-  max-height: 350px;
-  
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
   overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+  border-radius: 24px;
+  isolation: isolate;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
 
-  &:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  @media (hover: none) {
-    &:active {
-      transform: translateY(-5px);
-    }
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
-      opacity: 0;
-      z-index: 3;
-      transition: opacity 0.3s ease;
-    }
-    
-    &:active::before {
-      opacity: 1;
-    }
+  @media (max-width: 768px) {
+    min-height: 340px;
+    border-radius: 20px;
   }
 `;
 
 const CardContent = styled(motion.div)`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
+  inset: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  z-index: 2;
-  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, 0.97);
+  overflow: hidden;
 
-  @media (hover: none) {
-    &:active {
-      background-color: transparent;
-      h3, p { color: #fff; }
-    }
+  @media (max-width: 768px) {
+    border-radius: 20px;
   }
 `;
 
 const BackgroundImage = styled(motion.div)`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(${props => props.image});
+  inset: 0;
+  z-index: 1;
+  background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
-  z-index: 1;
-  transition: opacity 0.8s ease-out;
-  opacity: ${props => props.isHovered ? 1 : 0};
-  
+  background-repeat: no-repeat;
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.7)
+      180deg,
+      rgba(0, 0, 0, 0.14) 0%,
+      rgba(0, 0, 0, 0.28) 45%,
+      rgba(0, 0, 0, 0.72) 100%
     );
   }
 `;
 
 const ContentWrapper = styled.div`
-  position: relative;
-  z-index: 2;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1.25rem;
   text-align: center;
-  padding: ${props => props.isOverflowing ? '1.25rem' : '1.5rem'};
-  height: calc(100% - 70px); /* Reserve space for TagWrapper */
-  overflow-y: auto;
 
-  /* Custom scrollbar */
-  &::-webkit-scrollbar {
-    width: 3px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+  @media (max-width: 768px) {
+    padding: 1rem;
   }
 `;
 
+const IconWrapper = styled(motion.div)`
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  background: #f7f7f8;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  svg {
+    color: ${({ theme }) => theme.colors?.primary || "#ff0033"};
+    stroke-width: 2px;
+  }
+`;
+
+const TextArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
 const Title = styled.h3`
-  font-family: 'Lexend Medium', sans-serif;
-  font-size: clamp(0.9rem, ${props => props.children?.length > 30 ? '1rem' : '1.25rem'}, 1.25rem);
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-  transition: color 0.8s ease-out;
+  font-family: "Lexend", sans-serif;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.22;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.8rem;
   text-align: center;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.3;
-  min-height: 2.6em;
+  min-height: calc(1.22em * 2);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+    margin-bottom: 0.65rem;
+  }
 `;
 
 const Description = styled.p`
-  font-family: 'Lexend Light', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.75rem, ${props => props.children?.length > 150 ? '0.8rem' : '0.9rem'}, 0.9rem);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-  transition: all 0.8s ease-out;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
   text-align: center;
   display: -webkit-box;
-  -webkit-line-clamp: ${props => props.children?.length > 200 ? '4' : '6'};
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  @media (max-width: 768px) {
+    font-size: 0.86rem;
+    line-height: 1.56;
+  }
+`;
+
+const BottomArea = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 60px;
+  padding-top: 0.85rem;
 `;
 
 const TagWrapper = styled.div`
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  transition: all 0.8s ease-out;
-  backdrop-filter: blur(4px);
-  background-color: #ff0033;
-  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.4);
-  height: 40px; /* Fixed height */
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-width: min(100%, 220px);
+  max-width: 100%;
+  padding: 0.68rem 0.95rem;
+  border-radius: 14px;
+  background: rgba(255, 0, 51, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 `;
 
 const Tag = styled.span`
-  font-family: 'Lexend Light', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 600;
-  font-size: clamp(0.75rem, ${props => props.children?.length > 20 ? '0.8rem' : '0.9rem'}, 0.9rem);
-  color: white;
-  padding: 4px 10px;
-
-  background-color: rgba(0, 0, 0, 0);
+  font-size: 0.88rem;
+  color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 170px;
+
+  @media (max-width: 768px) {
+    font-size: 0.82rem;
+  }
 `;
 
 const StyledArrowIcon = styled(ArrowBigRightDash)`
-  stroke-width: 2.5px;
-  margin-left: 8px;
-  color: rgba(0, 0, 0, 0.8);
+  stroke-width: 2.4px;
+  color: #ffffff;
+  flex-shrink: 0;
 `;
 
-const IconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #f5f5f5;
-  margin-bottom: 16px;
-  
-  svg {
-    color: #333;
-  }
+const BottomSpacer = styled.div`
+  height: 44px;
 `;

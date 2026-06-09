@@ -1,6 +1,23 @@
 {
   "hosting": {
     "public": "dist",
+    "redirects": [
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/reforestation", 
+        "destination": "/", 
+        "type": 302 
+      },
+      {
+        "source": "/reforestation/**", 
+        "destination": "/", 
+        "type": 302 
+      }
+    ],
     "rewrites": [
       { "source": "**", "destination": "/index.html" }
     ],
@@ -8,6 +25,26 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/index.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css|woff2|webp|png|jpg|jpeg|svg|gif|ico)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable"}
+        ]
+      }
     ]
   }
 }

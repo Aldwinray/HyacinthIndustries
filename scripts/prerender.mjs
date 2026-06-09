@@ -10,17 +10,17 @@ const __dirname = path.dirname(__filename);
 
 const routes = [
   "/",
-  "/about",
-  "/industries",
-  "/contact",
-  "/services",
-  "/general-services",
-  "/administrative-support",
-  "/healthcare",
-  "/marketing",
-  "/web-design",
-  "/3d-animation",
-  "/logistics",
+  "/about/",
+  "/industries/",
+  "/contact/",
+  "/services/",
+  "/general-services/",
+  "/administrative-support/",
+  "/healthcare/",
+  "/marketing/",
+  "/web-design/",
+  "/3d-animation/",
+  "/logistics/",
 ];
 
 const distDir = path.resolve(__dirname, "..", "dist");

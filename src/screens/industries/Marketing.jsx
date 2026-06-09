@@ -17,7 +17,7 @@ export default function Marketing() {
       <Seo
         title="Marketing Services | Hyacinth Industries LLC"
         description="Marketing services from Hyacinth Industries LLC focused on multimedia production, social media management, and stronger digital brand execution."
-        canonicalPath="/marketing"
+        canonicalPath="/marketing/"
       />
 
       <TopNavBar />
@@ -30,5 +30,5 @@ export default function Marketing() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px;
+  padding-top: 0;
 `;

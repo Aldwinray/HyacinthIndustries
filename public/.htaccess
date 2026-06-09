@@ -1,5 +1,11 @@
 Options -MultiViews
 RewriteEngine On
+
+# Canonical host + protocol (single 301 hop)
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.hyacinthindustriesllc\.com$ [NC]
+RewriteRule ^ https://hyacinthindustriesllc.com%{REQUEST_URI} [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l

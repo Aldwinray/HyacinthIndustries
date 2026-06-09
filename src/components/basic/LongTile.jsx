@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const LongTile = ({ title, caption, image, order }) => {
   const [currentOrder, setCurrentOrder] = useState(order);
@@ -8,16 +8,16 @@ const LongTile = ({ title, caption, image, order }) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 600) {
-        setCurrentOrder('right');
+        setCurrentOrder("right");
       } else {
         setCurrentOrder(order);
       }
     };
 
     handleResize(); // Call on mount
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [order]);
 
   const ContentBlock = (
@@ -29,13 +29,13 @@ const LongTile = ({ title, caption, image, order }) => {
 
   const ImageBlock = (
     <ImageSection>
-      <img src={image} alt={title} />
+      <img src={image} alt={title} loading="lazy" />
     </ImageSection>
   );
 
   return (
     <TileContainer order={currentOrder}>
-      {currentOrder === 'left' ? (
+      {currentOrder === "left" ? (
         <>
           {ContentBlock}
           {ImageBlock}
@@ -54,7 +54,7 @@ LongTile.propTypes = {
   title: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  order: PropTypes.oneOf(['left', 'right'])
+  order: PropTypes.oneOf(["left", "right"]),
 };
 
 export default LongTile;

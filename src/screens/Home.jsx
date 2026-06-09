@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import styled from "styled-components";
 
 import Seo from "../components/Seo";
@@ -6,11 +6,11 @@ import TopNavBar from "../components/Nav/TopNavBar";
 import SideBar from "../components/Nav/Sidebar";
 import Footer from "../components/Nav/Footer";
 import HomeHeader from "../elements/HomeHeader";
-import FeatureContent from "..//elements/HomeFeatureContent";
-import BusinessActions from "..//elements/HomeBusinessActions";
-import IndustriesExpertise from "..//elements/HomeIndustriesExpertise";
-import HomeReforestationFeature from "../elements/HomeReforestationFeature";
-import HomeTestimonials from "../elements/HomeTestimonials";
+const FeatureContent = lazy(() => import("../elements/HomeFeatureContent"));
+const BusinessActions = lazy(() => import("../elements/HomeBusinessActions"));
+const IndustriesExpertise = lazy(() => import("../elements/HomeIndustriesExpertise"));
+const HomeReforestationFeature = lazy(() => import("../elements/HomeReforestationFeature"));
+const HomeTestimonials = lazy(() => import("../elements/HomeTestimonials"));
 
 export default function Home() {
   useEffect(() => {
@@ -28,11 +28,13 @@ export default function Home() {
       <TopNavBar />
       <SideBar />
       <HomeHeader />
-      <HomeReforestationFeature />
-      {/*<HomeTestimonials />*/} 
+      <Suspense fallback={null}>
+      {/*<HomeReforestationFeature />
+      {/*<HomeTestimonials />*/}
       <IndustriesExpertise />
       <BusinessActions />
       <FeatureContent />
+      </Suspense>
       <Footer />
     </Wrapper>
   );

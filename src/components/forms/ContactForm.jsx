@@ -1,17 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import emailjs from '@emailjs/browser';
+import PropTypes from "prop-types";
 
-export default function ContactForm() {
-  const form = useRef();
+export default function ContactForm({ onSuccess }) {
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    industry: "",
     message: "",
   });
-  const [status, setStatus] = useState({ type: "", message: "" });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -22,30 +20,30 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus({ type: "info", message: "Sending..." });
 
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-      .then((result) => {
-        setStatus({ type: "success", message: "Message sent successfully!" });
-        setFormData({ 
-          name: "", 
-          email: "", 
-          message: "" 
-        });
-      })
-      .catch((error) => {
-        setStatus({ type: "error", message: "Failed to send message. Please try again." });
-        console.error('EmailJS error:', error);
-      });
+    window.gtag?.("event", "contact_form_submit", {
+      form_name: "contact_form",
+      page_location: window.location.href,
+    });
+
+    onSuccess?.({
+      name: formData.name,
+      email: formData.email,
+      industry: formData.industry,
+      message: formData.message,
+    });
+
+    setFormData({
+      name: "",
+      email: "",
+      industry: "",
+      message: "",
+    });
   };
 
+
   return (
-    <FormWrapper ref={form} onSubmit={handleSubmit}>
+    <FormWrapper onSubmit={handleSubmit}>
       <FormGroup>
         <Label>Name</Label>
         <Input
@@ -69,6 +67,25 @@ export default function ContactForm() {
         />
       </FormGroup>
       <FormGroup>
+        <Label>Industry</Label>
+        <Select
+          name="industry"
+          value={formData.industry}
+          onChange={handleChange}
+          required
+        >
+          <option value="" disabled>Select an Industry</option>
+          <option value="Logistics">Logistics</option>
+          <option value="General Services">General Services</option>
+          <option value="Administrative Support">Administrative Support</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Web Design">Web Design</option>
+          <option value="3D Animation">3D Animation</option>
+          <option value="Other">Other</option>
+        </Select>
+      </FormGroup>
+      <FormGroup>
         <Label>What are you working on?</Label>
         <TextArea
           name="message"
@@ -79,15 +96,14 @@ export default function ContactForm() {
           rows="5"
         />
       </FormGroup>
-      {status.message && (
-        <StatusMessage type={status.type}>
-          {status.message}
-        </StatusMessage>
-      )}
       <SubmitButton type="submit">Send Message</SubmitButton>
     </FormWrapper>
   );
 }
+
+ContactForm.propTypes = {
+  onSuccess: PropTypes.func
+};
 
 const FormWrapper = styled.form`
   width: 100%;
@@ -138,6 +154,12 @@ const inputStyles = `
   }
 `;
 
+const Select = styled.select`
+  ${inputStyles}
+  appearance: none;
+  background-color: #fafafa;
+`;
+
 const Input = styled.input`
   ${inputStyles}
 `;
@@ -150,7 +172,7 @@ const TextArea = styled.textarea`
 
 const SubmitButton = styled.button`
   width: 100%;
-  background-color: #424242;
+  background-color: var(--primary);
   color: white;
   padding: 16px 24px;
   border: none;
@@ -163,43 +185,11 @@ const SubmitButton = styled.button`
   overflow: hidden;
 
   &:hover {
-    background-color: #212121;
+    background-color: #aa2b2b;
     transform: translateY(-1px);
   }
 
   &:active {
     transform: translateY(0);
   }
-`;
-
-const StatusMessage = styled.div`
-  margin: 0 0 24px;
-  padding: 14px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 500;
-  opacity: 0;
-  animation: fadeIn 0.3s ease forwards;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  ${props => {
-    switch(props.type) {
-      case 'error':
-        return 'background-color: #fff5f5; color: #e53e3e; border: 1px solid #fed7d7;';
-      case 'success':
-        return 'background-color: #f0fff4; color: #38a169; border: 1px solid #c6f6d5;';
-      default:
-        return 'background-color: #f5f5f5; color: #424242; border: 1px solid #e0e0e0;';
-    }
-  }}
 `;

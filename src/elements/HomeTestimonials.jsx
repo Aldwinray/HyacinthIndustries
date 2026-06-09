@@ -99,6 +99,14 @@ const Section = styled.div`
   background: 
     radial-gradient(circle at top left, rgba(139, 13, 42, 0.08), transparent 24%),
     linear-gradient(180deg, #fffdf9 0%, #f8f2f0 100%);
+
+  @media (max-width: 768px) {
+    padding: 4rem 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3rem 1rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -109,6 +117,10 @@ const Inner = styled.div`
 const HeadingBlock = styled.div`
   text-align: center;
   margin-bottom: 3rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2.5rem;
+  }
 `;
 
 const Eyebrow = styled.p`
@@ -119,6 +131,11 @@ const Eyebrow = styled.p`
   font-weight: 700;
   letter-spacing: 0.16rem;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    letter-spacing: 0.12rem;
+  }
 `;
 
 const Title = styled.h2`
@@ -155,6 +172,10 @@ const QuoteCard = styled.article`
     height: 5px;
     background: linear-gradient(90deg, #8b0d2a, #c89b2c);
   }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `;
 
 const QuoteMark = styled.span`
@@ -171,7 +192,12 @@ const Quote = styled.p`
   font-family: var(--font-body);
   font-size: 1.02rem;
   line-height: 1.8;
-  color: #2e3238;  
+  color: #2e3238;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
 `;
 
 const Outcome = styled.p`
@@ -232,6 +258,10 @@ const CaseStudyGrid = styled.div`
 const CaseStudyCard = styled.article`
   ${surfaceCard};
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `;
 
 const CaseStudyMeta = styled.p`

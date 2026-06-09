@@ -3,6 +3,22 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const FlipCard = ({ icon, title, caption }) => {
+  const isMobile = window.innerWidth <= 768;
+  
+  if (isMobile) {
+    return (
+      <CardContainer>
+        <StaticCard>
+          <IconContainer>
+            <div className="icon-container">{icon}</div>
+          </IconContainer>
+          <h2>{title}</h2>
+          <p>{caption}</p>
+        </StaticCard>
+      </CardContainer>
+    );
+  }
+
   return (
     <CardContainer>
       <CardInner
@@ -95,6 +111,32 @@ const CardBack = styled(CardFace)`
   }
   p{
     font-size: 0.8rem;
+  }
+`;
+
+const StaticCard = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  color: #212529;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  h2 {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0 0;
+    color: #6c757d;
   }
 `;
 

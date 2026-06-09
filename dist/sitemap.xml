@@ -6,72 +6,67 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/about</loc>
+    <loc>https://hyacinthindustriesllc.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/industries</loc>
+    <loc>https://hyacinthindustriesllc.com/industries/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/contact</loc>
+    <loc>https://hyacinthindustriesllc.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/services</loc>
+    <loc>https://hyacinthindustriesllc.com/services/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-   <loc>https://hyacinthindustriesllc.com/faq</loc>
+   <loc>https://hyacinthindustriesllc.com/faq/</loc>
    <changefreq>monthly</changefreq>
    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/reforestation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hyacinthindustriesllc.com/privacy-policy</loc>
+    <loc>https://hyacinthindustriesllc.com/privacy-policy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/general-services</loc>
+    <loc>https://hyacinthindustriesllc.com/general-services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/administrative-support</loc>
+    <loc>https://hyacinthindustriesllc.com/administrative-support/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>  
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/healthcare</loc>
+    <loc>https://hyacinthindustriesllc.com/healthcare/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/marketing</loc>
+    <loc>https://hyacinthindustriesllc.com/marketing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/web-design</loc>
+    <loc>https://hyacinthindustriesllc.com/web-design/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/3d-animation</loc>
+    <loc>https://hyacinthindustriesllc.com/3d-animation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyacinthindustriesllc.com/logistics</loc>
+    <loc>https://hyacinthindustriesllc.com/logistics/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

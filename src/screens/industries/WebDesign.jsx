@@ -18,7 +18,7 @@ export default function WebDesign() {
       <Seo
         title="Web Design Services | Hyacinth Industries LLC"
         description="Web design services from Hyacinth Industries LLC to improve digital presence, user experience, conversion performance, and online growth."
-        canonicalPath="/web-design"
+        canonicalPath="/web-design/"
       />
       <TopNavBar />
       <SideBar />
@@ -30,5 +30,5 @@ export default function WebDesign() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  padding-top: 110px; /* Account for fixed navbar height */
+  padding-top: 0;
 `;
