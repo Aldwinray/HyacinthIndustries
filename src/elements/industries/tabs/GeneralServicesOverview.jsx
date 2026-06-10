@@ -21,16 +21,16 @@ const GeneralServicesOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
-      <HeroSection>
-        <HeroBg src={bgImage} aria-hidden />
+      <HeroSection aria-labelledby="general-hero-title">
+        <HeroBg src={bgImage} aria-hidden="true" />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>General <GradientText>Services</GradientText></HeroTitle>
+            <HeroTitle id="general-hero-title">General <GradientText>Services</GradientText></HeroTitle>
             <HeroSubtitle>
               Comprehensive business support designed to stabilize daily operations and improve service delivery.
             </HeroSubtitle>
@@ -58,7 +58,7 @@ const GeneralServicesOverview = () => {
         <ServicesGrid>
           <ServiceCard>
             <ServiceNumber>01</ServiceNumber>
-            <ServiceIcon><Building2 size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Building2 size={24} strokeWidth={1.5} aria-label="Facility management and maintenance services" /></ServiceIcon>
             <ServiceTitle>Facility Management</ServiceTitle>
             <ServiceDescription>
               Comprehensive facility management solutions to maintain and optimize your business environment.
@@ -72,7 +72,7 @@ const GeneralServicesOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>02</ServiceNumber>
-            <ServiceIcon><ClipboardList size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><ClipboardList size={24} strokeWidth={1.5} aria-label="Office administration and coordination services" /></ServiceIcon>
             <ServiceTitle>Office Administration</ServiceTitle>
             <ServiceDescription>
               Streamline your office operations with our professional administrative support services.
@@ -86,7 +86,7 @@ const GeneralServicesOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>03</ServiceNumber>
-            <ServiceIcon><Users size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Users size={24} strokeWidth={1.5} aria-label="Human resources and workforce management services" /></ServiceIcon>
             <ServiceTitle>Human Resources</ServiceTitle>
             <ServiceDescription>
               Comprehensive HR solutions to manage your workforce effectively and efficiently.
@@ -100,7 +100,7 @@ const GeneralServicesOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>04</ServiceNumber>
-            <ServiceIcon><ShieldCheck size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><ShieldCheck size={24} strokeWidth={1.5} aria-label="Security services and access control solutions" /></ServiceIcon>
             <ServiceTitle>Security Services</ServiceTitle>
             <ServiceDescription>
               Protect your assets and ensure a safe working environment with our security solutions.

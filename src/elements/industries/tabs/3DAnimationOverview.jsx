@@ -22,18 +22,20 @@ import animationHero from '../../../assets/img/industries/animation.webp'
 const animationServices = [
   {
     icon: Box,
+    ariaLabel: "3D modeling and product visualization services",
     title: "3D Modeling",
     items: [
       "Character modeling",
       "Product visualization",
-      "Architectural rendering",
-      "Environment design"
+      "Environmental rendering",
+      "Props and assets"
     ],
     accent: "#9E1C24",
     accentLight: "rgba(158, 28, 36, 0.04)"
   },
   {
     icon: Video,
+    ariaLabel: "Animation production and motion graphics services",
     title: "Animation Production",
     items: [
       "Character animation",
@@ -46,6 +48,7 @@ const animationServices = [
   },
   {
     icon: Monitor,
+    ariaLabel: "Interactive VR and AR media solutions",
     title: "Interactive Media",
     items: [
       "Virtual reality (VR)",
@@ -58,6 +61,7 @@ const animationServices = [
   },
   {
     icon: Palette,
+    ariaLabel: "Visual design and concept art services",
     title: "Visual Design",
     items: [
       "Concept art",
@@ -70,6 +74,7 @@ const animationServices = [
   },
   {
     icon: Gamepad2,
+    ariaLabel: "Game development and asset creation services",
     title: "Game Development",
     items: [
       "Game asset creation",
@@ -82,6 +87,7 @@ const animationServices = [
   },
   {
     icon: Layers,
+    ariaLabel: "Compositing and post-production VFX services",
     title: "Compositing",
     items: [
       "Multi-layer compositing",
@@ -131,16 +137,16 @@ const ThreeDAnimationOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
-      <HeroSection>
-        <HeroBg src={animationHero} aria-hidden />
+      <HeroSection aria-labelledby="animation-hero-title">
+        <HeroBg src={animationHero} aria-hidden="true" />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>3D Animation & <GradientText>Visualization</GradientText></HeroTitle>
+            <HeroTitle id="animation-hero-title">3D Animation & <GradientText>Visualization</GradientText></HeroTitle>
             <HeroSubtitle>Bringing ideas to life through stunning visual storytelling</HeroSubtitle>
             <HeroNote>
               End-to-end 3D animation from concept to final render and delivery.
@@ -186,7 +192,7 @@ const ThreeDAnimationOverview = () => {
             <ServiceCard key={index}>
               <ServiceNumber>0{index + 1}</ServiceNumber>
               <ServiceIconWrapper>
-                <service.icon size={24} strokeWidth={1.5} />
+                <service.icon size={24} strokeWidth={1.5} aria-label={service.ariaLabel} />
               </ServiceIconWrapper>
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceList>

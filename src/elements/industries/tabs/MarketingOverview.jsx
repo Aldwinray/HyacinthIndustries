@@ -35,16 +35,16 @@ const marketingServices = [
 const MarketingOverview = () => {
   return (
     <Wrapper>
-      <HeroSection>
-        <HeroBg src={marketingHero} aria-hidden />
+      <HeroSection aria-labelledby="marketing-hero-title">
+        <HeroBg src={marketingHero} aria-hidden="true" />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>Marketing <GradientText>Support</GradientText></HeroTitle>
+            <HeroTitle id="marketing-hero-title">Marketing <GradientText>Support</GradientText></HeroTitle>
             <HeroSubtitle>
               Multimedia and social media support built to strengthen digital brand presence.
             </HeroSubtitle>
@@ -87,7 +87,7 @@ const MarketingOverview = () => {
             <ServiceCard key={index}>
               <ServiceNumber>0{index + 1}</ServiceNumber>
               <ServiceIconWrapper>
-                <service.icon size={24} strokeWidth={1.5} />
+                <service.icon size={24} strokeWidth={1.5} aria-label={service.title + " services"} />
               </ServiceIconWrapper>
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceList>

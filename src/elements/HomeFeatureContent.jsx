@@ -72,9 +72,9 @@ const cards = [
   {
     id: 2,
     image: card2,
-    title: "Technical Expertise",
+    title: "Digital Solutions",
     description:
-      "Access world-class engineering and web design services. Our team delivers cutting-edge solutions in CAD, product development, UI/UX design, and more.",
+      "Access world-class web design, development, and creative services. Our team delivers cutting-edge solutions in UI/UX design, digital marketing, 3D animation, and more.",
     tag: "Explore Services",
   },
   {

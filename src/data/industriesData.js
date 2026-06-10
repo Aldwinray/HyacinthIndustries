@@ -303,8 +303,8 @@ export const industriesData = {
       image: AnimationImg,
       icon: Globe,
       iconWeight: "duotone",
-      title: 'Architectural Visualization',
-      description: 'Create 3D models and animations for architectural projects',
+      title: 'Product Visualization',
+      description: 'Create 3D models and animations for product visualization and marketing',
       tag: 'Explore Now',
       link: '/3d-animation'
     },

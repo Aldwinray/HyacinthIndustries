@@ -61,16 +61,16 @@ const HealthcareOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
-      <HeroSection>
-        <HeroBg src={HealthcareHero} aria-hidden />
+      <HeroSection aria-labelledby="healthcare-hero-title">
+        <HeroBg src={HealthcareHero} aria-hidden="true" />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>Healthcare <GradientText>Solutions</GradientText></HeroTitle>
+            <HeroTitle id="healthcare-hero-title">Healthcare <GradientText>Solutions</GradientText></HeroTitle>
             <HeroSubtitle>
               Advanced medical support and technology services designed for reliable care delivery and stronger operations.
             </HeroSubtitle>
@@ -119,7 +119,7 @@ const HealthcareOverview = () => {
             </Paragraph>
           </ContentColumn>
           <ImageColumn>
-            <StyledImage src={HealthcareImg2} alt="Healthcare Technology" />
+            <StyledImage src={HealthcareImg2} alt="Healthcare professional using modern medical technology and digital health systems" />
           </ImageColumn>
         </ContentGrid>
       </Section>
@@ -131,7 +131,7 @@ const HealthcareOverview = () => {
         <ServicesGrid>
           <ServiceCard>
             <ServiceNumber>01</ServiceNumber>
-            <ServiceIcon><BriefcaseMedical size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><BriefcaseMedical size={24} strokeWidth={1.5} aria-label="Virtual healthcare and telehealth services" /></ServiceIcon>
             <ServiceTitle>Virtual Healthcare</ServiceTitle>
             <ServiceCardDescription>
               Comprehensive telehealth solutions including remote consultations, monitoring, and digital health platforms.
@@ -145,7 +145,7 @@ const HealthcareOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>02</ServiceNumber>
-            <ServiceIcon><PhoneForwarded size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><PhoneForwarded size={24} strokeWidth={1.5} aria-label="Healthcare administrative support services" /></ServiceIcon>
             <ServiceTitle>Administrative Support</ServiceTitle>
             <ServiceCardDescription>
               Streamlined administrative support for healthcare organizations, including billing, documentation, and compliance.
@@ -210,7 +210,7 @@ const HealthcareOverview = () => {
   
           
           <InnovationCard>
-            <InnovationImage src={RPM} alt="Remote Patient Monitoring" />
+            <InnovationImage src={RPM} alt="Remote patient monitoring dashboard displaying vital signs and health metrics" />
             <InnovationOverlay>
               <InnovationTitle>Remote Monitoring</InnovationTitle>
               <InnovationDescription>
@@ -220,7 +220,7 @@ const HealthcareOverview = () => {
           </InnovationCard>
           
           <InnovationCard>
-            <InnovationImage src={HealthcareSecurity} alt="Healthcare Security" />
+            <InnovationImage src={HealthcareSecurity} alt="Healthcare data security with encryption and HIPAA compliance protection" />
             <InnovationOverlay>
               <InnovationTitle>Secure Health Data</InnovationTitle>
               <InnovationDescription>
@@ -241,7 +241,7 @@ const HealthcareOverview = () => {
         
         <ProcessStepsContainer>
           <ProcessImage>
-            <img src={ProcessImg} alt="Healthcare Process" loading="lazy" />
+            <img src={ProcessImg} alt="Healthcare administrative process workflow from assessment to monitoring" loading="lazy" />
           </ProcessImage>
           
           <ProcessSteps>

@@ -21,16 +21,16 @@ const AdministrativeSupportOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
-      <HeroSection>
-        <HeroBg src={bgImage} aria-hidden />
+      <HeroSection aria-labelledby="admin-hero-title">
+        <HeroBg src={bgImage} aria-hidden="true" />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>Administrative <GradientText>Support</GradientText></HeroTitle>
+            <HeroTitle id="admin-hero-title">Administrative <GradientText>Support</GradientText></HeroTitle>
             <HeroSubtitle>
               Professional business administration built to reduce operational drag and keep teams focused on execution.
             </HeroSubtitle>
@@ -58,7 +58,7 @@ const AdministrativeSupportOverview = () => {
         <ServicesGrid>
           <ServiceCard>
             <ServiceNumber>01</ServiceNumber>
-            <ServiceIcon><ClipboardList size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><ClipboardList size={24} strokeWidth={1.5} aria-label="Office management and workflow optimization services" /></ServiceIcon>
             <ServiceTitle>Office Management</ServiceTitle>
             <ServiceDescription>
               Comprehensive office management solutions to streamline your business operations.
@@ -72,7 +72,7 @@ const AdministrativeSupportOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>02</ServiceNumber>
-            <ServiceIcon><FileText size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><FileText size={24} strokeWidth={1.5} aria-label="Document processing and data entry services" /></ServiceIcon>
             <ServiceTitle>Document Processing</ServiceTitle>
             <ServiceDescription>
               Efficient document management and processing services for your business needs.
@@ -86,7 +86,7 @@ const AdministrativeSupportOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>03</ServiceNumber>
-            <ServiceIcon><Calendar size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Calendar size={24} strokeWidth={1.5} aria-label="Scheduling and planning coordination services" /></ServiceIcon>
             <ServiceTitle>Scheduling & Planning</ServiceTitle>
             <ServiceDescription>
               Professional scheduling and planning services to optimize your time and resources.
@@ -100,7 +100,7 @@ const AdministrativeSupportOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>04</ServiceNumber>
-            <ServiceIcon><Mail size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Mail size={24} strokeWidth={1.5} aria-label="Email and correspondence management services" /></ServiceIcon>
             <ServiceTitle>Correspondence Management</ServiceTitle>
             <ServiceDescription>
               Efficient handling of business correspondence to maintain professional communications.

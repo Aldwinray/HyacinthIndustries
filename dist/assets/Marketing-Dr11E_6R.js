@@ -1,8 +1,8 @@
-import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js";import{d as t}from"./styled-CFUkIykv.js";import{S as p,T as g,a as x,F as h}from"./index-MTnuMEob.js";import{m as f}from"./marketing-UVJaPu9h.js";import{g as o,n as r,Q as b,V as u}from"./icons-BMgoPnMN.js";const w="/assets/Marketing-DE3Jdfq6.webp",v=[{icon:b,title:"Multimedia Production",items:["Video editing","Graphic design","Brand-aligned visual content","Visual storytelling assets"]},{icon:u,title:"Social Media Management",items:["Content scheduling","Platform coordination","Brand voice consistency","Audience engagement support"]}],j=()=>e.jsxs(k,{children:[e.jsxs(y,{children:[e.jsx(z,{src:f,"aria-hidden":!0}),e.jsx(C,{}),e.jsx(S,{}),e.jsx(M,{children:e.jsxs(E,{children:[e.jsxs(H,{children:[e.jsx(T,{})," Industry Solutions"]}),e.jsxs(I,{children:["Marketing ",e.jsx(A,{children:"Support"})]}),e.jsx(B,{children:"Multimedia and social media support built to strengthen digital brand presence."}),e.jsx(L,{children:"End-to-end support for multimedia production and social media management."}),e.jsxs(D,{children:[e.jsxs(G,{href:"#marketing",children:["Explore Marketing Support",e.jsx(o,{size:18})]}),e.jsxs(O,{children:[e.jsx(P,{children:"2 Core Services"}),e.jsx(W,{children:"Enterprise-grade support"})]})]})]})})]}),e.jsxs(V,{id:"marketing",children:[e.jsx(s,{children:"Modern Marketing Support for Growing Teams"}),e.jsx($,{children:"Hyacinth Industries helps companies improve digital communication through multimedia production and social media support. The focus is on helping your brand look more consistent, stay active across channels, and present content in a way that is easier for your audience to notice and trust."})]}),e.jsxs(N,{children:[e.jsx(Y,{}),e.jsx(s,{children:"Our Marketing Services"}),e.jsx(R,{children:"We provide practical marketing support across multimedia production, social media management, to help teams move faster without compromising quality."}),e.jsx(q,{children:v.map((i,a)=>e.jsxs(d,{children:[e.jsxs(F,{children:["0",a+1]}),e.jsx(X,{children:e.jsx(i.icon,{size:24,strokeWidth:1.5})}),e.jsx(J,{children:i.title}),e.jsx(Q,{children:i.items.map((m,c)=>e.jsx(U,{children:m},c))})]},a))})]}),e.jsxs(K,{children:[e.jsx(Z,{}),e.jsxs(_,{children:[e.jsx(ee,{children:"Ready to Strengthen Your Marketing Execution?"}),e.jsx(te,{children:"Let's discuss how Hyacinth Industries can support your brand with stronger multimedia output and more consistent social media coordination."}),e.jsxs(ie,{href:"/contact/",children:["Contact Us Today",e.jsx(o,{size:18})]}),e.jsxs(re,{children:[e.jsxs(n,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Multimedia Production"})]}),e.jsxs(n,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Social Media Management"})]}),e.jsxs(n,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Brand Content Strategy"})]})]})]})]})]}),k=t.div`
+import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js";import{d as t}from"./styled-CFUkIykv.js";import{S as p,T as g,a as x,F as f}from"./index-nbaXq9k7.js";import{m as h}from"./marketing-UVJaPu9h.js";import{g as o,n as r,Q as u,V as b}from"./icons-BMgoPnMN.js";const v="/assets/Marketing-DE3Jdfq6.webp",w=[{icon:u,title:"Multimedia Production",items:["Video editing","Graphic design","Brand-aligned visual content","Visual storytelling assets"]},{icon:b,title:"Social Media Management",items:["Content scheduling","Platform coordination","Brand voice consistency","Audience engagement support"]}],y=()=>e.jsxs(j,{children:[e.jsxs(k,{"aria-labelledby":"marketing-hero-title",children:[e.jsx(S,{src:h,"aria-hidden":"true"}),e.jsx(C,{}),e.jsx(z,{}),e.jsx(M,{children:e.jsxs(O,{children:[e.jsxs(E,{children:[e.jsx(H,{"aria-hidden":"true"})," Industry Solutions"]}),e.jsxs(A,{id:"marketing-hero-title",children:["Marketing ",e.jsx(T,{children:"Support"})]}),e.jsx(B,{children:"Multimedia and social media support built to strengthen digital brand presence."}),e.jsx(I,{children:"End-to-end support for multimedia production and social media management."}),e.jsxs(D,{children:[e.jsxs(L,{href:"#marketing",children:["Explore Marketing Support",e.jsx(o,{size:18})]}),e.jsxs(G,{children:[e.jsx(P,{children:"2 Core Services"}),e.jsx(V,{children:"Enterprise-grade support"})]})]})]})})]}),e.jsxs(W,{id:"marketing",children:[e.jsx(s,{children:"Modern Marketing Support for Growing Teams"}),e.jsx($,{children:"Hyacinth Industries helps companies improve digital communication through multimedia production and social media support. The focus is on helping your brand look more consistent, stay active across channels, and present content in a way that is easier for your audience to notice and trust."})]}),e.jsxs(N,{children:[e.jsx(Y,{}),e.jsx(s,{children:"Our Marketing Services"}),e.jsx(R,{children:"We provide practical marketing support across multimedia production, social media management, to help teams move faster without compromising quality."}),e.jsx(q,{children:w.map((i,a)=>e.jsxs(d,{children:[e.jsxs(F,{children:["0",a+1]}),e.jsx(X,{children:e.jsx(i.icon,{size:24,strokeWidth:1.5,"aria-label":i.title+" services"})}),e.jsx(J,{children:i.title}),e.jsx(Q,{children:i.items.map((m,c)=>e.jsx(U,{children:m},c))})]},a))})]}),e.jsxs(K,{children:[e.jsx(Z,{}),e.jsxs(_,{children:[e.jsx(ee,{children:"Ready to Strengthen Your Marketing Execution?"}),e.jsx(te,{children:"Let's discuss how Hyacinth Industries can support your brand with stronger multimedia output and more consistent social media coordination."}),e.jsxs(ie,{href:"/contact/",children:["Contact Us Today",e.jsx(o,{size:18})]}),e.jsxs(re,{children:[e.jsxs(n,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Multimedia Production"})]}),e.jsxs(n,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Social Media Management"})]}),e.jsxs(n,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Brand Content Strategy"})]})]})]})]})]}),j=t.div`
   width: 100%;
   background: #ffffff;
   overflow-x: hidden;
-`,y=t.section`
+`,k=t.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -15,7 +15,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
     min-height: auto;
     padding: 8rem 0 5rem;
   }
-`,z=t.div`
+`,S=t.div`
   position: absolute;
   inset: 0;
   background-image: url(${i=>i.src});
@@ -63,7 +63,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
       rgba(2, 6, 23, 0.75) 100%
     );
   }
-`,S=t.div`
+`,z=t.div`
   position: absolute;
   inset: 0;
   background: 
@@ -80,7 +80,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
-`,E=t.div`
+`,O=t.div`
   max-width: 720px;
   text-align: left;
 
@@ -88,7 +88,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
     max-width: 100%;
     text-align: center;
   }
-`,H=t.div`
+`,E=t.div`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -106,17 +106,17 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     margin-bottom: 2rem;
   }
-`,T=t.span`
+`,H=t.span`
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #C9A227;
-`,A=t.span`
+`,T=t.span`
   background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-`,I=t.h1`
+`,A=t.h1`
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(3rem, 5vw, 5rem);
@@ -142,7 +142,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
     margin: 1.75rem auto 0;
     max-width: 480px;
   }
-`,L=t.p`
+`,I=t.p`
   margin: 1.5rem 0 0;
   max-width: 560px;
   font-size: 0.95rem;
@@ -168,7 +168,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
     align-items: stretch;
     margin-top: 2.5rem;
   }
-`,G=t.a`
+`,L=t.a`
   display: inline-flex;
   align-items: center;
   gap: 0.875rem;
@@ -204,7 +204,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
     justify-content: center;
     height: 56px;
   }
-`,O=t.div`
+`,G=t.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,7 +228,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
   color: #ffffff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-`,W=t.span`
+`,V=t.span`
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 0.25rem;
@@ -237,7 +237,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
   @media (max-width: 640px) {
     margin-top: 0;
   }
-`,V=t.section`
+`,W=t.section`
   padding: 7rem 2rem;
   text-align: center;
   max-width: 860px;
@@ -392,7 +392,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
   inset: 0;
   background: 
     radial-gradient(ellipse at 50% 0%, rgba(158, 28, 36, 0.08) 0%, transparent 60%),
-    url(${w}) center / cover no-repeat;
+    url(${v}) center / cover no-repeat;
   opacity: 0.12;
 
   &::after {
@@ -538,7 +538,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js
   svg {
     color: #C9A227;
   }
-`;function le(){return l.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(ne,{children:[e.jsx(p,{title:"Marketing Services | Hyacinth Industries LLC",description:"Marketing services from Hyacinth Industries LLC focused on multimedia production, social media management, and stronger digital brand execution.",canonicalPath:"/marketing/"}),e.jsx(g,{}),e.jsx(x,{}),e.jsx(j,{}),e.jsx(h,{})]})}const ne=t.div`
+`,ne={"@context":"https://schema.org","@type":"Service",serviceType:"Marketing Support",provider:{"@type":"Organization",name:"Hyacinth Industries LLC",url:"https://hyacinthindustriesllc.com"},areaServed:"Global",hasOfferCatalog:{"@type":"OfferCatalog",name:"Marketing Services",itemListElement:[{"@type":"Offer",itemOffered:{"@type":"Service",name:"Multimedia Production"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Video Editing"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Graphic Design"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Social Media Management"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Brand Voice Consistency"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Content Scheduling"}}]}};function pe(){return l.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(ae,{children:[e.jsx(p,{title:"Marketing Services | Hyacinth Industries LLC",description:"Marketing support including multimedia production, video editing, graphic design, and social media management. Strengthen your brand's digital presence.",canonicalPath:"/marketing/",image:"/og-marketing.jpg",structuredData:ne}),e.jsx(g,{}),e.jsx(x,{}),e.jsx(y,{}),e.jsx(f,{})]})}const ae=t.div`
   width: 100vw;
   padding-top: 0;
-`;export{le as default};
+`;export{pe as default};

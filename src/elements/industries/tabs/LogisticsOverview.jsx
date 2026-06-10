@@ -11,16 +11,16 @@ const LogisticsOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
-      <HeroSection>
+      <HeroSection aria-labelledby="logistics-hero-title">
         <HeroBg src={bgImage} aria-hidden />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>Logistics <GradientText>Support</GradientText></HeroTitle>
+            <HeroTitle id="logistics-hero-title">Logistics <GradientText>Support</GradientText></HeroTitle>
             <HeroSubtitle>
               Professional logistics support services designed to streamline your supply chain operations and enhance operational efficiency.
             </HeroSubtitle>
@@ -48,7 +48,7 @@ const LogisticsOverview = () => {
         <ServicesGrid>
           <ServiceCard>
             <ServiceNumber>01</ServiceNumber>
-            <ServiceIcon><Computer size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Computer size={24} strokeWidth={1.5} aria-label="Data entry and shipment processing services" /></ServiceIcon>
             <ServiceTitle>Data Entry</ServiceTitle>
             <ServiceDescription>
               Meticulous accuracy and efficiency at every step of your logistics data management.
@@ -62,7 +62,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>02</ServiceNumber>
-            <ServiceIcon><MapPinned size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><MapPinned size={24} strokeWidth={1.5} aria-label="Real-time shipment tracking and trace services" /></ServiceIcon>
             <ServiceTitle>Track and Trace</ServiceTitle>
             <ServiceDescription>
               Real-time visibility for all your shipments with comprehensive monitoring and updates.
@@ -76,7 +76,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>03</ServiceNumber>
-            <ServiceIcon><TrendingUp size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><TrendingUp size={24} strokeWidth={1.5} aria-label="Carrier sales and revenue growth services" /></ServiceIcon>
             <ServiceTitle>Carrier Sales</ServiceTitle>
             <ServiceDescription>
               Effective sales strategies to increase your carrier&apos;s revenue and expand market reach.
@@ -90,7 +90,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>04</ServiceNumber>
-            <ServiceIcon><PackageCheck size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><PackageCheck size={24} strokeWidth={1.5} aria-label="Load planning and route optimization services" /></ServiceIcon>
             <ServiceTitle>Load Planning</ServiceTitle>
             <ServiceDescription>
               Planning and optimization of loads for efficient transportation and cost reduction.
@@ -104,7 +104,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>05</ServiceNumber>
-            <ServiceIcon><Phone size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Phone size={24} strokeWidth={1.5} aria-label="Customer support and issue resolution services" /></ServiceIcon>
             <ServiceTitle>Customer Support</ServiceTitle>
             <ServiceDescription>
               Prompt, professional issue resolution for enhanced customer satisfaction.
@@ -118,7 +118,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>06</ServiceNumber>
-            <ServiceIcon><Headset size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Headset size={24} strokeWidth={1.5} aria-label="24/7 afterhours logistics support" /></ServiceIcon>
             <ServiceTitle>Afterhours Support</ServiceTitle>
             <ServiceDescription>
               Support during non-work hours, including evenings and weekends for continuous operations.
@@ -132,7 +132,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>07</ServiceNumber>
-            <ServiceIcon><User size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><User size={24} strokeWidth={1.5} aria-label="Logistics coordination and vendor management" /></ServiceIcon>
             <ServiceTitle>Logistics Coordinator</ServiceTitle>
             <ServiceDescription>
               Seamless orchestration from origin to destination ensuring smooth operations.
@@ -146,7 +146,7 @@ const LogisticsOverview = () => {
           
           <ServiceCard>
             <ServiceNumber>08</ServiceNumber>
-            <ServiceIcon><Database size={24} strokeWidth={1.5} /></ServiceIcon>
+            <ServiceIcon><Database size={24} strokeWidth={1.5} aria-label="Logistics data analytics and reporting" /></ServiceIcon>
             <ServiceTitle>Data Analyst</ServiceTitle>
             <ServiceDescription>
               Analysis of data for insights, trends, and informed business decisions.

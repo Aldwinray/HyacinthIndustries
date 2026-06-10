@@ -119,16 +119,16 @@ const WebDesignOverview = () => {
   return (
     <Wrapper>
       {/* Hero Section */}
-      <HeroSection>
-        <HeroBg src={webHero} aria-hidden />
+      <HeroSection aria-labelledby="webdesign-hero-title">
+        <HeroBg src={webHero} aria-hidden="true" />
         <HeroOverlay />
         <HeroVignette />
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowDot /> Industry Solutions
+              <EyebrowDot aria-hidden="true" /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>Web Design & <GradientText>Development</GradientText></HeroTitle>
+            <HeroTitle id="webdesign-hero-title">Web Design & <GradientText>Development</GradientText></HeroTitle>
             <HeroSubtitle>Creating digital experiences that engage, convert, and inspire</HeroSubtitle>
             <HeroNote>
               End-to-end web solutions from design to deployment and ongoing support.
@@ -170,7 +170,7 @@ const WebDesignOverview = () => {
             <ServiceCard key={index}>
               <ServiceNumber>0{index + 1}</ServiceNumber>
               <ServiceIconWrapper>
-                <service.icon size={24} strokeWidth={1.5} />
+                <service.icon size={24} strokeWidth={1.5} aria-label={service.title + " services"} />
               </ServiceIconWrapper>
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceList>
@@ -194,7 +194,7 @@ const WebDesignOverview = () => {
           {webBenefits.map((benefit, index) => (
             <BenefitCard key={index}>
               <BenefitIconWrapper>
-                <benefit.icon size={24} strokeWidth={1.5} />
+                <benefit.icon size={24} strokeWidth={1.5} aria-label={benefit.title} />
               </BenefitIconWrapper>
               <BenefitTitle>{benefit.title}</BenefitTitle>
               <BenefitText>{benefit.description}</BenefitText>

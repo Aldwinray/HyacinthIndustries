@@ -1,8 +1,8 @@
-import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js";import{d as i}from"./styled-CFUkIykv.js";import{S as W,T as E,a as A,F as P}from"./index-MTnuMEob.js";import{b as H}from"./office-Bip-LbGP.js";import{g as w,v as k,n as r,D as T,E as D,M as B,W as O,U as I,z,i as M,J as F}from"./icons-BMgoPnMN.js";const L="/assets/Administrative%20Support-Dw_kkO1p.webp",R=()=>e.jsxs($,{children:[e.jsxs(G,{children:[e.jsx(Y,{src:H,"aria-hidden":!0}),e.jsx(N,{}),e.jsx(U,{}),e.jsx(q,{children:e.jsxs(X,{children:[e.jsxs(J,{children:[e.jsx(Q,{})," Industry Solutions"]}),e.jsxs(_,{children:["Administrative ",e.jsx(V,{children:"Support"})]}),e.jsx(K,{children:"Professional business administration built to reduce operational drag and keep teams focused on execution."}),e.jsx(Z,{children:"End-to-end support for office management, documents, scheduling, and correspondence."}),e.jsxs(ee,{children:[e.jsxs(ie,{href:"#administrative-services",children:["Get Started",e.jsx(w,{size:18})]}),e.jsxs(re,{children:[e.jsx(te,{children:"4 Core Services"}),e.jsx(ne,{children:"Enterprise-grade support"})]})]})]})})]}),e.jsxs(oe,{id:"administrative-services",children:[e.jsx(y,{}),e.jsx(f,{children:"Our Administrative Services"}),e.jsxs(se,{children:[e.jsxs(n,{children:[e.jsx(s,{children:"01"}),e.jsx(a,{children:e.jsx(k,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Office Management"}),e.jsx(c,{children:"Comprehensive office management solutions to streamline your business operations."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Workflow Optimization"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Resource Allocation"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Office Coordination"]})]})]}),e.jsxs(n,{children:[e.jsx(s,{children:"02"}),e.jsx(a,{children:e.jsx(T,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Document Processing"}),e.jsx(c,{children:"Efficient document management and processing services for your business needs."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Document Creation"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Filing & Organization"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Data Entry"]})]})]}),e.jsxs(n,{children:[e.jsx(s,{children:"03"}),e.jsx(a,{children:e.jsx(D,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Scheduling & Planning"}),e.jsx(c,{children:"Professional scheduling and planning services to optimize your time and resources."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Appointment Setting"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Meeting Coordination"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Event Planning"]})]})]}),e.jsxs(n,{children:[e.jsx(s,{children:"04"}),e.jsx(a,{children:e.jsx(B,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Correspondence Management"}),e.jsx(c,{children:"Efficient handling of business correspondence to maintain professional communications."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Email Management"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Letter Drafting"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Response Handling"]})]})]})]})]}),e.jsxs(ae,{children:[e.jsx(y,{}),e.jsx(f,{children:"Our Administrative Process"}),e.jsx(de,{children:"We follow a systematic approach to deliver exceptional administrative support that meets your business needs."}),e.jsxs(ce,{children:[e.jsxs(o,{children:[e.jsx(m,{children:"01"}),e.jsx(p,{children:e.jsx(k,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Assessment"}),e.jsx(h,{children:"We evaluate your current administrative processes and identify areas for improvement."})]}),e.jsxs(o,{children:[e.jsx(m,{children:"02"}),e.jsx(p,{children:e.jsx(O,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Planning"}),e.jsx(h,{children:"We develop a customized administrative support plan tailored to your specific requirements."})]}),e.jsxs(o,{children:[e.jsx(m,{children:"03"}),e.jsx(p,{children:e.jsx(I,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Implementation"}),e.jsx(h,{children:"We assign dedicated administrative professionals to execute the plan with precision."})]}),e.jsxs(o,{children:[e.jsx(m,{children:"04"}),e.jsx(p,{children:e.jsx(z,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Optimization"}),e.jsx(h,{children:"We continuously monitor performance and optimize processes for maximum efficiency."})]})]})]}),e.jsxs(le,{children:[e.jsx(f,{children:"Why Choose Our Administrative Support"}),e.jsxs(me,{children:[e.jsxs(g,{children:[e.jsx(u,{children:e.jsx(M,{size:24,strokeWidth:1.5})}),e.jsx(b,{children:"Time Efficiency"}),e.jsx(j,{children:"Free up valuable time for core business activities by outsourcing administrative tasks to our experts."})]}),e.jsxs(g,{children:[e.jsx(u,{children:e.jsx(z,{size:24,strokeWidth:1.5})}),e.jsx(b,{children:"Cost Reduction"}),e.jsx(j,{children:"Lower operational costs through efficient resource allocation and streamlined administrative processes."})]}),e.jsxs(g,{children:[e.jsx(u,{children:e.jsx(F,{size:24,strokeWidth:1.5})}),e.jsx(b,{children:"Professional Quality"}),e.jsx(j,{children:"Ensure consistent, high-quality administrative support from experienced professionals."})]})]})]}),e.jsxs(pe,{children:[e.jsx(xe,{}),e.jsxs(he,{children:[e.jsx(ge,{children:"Ready to Streamline Your Administrative Processes?"}),e.jsx(fe,{children:"Contact us today to learn how our administrative support services can help your business thrive."}),e.jsxs(ue,{href:"/contact/",children:["Contact Us",e.jsx(w,{size:18})]}),e.jsxs(be,{children:[e.jsxs(v,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Document Management"})]}),e.jsxs(v,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Data Entry & Research"})]}),e.jsxs(v,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Scheduling & Planning"})]})]})]})]})]}),$=i.div`
+import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js";import{d as i}from"./styled-CFUkIykv.js";import{S as w,T as y,a as j,F as S}from"./index-nbaXq9k7.js";import{w as m}from"./coding-DYEnY3xo.js";import{g,n as l,Y as z,_ as C,$ as k,a0 as D,t as O,a1 as E,a2 as W,U as P,a3 as T,S as A,a4 as B,i as H}from"./icons-BMgoPnMN.js";const I="/assets/Web%20Design-DgGxZffV.webp",L=[{icon:z,title:"UI/UX Design",items:["User interface design","User experience optimization","Wireframing & prototyping","Visual design systems"]},{icon:C,title:"Responsive Development",items:["Mobile-first design","Cross-browser compatibility","Progressive web apps","Performance optimization"]},{icon:k,title:"Technical Solutions",items:["Custom web applications","Content management systems","E-commerce platforms","API integrations"]},{icon:D,title:"Creative Design",items:["Brand identity integration","Custom graphics & illustrations","Animation & interactive elements","Visual storytelling"]},{icon:O,title:"SEO Optimization",items:["Search engine friendly structure","Performance optimization","Semantic HTML markup","Analytics integration"]},{icon:E,title:"Maintenance & Support",items:["Regular updates & monitoring","Performance optimization","Security patches","Content management"]}],U=[{icon:W,title:"Performance-Driven",description:"Fast-loading, optimized websites that convert visitors into customers with measurable results."},{icon:P,title:"Expert Team",description:"Our skilled designers and developers bring years of experience to deliver exceptional digital solutions."},{icon:T,title:"Scalable Solutions",description:"Websites and applications that grow seamlessly with your business needs and user base."},{icon:A,title:"Secure & Reliable",description:"Built with modern security standards to protect your business and customer data."},{icon:B,title:"Innovative Approach",description:"We leverage the latest technologies and design trends to keep your digital presence ahead of the curve."},{icon:H,title:"Timely Delivery",description:"We understand the importance of deadlines and deliver projects on time without compromising quality."}],G=()=>e.jsxs(M,{children:[e.jsxs(R,{"aria-labelledby":"webdesign-hero-title",children:[e.jsx(X,{src:m,"aria-hidden":"true"}),e.jsx($,{}),e.jsx(Y,{}),e.jsx(N,{children:e.jsxs(V,{children:[e.jsxs(F,{children:[e.jsx(q,{"aria-hidden":"true"})," Industry Solutions"]}),e.jsxs(_,{id:"webdesign-hero-title",children:["Web Design & ",e.jsx(Z,{children:"Development"})]}),e.jsx(J,{children:"Creating digital experiences that engage, convert, and inspire"}),e.jsx(K,{children:"End-to-end web solutions from design to deployment and ongoing support."}),e.jsxs(Q,{children:[e.jsxs(ee,{href:"#web-design-and-development",children:["Get Started",e.jsx(g,{size:18})]}),e.jsxs(ie,{children:[e.jsx(te,{children:"6 Core Services"}),e.jsx(re,{children:"Enterprise-grade solutions"})]})]})]})})]}),e.jsxs(ne,{id:"web-design-and-development",children:[e.jsx(n,{children:"Modern Web Solutions for the Digital Age"}),e.jsx(oe,{children:"At Hyacinth Industries, we create stunning, responsive websites that combine aesthetic excellence with technical innovation. Our web design services focus on delivering user-friendly, performance-optimized digital experiences that drive results and help your business stand out in the competitive digital landscape."})]}),e.jsxs(ae,{children:[e.jsx(h,{}),e.jsx(n,{children:"Our Web Design Services"}),e.jsx(se,{children:"We offer a comprehensive range of web design and development services to meet your business needs, from simple informational websites to complex web applications."}),e.jsx(de,{children:L.map((t,r)=>e.jsxs(x,{children:[e.jsxs(ce,{children:["0",r+1]}),e.jsx(le,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5,"aria-label":t.title+" services"})}),e.jsx(pe,{children:t.title}),e.jsx(me,{children:t.items.map((b,u)=>e.jsx(ge,{children:b},u))})]},r))})]}),e.jsxs(he,{children:[e.jsx(n,{children:"Why Choose Our Web Design Services?"}),e.jsx(xe,{children:"Our approach to web design combines creativity, technical expertise, and business strategy to deliver websites that not only look great but also perform exceptionally well."}),e.jsx(fe,{children:U.map((t,r)=>e.jsxs(f,{children:[e.jsx(be,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5,"aria-label":t.title})}),e.jsx(ue,{children:t.title}),e.jsx(ve,{children:t.description})]},r))})]}),e.jsxs(we,{children:[e.jsx(h,{}),e.jsx(n,{children:"Our Web Development Process"}),e.jsx(ye,{children:"We follow a structured approach to web design and development to ensure that every project is delivered on time, within budget, and exceeds expectations."}),e.jsxs(je,{children:[e.jsx(Se,{children:e.jsx("img",{src:m,alt:"Web Development Process",loading:"lazy"})}),e.jsxs(ze,{children:[e.jsxs(o,{children:[e.jsx(a,{children:"01"}),e.jsxs(s,{children:[e.jsx(d,{children:"Discovery & Planning"}),e.jsx(c,{children:"We begin by understanding your business goals, target audience, and requirements to create a comprehensive project plan."})]})]}),e.jsxs(o,{children:[e.jsx(a,{children:"02"}),e.jsxs(s,{children:[e.jsx(d,{children:"Design & Prototyping"}),e.jsx(c,{children:"Our designers create wireframes and visual designs that align with your brand identity and user experience goals."})]})]}),e.jsxs(o,{children:[e.jsx(a,{children:"03"}),e.jsxs(s,{children:[e.jsx(d,{children:"Development & Testing"}),e.jsx(c,{children:"Our developers build your website using clean, efficient code and thoroughly test it across all devices and browsers."})]})]}),e.jsxs(o,{children:[e.jsx(a,{children:"04"}),e.jsxs(s,{children:[e.jsx(d,{children:"Launch & Optimization"}),e.jsx(c,{children:"After final approval, we deploy your website and provide ongoing support to ensure optimal performance."})]})]})]})]})]}),e.jsxs(Ce,{children:[e.jsx(ke,{}),e.jsxs(De,{children:[e.jsx(Oe,{children:"Ready to Transform Your Digital Presence?"}),e.jsx(Ee,{children:"Let's discuss how our web design services can help you achieve your business goals and create a compelling online experience for your customers."}),e.jsxs(We,{href:"/contact/",children:["Contact Us Today",e.jsx(g,{size:18})]}),e.jsxs(Pe,{children:[e.jsxs(p,{children:[e.jsx(l,{size:16}),e.jsx("span",{children:"UI/UX Design"})]}),e.jsxs(p,{children:[e.jsx(l,{size:16}),e.jsx("span",{children:"SEO & Performance"})]}),e.jsxs(p,{children:[e.jsx(l,{size:16}),e.jsx("span",{children:"Responsive Development"})]})]})]})]})]}),M=i.div`
   width: 100%;
   background: #ffffff;
   overflow-x: hidden;
-`,G=i.section`
+`,R=i.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -15,10 +15,10 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     min-height: auto;
     padding: 8rem 0 5rem;
   }
-`,Y=i.div`
+`,X=i.div`
   position: absolute;
   inset: 0;
-  background-image: url(${C=>C.src});
+  background-image: url(${t=>t.src});
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -28,7 +28,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     background-position: 65% center;
     opacity: 0.45;
   }
-`,N=i.div`
+`,$=i.div`
   position: absolute;
   inset: 0;
   background: 
@@ -63,13 +63,13 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
       rgba(2, 6, 23, 0.75) 100%
     );
   }
-`,U=i.div`
+`,Y=i.div`
   position: absolute;
   inset: 0;
   background: 
     radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 6, 23, 0.4) 100%);
   pointer-events: none;
-`,q=i.div`
+`,N=i.div`
   position: relative;
   z-index: 3;
   width: 100%;
@@ -80,7 +80,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
-`,X=i.div`
+`,V=i.div`
   max-width: 720px;
   text-align: left;
 
@@ -88,7 +88,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     max-width: 100%;
     text-align: center;
   }
-`,J=i.div`
+`,F=i.div`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -106,12 +106,12 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     margin-bottom: 2rem;
   }
-`,Q=i.span`
+`,q=i.span`
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #C9A227;
-`,V=i.span`
+`,Z=i.span`
   background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -129,7 +129,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     font-size: clamp(2.5rem, 8vw, 3.5rem);
     line-height: 1.1;
   }
-`,K=i.p`
+`,J=i.p`
   margin: 2.25rem 0 0;
   max-width: 560px;
   font-size: 1.25rem;
@@ -142,7 +142,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     margin: 1.75rem auto 0;
     max-width: 480px;
   }
-`,Z=i.p`
+`,K=i.p`
   margin: 1.5rem 0 0;
   max-width: 560px;
   font-size: 0.95rem;
@@ -157,7 +157,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     padding-left: 1rem;
     font-size: 0.9rem;
   }
-`,ee=i.div`
+`,Q=i.div`
   display: flex;
   align-items: center;
   margin-top: 3rem;
@@ -168,7 +168,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     align-items: stretch;
     margin-top: 2.5rem;
   }
-`,ie=i.a`
+`,ee=i.a`
   display: inline-flex;
   align-items: center;
   gap: 0.875rem;
@@ -204,7 +204,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     justify-content: center;
     height: 56px;
   }
-`,re=i.div`
+`,ie=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,7 +228,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   color: #ffffff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-`,ne=i.span`
+`,re=i.span`
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 0.25rem;
@@ -237,7 +237,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 640px) {
     margin-top: 0;
   }
-`,y=i.div`
+`,h=i.div`
   width: 100%;
   max-width: 1320px;
   margin: 0 auto 5rem;
@@ -247,7 +247,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     margin-bottom: 3rem;
   }
-`,f=i.h2`
+`,n=i.h2`
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.5rem);
   font-weight: 600;
@@ -256,35 +256,60 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   margin-bottom: 4rem;
   text-align: center;
   line-height: 1.15;
-`,oe=i.section`
+`,ne=i.section`
   padding: 7rem 2rem;
-  background-color: #fafbfc;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
   scroll-margin-top: 100px;
-  
+
   @media (max-width: 768px) {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1.25rem;
     scroll-margin-top: 80px;
   }
-`,se=i.div`
+`,oe=i.p`
+  font-size: 1.125rem;
+  color: #5a6578;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+`,ae=i.section`
+  padding: 7rem 2rem;
+  background: #fafbfc;
+  scroll-margin-top: 100px;
+
+  @media (max-width: 768px) {
+    padding: 5rem 1.25rem;
+    scroll-margin-top: 80px;
+  }
+`,se=i.p`
+  font-size: 1.125rem;
+  color: #5a6578;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.7;
+`,de=i.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
   }
-`,n=i.div`
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`,x=i.div`
   position: relative;
   background: #ffffff;
   border: 1px solid #e5e9ed;
   padding: 2rem 1.75rem 1.75rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
-  display: flex;
-  flex-direction: column;
 
   &:hover {
     border-color: #9E1C24;
@@ -295,7 +320,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 1.75rem 1.5rem 1.5rem;
   }
-`,s=i.span`
+`,ce=i.span`
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
@@ -310,7 +335,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     top: 1rem;
     right: 1rem;
   }
-`,a=i.div`
+`,le=i.div`
   width: 48px;
   height: 48px;
   background: #f8fafc;
@@ -322,13 +347,13 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   margin-bottom: 1.5rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${n}:hover & {
+  ${x}:hover & {
     background: #9E1C24;
     border-color: #9E1C24;
     color: #ffffff;
     transform: scale(1.05);
   }
-`,d=i.h3`
+`,pe=i.h3`
   margin: 0 0 0.75rem;
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -336,119 +361,31 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   color: #0a1628;
   line-height: 1.25;
   letter-spacing: -0.01em;
-`,c=i.p`
-  margin: 0 0 1.25rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #5a6578;
-  flex-grow: 1;
-`,l=i.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+`,me=i.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
   padding-top: 1.25rem;
   border-top: 1px solid #e5e9ed;
-`,t=i.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #5a6578;
-  line-height: 1.5;
-  
-  svg {
-    color: #9E1C24;
-    flex-shrink: 0;
-    width: 14px;
-    height: 14px;
-    opacity: 0.8;
-  }
-`,ae=i.section`
-  padding: 7rem 2rem;
-  background-color: #ffffff;
+`,ge=i.li`
+  padding-left: 1.5rem;
   position: relative;
-  
-  @media (max-width: 768px) {
-    padding: 5rem 1.5rem;
-  }
-`,de=i.p`
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 3rem;
-  font-size: 1.125rem;
-  color: #5a6578;
-  line-height: 1.7;
-`,ce=i.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-`,o=i.div`
-  position: relative;
-  background: #ffffff;
-  border: 1px solid #e5e9ed;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    border-color: #9E1C24;
-    box-shadow: 0 16px 40px rgba(10, 22, 40, 0.08);
-    transform: translateY(-4px);
-  }
-`,m=i.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #9E1C24;
-  font-family: var(--font-heading);
-  letter-spacing: 0.1em;
-  opacity: 0.6;
-`,p=i.div`
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 1.25rem;
-  background: #f8fafc;
-  border: 1px solid #e5e9ed;
-  color: #9E1C24;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  ${o}:hover & {
-    background: #9E1C24;
-    border-color: #9E1C24;
-    color: #ffffff;
-  }
-`,x=i.h3`
-  font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #0a1628;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-`,h=i.p`
-  font-size: 0.9rem;
   color: #5a6578;
-  line-height: 1.65;
-  margin: 0;
-`,le=i.section`
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  &:before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #9E1C24;
+    font-weight: bold;
+  }
+`,he=i.section`
   padding: 7rem 2rem;
-  background-color: #fafbfc;
+  background: #fafbfc;
   position: relative;
   
   &::before {
@@ -462,9 +399,16 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   }
   
   @media (max-width: 768px) {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1.25rem;
   }
-`,me=i.div`
+`,xe=i.p`
+  font-size: 1.125rem;
+  color: #5a6578;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.7;
+`,fe=i.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -480,7 +424,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-`,g=i.div`
+`,f=i.div`
   position: relative;
   display: flex;
   gap: 1rem;
@@ -512,50 +456,130 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 1.5rem 1.25rem;
   }
-`,u=i.div`
+`,be=i.div`
   width: 40px;
   height: 40px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
   color: #9E1C24;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${g}:hover & {
+  ${f}:hover & {
     background: #9E1C24;
     border-color: #9E1C24;
     color: #ffffff;
   }
-`,b=i.h3`
+`,ue=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,j=i.p`
+`,ve=i.p`
   font-size: 0.925rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,pe=i.section`
+`,we=i.section`
+  padding: 7rem 2rem;
+  background: #ffffff;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 5rem 1.25rem;
+  }
+`,ye=i.p`
+  font-size: 1.125rem;
+  color: #5a6578;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.7;
+`,je=i.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+`,Se=i.div`
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 16px 48px rgba(10, 22, 40, 0.1);
+  }
+  
+  @media (max-width: 992px) {
+    max-height: 400px;
+    overflow: hidden;
+  }
+`,ze=i.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`,o=i.div`
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #fafbfc;
+  border: 1px solid #e5e9ed;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: #9E1C24;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(10, 22, 40, 0.06);
+  }
+`,a=i.div`
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9E1C24;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  background: rgba(158, 28, 36, 0.1);
+  flex-shrink: 0;
+`,s=i.div`
+  flex: 1;
+`,d=i.h3`
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: #0a1628;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+`,c=i.p`
+  font-size: 0.925rem;
+  color: #5a6578;
+  line-height: 1.65;
+  margin: 0;
+`,Ce=i.section`
   padding: 7rem 2rem;
   background: #020617;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1.25rem;
   }
-`,xe=i.div`
+`,ke=i.div`
   position: absolute;
   inset: 0;
   background: 
     radial-gradient(ellipse at 50% 0%, rgba(158, 28, 36, 0.08) 0%, transparent 60%),
-    url(${L}) center / cover no-repeat;
+    url(${I}) center / cover no-repeat;
   opacity: 0.12;
 
   &::after {
@@ -569,7 +593,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
       rgba(2, 6, 23, 0.95) 100%
     );
   }
-`,he=i.div`
+`,De=i.div`
   position: relative;
   z-index: 2;
   max-width: 720px;
@@ -610,7 +634,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 2.5rem 1.5rem;
   }
-`,ge=i.h2`
+`,Oe=i.h2`
   font-size: clamp(1.75rem, 3.5vw, 2.25rem);
   font-weight: 600;
   color: #ffffff;
@@ -618,7 +642,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   line-height: 1.2;
   font-family: var(--font-heading);
   letter-spacing: -0.01em;
-`,fe=i.p`
+`,Ee=i.p`
   font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
@@ -626,7 +650,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
-`,ue=i.a`
+`,We=i.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -679,7 +703,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   &:hover svg {
     transform: translateX(4px);
   }
-`,be=i.div`
+`,Pe=i.div`
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -691,7 +715,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     gap: 1rem;
   }
-`,v=i.div`
+`,p=i.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -701,9 +725,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js
   svg {
     color: #C9A227;
   }
-`,je=()=>e.jsx(ve,{children:e.jsx(R,{})}),ve=i.div`
-  width: 100%;
-`;function Ee(){return S.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(we,{id:"administrative-support",children:[e.jsx(W,{title:"Administrative Support Services | Hyacinth Industries LLC",description:"Administrative support services from Hyacinth Industries LLC to streamline operations, improve productivity, and keep teams focused on growth.",canonicalPath:"/administrative-support/"}),e.jsx(E,{}),e.jsx(A,{}),e.jsx(je,{}),e.jsx(P,{})]})}const we=i.div`
+`,Te={"@context":"https://schema.org","@type":"Service",serviceType:"Web Design & Development",provider:{"@type":"Organization",name:"Hyacinth Industries LLC",url:"https://hyacinthindustriesllc.com"},areaServed:"Global",hasOfferCatalog:{"@type":"OfferCatalog",name:"Web Design Services",itemListElement:[{"@type":"Offer",itemOffered:{"@type":"Service",name:"UI/UX Design"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Responsive Development"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Custom Web Applications"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Creative Design & Branding"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"SEO Optimization"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Maintenance & Support"}}]}};function Me(){return v.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(Ae,{id:"web-design",children:[e.jsx(w,{title:"Web Design Services | Hyacinth Industries LLC",description:"Custome web design and development services including responsive UI/UX design, SEO optimization, and website maintenance. Build a high-converting digital presence.",canonicalPath:"/web-design/",image:"/og-web-design.jpg",structuredData:Te}),e.jsx(y,{}),e.jsx(j,{}),e.jsx(G,{}),e.jsx(S,{})]})}const Ae=i.div`
   width: 100vw;
   padding-top: 0;
-`;export{Ee as default};
+`;export{Me as default};

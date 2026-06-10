@@ -1,8 +1,8 @@
-import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js";import{d as i}from"./styled-CFUkIykv.js";import{S as w,T as j,a as y,F as z}from"./index-MTnuMEob.js";import{w as p}from"./coding-DYEnY3xo.js";import{g,n as l,Y as k,_ as C,$ as S,a0 as D,t as E,a1 as P,a2 as W,U as T,a3 as A,S as H,a4 as O,i as B}from"./icons-BMgoPnMN.js";const I="/assets/Web%20Design-DgGxZffV.webp",L=[{icon:k,title:"UI/UX Design",items:["User interface design","User experience optimization","Wireframing & prototyping","Visual design systems"]},{icon:C,title:"Responsive Development",items:["Mobile-first design","Cross-browser compatibility","Progressive web apps","Performance optimization"]},{icon:S,title:"Technical Solutions",items:["Custom web applications","Content management systems","E-commerce platforms","API integrations"]},{icon:D,title:"Creative Design",items:["Brand identity integration","Custom graphics & illustrations","Animation & interactive elements","Visual storytelling"]},{icon:E,title:"SEO Optimization",items:["Search engine friendly structure","Performance optimization","Semantic HTML markup","Analytics integration"]},{icon:P,title:"Maintenance & Support",items:["Regular updates & monitoring","Performance optimization","Security patches","Content management"]}],U=[{icon:W,title:"Performance-Driven",description:"Fast-loading, optimized websites that convert visitors into customers with measurable results."},{icon:T,title:"Expert Team",description:"Our skilled designers and developers bring years of experience to deliver exceptional digital solutions."},{icon:A,title:"Scalable Solutions",description:"Websites and applications that grow seamlessly with your business needs and user base."},{icon:H,title:"Secure & Reliable",description:"Built with modern security standards to protect your business and customer data."},{icon:O,title:"Innovative Approach",description:"We leverage the latest technologies and design trends to keep your digital presence ahead of the curve."},{icon:B,title:"Timely Delivery",description:"We understand the importance of deadlines and deliver projects on time without compromising quality."}],G=()=>e.jsxs(M,{children:[e.jsxs(R,{children:[e.jsx($,{src:p,"aria-hidden":!0}),e.jsx(Y,{}),e.jsx(N,{}),e.jsx(V,{children:e.jsxs(X,{children:[e.jsxs(F,{children:[e.jsx(q,{})," Industry Solutions"]}),e.jsxs(_,{children:["Web Design & ",e.jsx(Z,{children:"Development"})]}),e.jsx(J,{children:"Creating digital experiences that engage, convert, and inspire"}),e.jsx(K,{children:"End-to-end web solutions from design to deployment and ongoing support."}),e.jsxs(Q,{children:[e.jsxs(ee,{href:"#web-design-and-development",children:["Get Started",e.jsx(g,{size:18})]}),e.jsxs(ie,{children:[e.jsx(te,{children:"6 Core Services"}),e.jsx(re,{children:"Enterprise-grade solutions"})]})]})]})})]}),e.jsxs(ne,{id:"web-design-and-development",children:[e.jsx(n,{children:"Modern Web Solutions for the Digital Age"}),e.jsx(oe,{children:"At Hyacinth Industries, we create stunning, responsive websites that combine aesthetic excellence with technical innovation. Our web design services focus on delivering user-friendly, performance-optimized digital experiences that drive results and help your business stand out in the competitive digital landscape."})]}),e.jsxs(ae,{children:[e.jsx(h,{}),e.jsx(n,{children:"Our Web Design Services"}),e.jsx(se,{children:"We offer a comprehensive range of web design and development services to meet your business needs, from simple informational websites to complex web applications."}),e.jsx(de,{children:L.map((t,r)=>e.jsxs(x,{children:[e.jsxs(ce,{children:["0",r+1]}),e.jsx(le,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(me,{children:t.title}),e.jsx(pe,{children:t.items.map((b,u)=>e.jsx(ge,{children:b},u))})]},r))})]}),e.jsxs(he,{children:[e.jsx(n,{children:"Why Choose Our Web Design Services?"}),e.jsx(xe,{children:"Our approach to web design combines creativity, technical expertise, and business strategy to deliver websites that not only look great but also perform exceptionally well."}),e.jsx(fe,{children:U.map((t,r)=>e.jsxs(f,{children:[e.jsx(be,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(ue,{children:t.title}),e.jsx(ve,{children:t.description})]},r))})]}),e.jsxs(we,{children:[e.jsx(h,{}),e.jsx(n,{children:"Our Web Development Process"}),e.jsx(je,{children:"We follow a structured approach to web design and development to ensure that every project is delivered on time, within budget, and exceeds expectations."}),e.jsxs(ye,{children:[e.jsx(ze,{children:e.jsx("img",{src:p,alt:"Web Development Process",loading:"lazy"})}),e.jsxs(ke,{children:[e.jsxs(o,{children:[e.jsx(a,{children:"01"}),e.jsxs(s,{children:[e.jsx(d,{children:"Discovery & Planning"}),e.jsx(c,{children:"We begin by understanding your business goals, target audience, and requirements to create a comprehensive project plan."})]})]}),e.jsxs(o,{children:[e.jsx(a,{children:"02"}),e.jsxs(s,{children:[e.jsx(d,{children:"Design & Prototyping"}),e.jsx(c,{children:"Our designers create wireframes and visual designs that align with your brand identity and user experience goals."})]})]}),e.jsxs(o,{children:[e.jsx(a,{children:"03"}),e.jsxs(s,{children:[e.jsx(d,{children:"Development & Testing"}),e.jsx(c,{children:"Our developers build your website using clean, efficient code and thoroughly test it across all devices and browsers."})]})]}),e.jsxs(o,{children:[e.jsx(a,{children:"04"}),e.jsxs(s,{children:[e.jsx(d,{children:"Launch & Optimization"}),e.jsx(c,{children:"After final approval, we deploy your website and provide ongoing support to ensure optimal performance."})]})]})]})]})]}),e.jsxs(Ce,{children:[e.jsx(Se,{}),e.jsxs(De,{children:[e.jsx(Ee,{children:"Ready to Transform Your Digital Presence?"}),e.jsx(Pe,{children:"Let's discuss how our web design services can help you achieve your business goals and create a compelling online experience for your customers."}),e.jsxs(We,{href:"/contact/",children:["Contact Us Today",e.jsx(g,{size:18})]}),e.jsxs(Te,{children:[e.jsxs(m,{children:[e.jsx(l,{size:16}),e.jsx("span",{children:"UI/UX Design"})]}),e.jsxs(m,{children:[e.jsx(l,{size:16}),e.jsx("span",{children:"SEO & Performance"})]}),e.jsxs(m,{children:[e.jsx(l,{size:16}),e.jsx("span",{children:"Responsive Development"})]})]})]})]})]}),M=i.div`
+import{j as e}from"./motion-Cy3Fut2F.js";import{r as h}from"./vendor-BQFpGxKL.js";import{d as i}from"./styled-CFUkIykv.js";import{S as f,T as x,a as u,F as b}from"./index-nbaXq9k7.js";import{a as s}from"./animation-DZXJdELE.js";import{g as d,n,a5 as v,a6 as w,a7 as y,a8 as j,a9 as C,aa as z,a2 as k,U as S,a3 as A,S as D,a4 as E,i as O}from"./icons-BMgoPnMN.js";const L="/assets/3dAnimation-DWe3eMQX.webp",P=[{icon:v,ariaLabel:"3D modeling and product visualization services",title:"3D Modeling",items:["Character modeling","Product visualization","Environmental rendering","Props and assets"],accent:"#9E1C24",accentLight:"rgba(158, 28, 36, 0.04)"},{icon:w,ariaLabel:"Animation production and motion graphics services",title:"Animation Production",items:["Character animation","Motion graphics","Visual effects (VFX)","Cinematic sequences"],accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.04)"},{icon:y,ariaLabel:"Interactive VR and AR media solutions",title:"Interactive Media",items:["Virtual reality (VR)","Augmented reality (AR)","Interactive presentations","Real-time rendering"],accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.04)"},{icon:j,ariaLabel:"Visual design and concept art services",title:"Visual Design",items:["Concept art","Texture creation","Lighting design","Color grading"],accent:"#9E1C24",accentLight:"rgba(158, 28, 36, 0.04)"},{icon:C,ariaLabel:"Game development and asset creation services",title:"Game Development",items:["Game asset creation","Character rigging","Animation integration","Environment design"],accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.04)"},{icon:z,ariaLabel:"Compositing and post-production VFX services",title:"Compositing",items:["Multi-layer compositing","Post-production effects","Color correction","Final output rendering"],accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.04)"}],T=[{icon:k,title:"Creative Excellence",description:"Stunning visuals that bring your ideas to life with cutting-edge animation techniques and artistic direction."},{icon:S,title:"Expert Team",description:"Our skilled 3D artists and animators bring years of experience across various industries and project types."},{icon:A,title:"Versatile Solutions",description:"Adaptable animation services for various industries including entertainment, education, marketing, and more."},{icon:D,title:"Quality Assurance",description:"High-quality deliverables that meet industry standards with meticulous attention to detail."},{icon:E,title:"Innovative Approach",description:"We leverage the latest technologies and creative techniques to deliver animations that stand out."},{icon:O,title:"Timely Delivery",description:"We understand the importance of deadlines and deliver projects on time without compromising quality."}],H=()=>e.jsxs(V,{children:[e.jsxs(B,{"aria-labelledby":"animation-hero-title",children:[e.jsx(I,{src:s,"aria-hidden":"true"}),e.jsx(W,{}),e.jsx(M,{}),e.jsx(R,{children:e.jsxs(G,{children:[e.jsxs(q,{children:[e.jsx(F,{"aria-hidden":"true"})," Industry Solutions"]}),e.jsxs(Y,{id:"animation-hero-title",children:["3D Animation & ",e.jsx(X,{children:"Visualization"})]}),e.jsx($,{children:"Bringing ideas to life through stunning visual storytelling"}),e.jsx(N,{children:"End-to-end 3D animation from concept to final render and delivery."}),e.jsxs(Q,{children:[e.jsxs(U,{href:"#3d-animation-and-visualization",children:["Explore Our Work",e.jsx(d,{size:18})]}),e.jsxs(J,{children:[e.jsx(K,{children:"6 Core Services"}),e.jsx(Z,{children:"Enterprise-grade solutions"})]})]})]})})]}),e.jsx(_,{id:"3d-animation-and-visualization",children:e.jsx(ee,{children:e.jsxs(ie,{children:[e.jsx(te,{children:"Cutting-Edge 3D Animation Services"}),e.jsx(re,{children:"At Hyacinth Industries, we bring ideas to life through cutting-edge 3D animation and visualization. Our team combines artistic excellence with technical expertise to create stunning visual content that captivates audiences and communicates your message effectively."})]})})}),e.jsxs(ne,{children:[e.jsx(c,{}),e.jsx(a,{children:"Our Animation Services"}),e.jsx(ae,{children:"We offer a comprehensive range of 3D animation and visualization services to meet your creative needs, from concept development to final rendering and everything in between."}),e.jsx(oe,{children:P.map((t,r)=>e.jsxs(l,{children:[e.jsxs(se,{children:["0",r+1]}),e.jsx(de,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5,"aria-label":t.ariaLabel})}),e.jsx(ce,{children:t.title}),e.jsx(le,{children:t.items.map((g,p)=>e.jsx(me,{children:g},p))})]},r))})]}),e.jsxs(ge,{children:[e.jsx(a,{children:"Why Choose Our Animation Services?"}),e.jsx(pe,{children:"Our approach to 3D animation combines creativity, technical expertise, and strategic thinking to deliver visual content that not only looks impressive but also achieves your communication goals."}),e.jsx(he,{children:T.map((t,r)=>e.jsxs(m,{children:[e.jsx(fe,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(xe,{children:t.title}),e.jsx(ue,{children:t.description})]},r))})]}),e.jsxs(be,{children:[e.jsx(c,{}),e.jsx(a,{children:"Our Animation Process"}),e.jsx(ve,{children:"We follow a structured approach to 3D animation and visualization to ensure that every project is delivered on time, within budget, and exceeds expectations."}),e.jsxs(we,{children:[e.jsx(ye,{children:e.jsx("img",{src:s,alt:"Animation Process",loading:"lazy"})}),e.jsx(je,{children:[{t:"Concept & Storyboarding",d:"We begin by understanding your vision and developing concepts and storyboards that outline the visual narrative."},{t:"3D Modeling & Texturing",d:"Our artists create detailed 3D models and apply realistic textures to bring characters and environments to life."},{t:"Animation & Lighting",d:"We animate the models with fluid motion and apply professional lighting to create the desired mood and atmosphere."},{t:"Rendering & Post-Production",d:"The final stage involves high-quality rendering and post-production enhancements to deliver the finished animation."}].map((t,r)=>e.jsxs(Ce,{children:[e.jsxs(ze,{children:["0",r+1]}),e.jsxs(ke,{children:[e.jsx(Se,{children:t.t}),e.jsx(Ae,{children:t.d})]})]},r))})]})]}),e.jsxs(De,{children:[e.jsx(Ee,{}),e.jsxs(Oe,{children:[e.jsx(Le,{children:"Ready to Bring Your Vision to Life?"}),e.jsx(Pe,{children:"Let's discuss how our 3D animation services can help you create compelling visual content that engages your audience and achieves your goals."}),e.jsxs(Te,{href:"/contact/",children:["Start Your Project",e.jsx(d,{size:18})]}),e.jsxs(He,{children:[e.jsxs(o,{children:[e.jsx(n,{size:16}),e.jsx("span",{children:"3D Modeling & Rendering"})]}),e.jsxs(o,{children:[e.jsx(n,{size:16}),e.jsx("span",{children:"Animation Production"})]}),e.jsxs(o,{children:[e.jsx(n,{size:16}),e.jsx("span",{children:"VFX & Post-Production"})]})]})]})]})]}),V=i.div`
   width: 100%;
   background: #ffffff;
   overflow-x: hidden;
-`,R=i.section`
+`,B=i.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -15,7 +15,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     min-height: auto;
     padding: 8rem 0 5rem;
   }
-`,$=i.div`
+`,I=i.div`
   position: absolute;
   inset: 0;
   background-image: url(${t=>t.src});
@@ -28,7 +28,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     background-position: 65% center;
     opacity: 0.45;
   }
-`,Y=i.div`
+`,W=i.div`
   position: absolute;
   inset: 0;
   background: 
@@ -63,13 +63,13 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
       rgba(2, 6, 23, 0.75) 100%
     );
   }
-`,N=i.div`
+`,M=i.div`
   position: absolute;
   inset: 0;
   background: 
     radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 6, 23, 0.4) 100%);
   pointer-events: none;
-`,V=i.div`
+`,R=i.div`
   position: relative;
   z-index: 3;
   width: 100%;
@@ -80,7 +80,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
-`,X=i.div`
+`,G=i.div`
   max-width: 720px;
   text-align: left;
 
@@ -88,7 +88,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     max-width: 100%;
     text-align: center;
   }
-`,F=i.div`
+`,q=i.div`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -106,17 +106,17 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     margin-bottom: 2rem;
   }
-`,q=i.span`
+`,F=i.span`
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #C9A227;
-`,Z=i.span`
+`,X=i.span`
   background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-`,_=i.h1`
+`,Y=i.h1`
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(3rem, 5vw, 5rem);
@@ -129,7 +129,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     font-size: clamp(2.5rem, 8vw, 3.5rem);
     line-height: 1.1;
   }
-`,J=i.p`
+`,$=i.p`
   margin: 2.25rem 0 0;
   max-width: 560px;
   font-size: 1.25rem;
@@ -142,7 +142,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     margin: 1.75rem auto 0;
     max-width: 480px;
   }
-`,K=i.p`
+`,N=i.p`
   margin: 1.5rem 0 0;
   max-width: 560px;
   font-size: 0.95rem;
@@ -168,7 +168,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     align-items: stretch;
     margin-top: 2.5rem;
   }
-`,ee=i.a`
+`,U=i.a`
   display: inline-flex;
   align-items: center;
   gap: 0.875rem;
@@ -204,7 +204,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     justify-content: center;
     height: 56px;
   }
-`,ie=i.div`
+`,J=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -222,13 +222,13 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     margin-top: 1.5rem;
     padding-top: 1.5rem;
   }
-`,te=i.span`
+`,K=i.span`
   font-size: 0.8rem;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-`,re=i.span`
+`,Z=i.span`
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 0.25rem;
@@ -237,26 +237,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 640px) {
     margin-top: 0;
   }
-`,h=i.div`
-  width: 100%;
-  max-width: 1320px;
-  margin: 0 auto 5rem;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.2), transparent);
-
-  @media (max-width: 768px) {
-    margin-bottom: 3rem;
-  }
-`,n=i.h2`
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.5vw, 2.5rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #0a1628;
-  margin-bottom: 4rem;
-  text-align: center;
-  line-height: 1.15;
-`,ne=i.section`
+`,_=i.section`
   padding: 7rem 2rem;
   text-align: center;
   max-width: 860px;
@@ -267,13 +248,49 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     padding: 5rem 1.25rem;
     scroll-margin-top: 80px;
   }
-`,oe=i.p`
-  font-size: 1.125rem;
-  color: #5a6578;
-  max-width: 640px;
+`,ee=i.div`
+  width: min(1180px, 100%);
+  max-width: 1180px;
   margin: 0 auto;
+`,ie=i.div`
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+`,c=i.div`
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.2), transparent);
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
+`,a=i.h2`
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a1628;
+  margin-bottom: 4rem;
+  text-align: center;
+  line-height: 1.15;
+`,te=i.h2`
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a1628;
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 1.15;
+`,re=i.p`
+  font-size: 1.125rem;
   line-height: 1.7;
-`,ae=i.section`
+  color: #5a6578;
+  margin: 0 auto;
+  text-align: center;
+`,ne=i.section`
   padding: 7rem 2rem;
   background: #fafbfc;
   scroll-margin-top: 100px;
@@ -282,14 +299,14 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     padding: 5rem 1.25rem;
     scroll-margin-top: 80px;
   }
-`,se=i.p`
+`,ae=i.p`
   font-size: 1.125rem;
   color: #5a6578;
   max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.7;
-`,de=i.div`
+`,oe=i.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -303,7 +320,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`,x=i.div`
+`,l=i.div`
   position: relative;
   background: #ffffff;
   border: 1px solid #e5e9ed;
@@ -320,7 +337,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 1.75rem 1.5rem 1.5rem;
   }
-`,ce=i.span`
+`,se=i.span`
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
@@ -335,7 +352,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     top: 1rem;
     right: 1rem;
   }
-`,le=i.div`
+`,de=i.div`
   width: 48px;
   height: 48px;
   background: #f8fafc;
@@ -347,13 +364,13 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   margin-bottom: 1.5rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${x}:hover & {
+  ${l}:hover & {
     background: #9E1C24;
     border-color: #9E1C24;
     color: #ffffff;
     transform: scale(1.05);
   }
-`,me=i.h3`
+`,ce=i.h3`
   margin: 0 0 0.75rem;
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -361,29 +378,27 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   color: #0a1628;
   line-height: 1.25;
   letter-spacing: -0.01em;
-`,pe=i.ul`
+`,le=i.ul`
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 1.25rem;
   border-top: 1px solid #e5e9ed;
-`,ge=i.li`
-  padding-left: 1.5rem;
+`,me=i.li`
   position: relative;
+  padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #5a6578;
-  font-family: var(--font-body);
   font-size: 0.875rem;
+  color: #5a6578;
   line-height: 1.5;
-
-  &:before {
+  &::before {
     content: "\2022";
     position: absolute;
     left: 0;
     color: #9E1C24;
     font-weight: bold;
   }
-`,he=i.section`
+`,ge=i.section`
   padding: 7rem 2rem;
   background: #fafbfc;
   position: relative;
@@ -401,14 +416,14 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 5rem 1.25rem;
   }
-`,xe=i.p`
+`,pe=i.p`
   font-size: 1.125rem;
   color: #5a6578;
   max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.7;
-`,fe=i.div`
+`,he=i.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -424,7 +439,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-`,f=i.div`
+`,m=i.div`
   position: relative;
   display: flex;
   gap: 1rem;
@@ -456,7 +471,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 1.5rem 1.25rem;
   }
-`,be=i.div`
+`,fe=i.div`
   width: 40px;
   height: 40px;
   background: #f8fafc;
@@ -468,24 +483,24 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${f}:hover & {
+  ${m}:hover & {
     background: #9E1C24;
     border-color: #9E1C24;
     color: #ffffff;
   }
-`,ue=i.h3`
+`,xe=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,ve=i.p`
+`,ue=i.p`
   font-size: 0.925rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,we=i.section`
+`,be=i.section`
   padding: 7rem 2rem;
   background: #ffffff;
   position: relative;
@@ -493,14 +508,14 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 5rem 1.25rem;
   }
-`,je=i.p`
+`,ve=i.p`
   font-size: 1.125rem;
   color: #5a6578;
   max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.7;
-`,ye=i.div`
+`,we=i.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -511,7 +526,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-`,ze=i.div`
+`,ye=i.div`
   img {
     width: 100%;
     height: 100%;
@@ -524,11 +539,11 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     max-height: 400px;
     overflow: hidden;
   }
-`,ke=i.div`
+`,je=i.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`,o=i.div`
+`,Ce=i.div`
   display: flex;
   gap: 1rem;
   align-items: flex-start;
@@ -542,7 +557,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
     background: #ffffff;
     box-shadow: 0 8px 24px rgba(10, 22, 40, 0.06);
   }
-`,a=i.div`
+`,ze=i.div`
   font-size: 0.7rem;
   font-weight: 600;
   color: #9E1C24;
@@ -551,21 +566,21 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   padding: 0.25rem 0.5rem;
   background: rgba(158, 28, 36, 0.1);
   flex-shrink: 0;
-`,s=i.div`
+`,ke=i.div`
   flex: 1;
-`,d=i.h3`
+`,Se=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,c=i.p`
+`,Ae=i.p`
   font-size: 0.925rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,Ce=i.section`
+`,De=i.section`
   padding: 7rem 2rem;
   background: #020617;
   position: relative;
@@ -574,12 +589,12 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 5rem 1.25rem;
   }
-`,Se=i.div`
+`,Ee=i.div`
   position: absolute;
   inset: 0;
   background: 
     radial-gradient(ellipse at 50% 0%, rgba(158, 28, 36, 0.08) 0%, transparent 60%),
-    url(${I}) center / cover no-repeat;
+    url(${L}) center / cover no-repeat;
   opacity: 0.12;
 
   &::after {
@@ -593,7 +608,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
       rgba(2, 6, 23, 0.95) 100%
     );
   }
-`,De=i.div`
+`,Oe=i.div`
   position: relative;
   z-index: 2;
   max-width: 720px;
@@ -634,7 +649,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     padding: 2.5rem 1.5rem;
   }
-`,Ee=i.h2`
+`,Le=i.h2`
   font-size: clamp(1.75rem, 3.5vw, 2.25rem);
   font-weight: 600;
   color: #ffffff;
@@ -650,7 +665,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
-`,We=i.a`
+`,Te=i.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -703,7 +718,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   &:hover svg {
     transform: translateX(4px);
   }
-`,Te=i.div`
+`,He=i.div`
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -715,7 +730,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   @media (max-width: 768px) {
     gap: 1rem;
   }
-`,m=i.div`
+`,o=i.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -725,7 +740,7 @@ import{j as e}from"./motion-Cy3Fut2F.js";import{r as v}from"./vendor-BQFpGxKL.js
   svg {
     color: #C9A227;
   }
-`;function Ge(){return v.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(Ae,{id:"web-design",children:[e.jsx(w,{title:"Web Design Services | Hyacinth Industries LLC",description:"Web design services from Hyacinth Industries LLC to improve digital presence, user experience, conversion performance, and online growth.",canonicalPath:"/web-design/"}),e.jsx(j,{}),e.jsx(y,{}),e.jsx(G,{}),e.jsx(z,{})]})}const Ae=i.div`
+`,Ve={"@context":"https://schema.org","@type":"Service",serviceType:"3D Animation & Visualization",provider:{"@type":"Organization",name:"Hyacinth Industries LLC",url:"https://hyacinthindustriesllc.com"},areaServed:"Global",hasOfferCatalog:{"@type":"OfferCatalog",name:"3D Animation Services",itemListElement:[{"@type":"Offer",itemOffered:{"@type":"Service",name:"3D Modeling"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Animation Production"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Interactive Media (VR/AR)"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Visual Design"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Game Development"}},{"@type":"Offer",itemOffered:{"@type":"Service",name:"Compositing & VFX"}}]}};function Fe(){return h.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(Be,{id:"3d-animation",children:[e.jsx(f,{title:"3D Animation Services | Hyacinth Industries LLC",description:"Professional 3D animation services including modeling, rendering, character animation, and visual effects. High-quality visual storytelling for your brand.",canonicalPath:"/3d-animation/",image:"/og-3d-animation.jpg",structuredData:Ve}),e.jsx(x,{}),e.jsx(u,{}),e.jsx(H,{}),e.jsx(b,{})]})}const Be=i.div`
   width: 100vw;
   padding-top: 0;
-`;export{Ge as default};
+`;export{Fe as default};

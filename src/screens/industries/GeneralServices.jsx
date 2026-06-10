@@ -8,6 +8,28 @@ import Footer from "../../components/Nav/Footer";
 //elements
 import GeneralServicesContentWrapper from "../../elements/industries/GeneralServicesContentWrapper";
 
+const generalServicesStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "General Business Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Hyacinth Industries LLC",
+    "url": "https://hyacinthindustriesllc.com"
+  },
+  "areaServed": "Global",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "General Business Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facility Management" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Administration" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Human Resources" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Security Services" } }
+    ]
+  }
+};
+
 export default function GeneralServices() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,8 +38,10 @@ export default function GeneralServices() {
     <Wrapper>
       <Seo
         title="General Business Services | Hyacinth Industries LLC"
-        description="General business services from Hyacinth Industries LLC designed to strengthen operations, support teams, and accelerate business growth."
+        description="Comprehensive business services including customer support, office administration, HR solutions, and security services. End-to-end operational support."
         canonicalPath="/general-services/"
+        image="/og-general-services.jpg"
+        structuredData={generalServicesStructuredData}
       />
       <TopNavBar />
       <SideBar />

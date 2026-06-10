@@ -9,6 +9,30 @@ import Footer from "../../components/Nav/Footer";
 import WebDesignOverview from "../../elements/industries/tabs/WebDesignOverview";
 
 
+const webDesignStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Web Design & Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Hyacinth Industries LLC",
+    "url": "https://hyacinthindustriesllc.com"
+  },
+  "areaServed": "Global",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Web Design Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Responsive Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Applications" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative Design & Branding" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & Support" } }
+    ]
+  }
+};
+
 export default function WebDesign() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,8 +41,10 @@ export default function WebDesign() {
     <Wrapper id="web-design">
       <Seo
         title="Web Design Services | Hyacinth Industries LLC"
-        description="Web design services from Hyacinth Industries LLC to improve digital presence, user experience, conversion performance, and online growth."
+        description="Custome web design and development services including responsive UI/UX design, SEO optimization, and website maintenance. Build a high-converting digital presence."
         canonicalPath="/web-design/"
+        image="/og-web-design.jpg"
+        structuredData={webDesignStructuredData}
       />
       <TopNavBar />
       <SideBar />

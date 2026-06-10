@@ -10,7 +10,6 @@ const ImageSlider = lazy(() => import("../components/basic/ImageSlider"));
 
 import BackgroundImg from "../assets/img/backgrounds/bg2.webp";
 import OfficeImg from "../assets/img/industries/office.webp";
-import EngineeringImg from "../assets/img/engineering/construction.webp";
 import HealthcareImg from "../assets/img/industries/healthcare.webp";
 import AnimationImg from "../assets/img/industries/animation.webp";
 import CodingImg from "../assets/img/industries/coding.webp";
@@ -158,7 +157,6 @@ export default function About() {
                 <ImageSlider
                   images={[
                     OfficeImg,
-                    EngineeringImg,
                     HealthcareImg,
                     AnimationImg,
                     CodingImg,
@@ -348,7 +346,7 @@ export default function About() {
                 </Paragraph>
                 <Paragraph>
                   With experience across multiple sectors, we deliver practical
-                  support in healthcare, engineering, administrative work, and
+                  support in healthcare, logistics, administrative work, and
                   creative services. Our commitment to quality, reliability, and
                   innovation helps clients move forward with confidence.
                 </Paragraph>
