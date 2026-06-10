@@ -1,8 +1,8 @@
-import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js";import{d as i}from"./styled-3-8BfJdI.js";import{S as p,T as h,a as f,F as x}from"./index-D8YeovzI.js";import{a}from"./animation-DZXJdELE.js";import{g as o,a5 as u,a6 as b,a7 as v,a8 as w,a9 as j,aa as y,a2 as z,U as k,a3 as S,S as C,a4 as D,i as A}from"./icons-D9O8TY1s.js";const P="/assets/3dAnimation-DWe3eMQX.webp",H=[{icon:u,title:"3D Modeling",items:["Character modeling","Product visualization","Architectural rendering","Environment design"],accent:"#8b0d2a",accentLight:"rgba(139, 13, 42, 0.04)"},{icon:b,title:"Animation Production",items:["Character animation","Motion graphics","Visual effects (VFX)","Cinematic sequences"],accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.04)"},{icon:v,title:"Interactive Media",items:["Virtual reality (VR)","Augmented reality (AR)","Interactive presentations","Real-time rendering"],accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.04)"},{icon:w,title:"Visual Design",items:["Concept art","Texture creation","Lighting design","Color grading"],accent:"#8b0d2a",accentLight:"rgba(139, 13, 42, 0.04)"},{icon:j,title:"Game Development",items:["Game asset creation","Character rigging","Animation integration","Environment design"],accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.04)"},{icon:y,title:"Compositing",items:["Multi-layer compositing","Post-production effects","Color correction","Final output rendering"],accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.04)"}],L=[{icon:z,title:"Creative Excellence",description:"Stunning visuals that bring your ideas to life with cutting-edge animation techniques and artistic direction."},{icon:k,title:"Expert Team",description:"Our skilled 3D artists and animators bring years of experience across various industries and project types."},{icon:S,title:"Versatile Solutions",description:"Adaptable animation services for various industries including entertainment, education, marketing, and more."},{icon:C,title:"Quality Assurance",description:"High-quality deliverables that meet industry standards with meticulous attention to detail."},{icon:D,title:"Innovative Approach",description:"We leverage the latest technologies and creative techniques to deliver animations that stand out."},{icon:A,title:"Timely Delivery",description:"We understand the importance of deadlines and deliver projects on time without compromising quality."}],T=()=>e.jsxs(B,{children:[e.jsxs(O,{children:[e.jsx(E,{src:a,"aria-hidden":!0}),e.jsx(W,{}),e.jsx(I,{}),e.jsx(M,{children:e.jsxs(V,{children:[e.jsxs(q,{children:[e.jsx(R,{children:"Hyacinth Industries"}),e.jsx(G,{})]}),e.jsxs(Y,{children:["3D Animation & ",e.jsx("span",{children:"Visualization"})]}),e.jsx($,{children:"Bringing ideas to life through stunning visual storytelling"}),e.jsx(F,{children:"End-to-end 3D animation from concept to final render and delivery."}),e.jsxs(N,{children:[e.jsxs(X,{href:"#3d-animation-and-visualization",children:["Explore Our Work",e.jsx(o,{size:18})]}),e.jsxs(Q,{children:[e.jsx(U,{children:"6 Core Services"}),e.jsx(J,{children:"Enterprise-grade solutions"})]})]})]})})]}),e.jsx(K,{id:"3d-animation-and-visualization",children:e.jsx(Z,{children:e.jsxs(_,{children:[e.jsx(ee,{children:"Cutting-Edge 3D Animation Services"}),e.jsx(ie,{children:"At Hyacinth Industries, we bring ideas to life through cutting-edge 3D animation and visualization. Our team combines artistic excellence with technical expertise to create stunning visual content that captivates audiences and communicates your message effectively."})]})})}),e.jsxs(te,{children:[e.jsx(s,{}),e.jsx(r,{children:"Our Animation Services"}),e.jsx(ne,{children:"We offer a comprehensive range of 3D animation and visualization services to meet your creative needs, from concept development to final rendering and everything in between."}),e.jsx(re,{children:H.map((t,n)=>e.jsxs(d,{children:[e.jsxs(ae,{children:["0",n+1]}),e.jsx(oe,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(se,{children:t.title}),e.jsx(de,{children:t.items.map((l,m)=>e.jsx(ce,{children:l},m))})]},n))})]}),e.jsxs(le,{children:[e.jsx(r,{children:"Why Choose Our Animation Services?"}),e.jsx(me,{children:"Our approach to 3D animation combines creativity, technical expertise, and strategic thinking to deliver visual content that not only looks impressive but also achieves your communication goals."}),e.jsx(ge,{children:L.map((t,n)=>e.jsxs(c,{children:[e.jsx(pe,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(he,{children:t.title}),e.jsx(fe,{children:t.description})]},n))})]}),e.jsxs(xe,{children:[e.jsx(s,{}),e.jsx(r,{children:"Our Animation Process"}),e.jsx(ue,{children:"We follow a structured approach to 3D animation and visualization to ensure that every project is delivered on time, within budget, and exceeds expectations."}),e.jsxs(be,{children:[e.jsx(ve,{children:e.jsx("img",{src:a,alt:"Animation Process",loading:"lazy"})}),e.jsx(we,{children:[{t:"Concept & Storyboarding",d:"We begin by understanding your vision and developing concepts and storyboards that outline the visual narrative."},{t:"3D Modeling & Texturing",d:"Our artists create detailed 3D models and apply realistic textures to bring characters and environments to life."},{t:"Animation & Lighting",d:"We animate the models with fluid motion and apply professional lighting to create the desired mood and atmosphere."},{t:"Rendering & Post-Production",d:"The final stage involves high-quality rendering and post-production enhancements to deliver the finished animation."}].map((t,n)=>e.jsxs(je,{children:[e.jsxs(ye,{children:["0",n+1]}),e.jsxs(ze,{children:[e.jsx(ke,{children:t.t}),e.jsx(Se,{children:t.d})]})]},n))})]})]}),e.jsxs(Ce,{children:[e.jsx(De,{}),e.jsxs(Ae,{children:[e.jsx(Pe,{children:"Ready to Bring Your Vision to Life?"}),e.jsx(He,{children:"Let's discuss how our 3D animation services can help you create compelling visual content that engages your audience and achieves your goals."}),e.jsxs(Le,{href:"/contact/",children:["Start Your Project",e.jsx(o,{size:18})]})]})]})]}),B=i.div`
+import{j as e}from"./motion-Cy3Fut2F.js";import{r as h}from"./vendor-BQFpGxKL.js";import{d as i}from"./styled-CFUkIykv.js";import{S as x,T as f,a as u,F as b}from"./index-MTnuMEob.js";import{a as s}from"./animation-DZXJdELE.js";import{g as d,n,a5 as v,a6 as w,a7 as j,a8 as y,a9 as C,aa as z,a2 as k,U as S,a3 as A,S as E,a4 as D,i as P}from"./icons-BMgoPnMN.js";const T="/assets/3dAnimation-DWe3eMQX.webp",H=[{icon:v,title:"3D Modeling",items:["Character modeling","Product visualization","Architectural rendering","Environment design"],accent:"#9E1C24",accentLight:"rgba(158, 28, 36, 0.04)"},{icon:w,title:"Animation Production",items:["Character animation","Motion graphics","Visual effects (VFX)","Cinematic sequences"],accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.04)"},{icon:j,title:"Interactive Media",items:["Virtual reality (VR)","Augmented reality (AR)","Interactive presentations","Real-time rendering"],accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.04)"},{icon:y,title:"Visual Design",items:["Concept art","Texture creation","Lighting design","Color grading"],accent:"#9E1C24",accentLight:"rgba(158, 28, 36, 0.04)"},{icon:C,title:"Game Development",items:["Game asset creation","Character rigging","Animation integration","Environment design"],accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.04)"},{icon:z,title:"Compositing",items:["Multi-layer compositing","Post-production effects","Color correction","Final output rendering"],accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.04)"}],L=[{icon:k,title:"Creative Excellence",description:"Stunning visuals that bring your ideas to life with cutting-edge animation techniques and artistic direction."},{icon:S,title:"Expert Team",description:"Our skilled 3D artists and animators bring years of experience across various industries and project types."},{icon:A,title:"Versatile Solutions",description:"Adaptable animation services for various industries including entertainment, education, marketing, and more."},{icon:E,title:"Quality Assurance",description:"High-quality deliverables that meet industry standards with meticulous attention to detail."},{icon:D,title:"Innovative Approach",description:"We leverage the latest technologies and creative techniques to deliver animations that stand out."},{icon:P,title:"Timely Delivery",description:"We understand the importance of deadlines and deliver projects on time without compromising quality."}],B=()=>e.jsxs(O,{children:[e.jsxs(I,{children:[e.jsx(W,{src:s,"aria-hidden":!0}),e.jsx(M,{}),e.jsx(V,{}),e.jsx(G,{children:e.jsxs(R,{children:[e.jsxs(q,{children:[e.jsx(F,{})," Industry Solutions"]}),e.jsxs(Y,{children:["3D Animation & ",e.jsx(X,{children:"Visualization"})]}),e.jsx($,{children:"Bringing ideas to life through stunning visual storytelling"}),e.jsx(N,{children:"End-to-end 3D animation from concept to final render and delivery."}),e.jsxs(Q,{children:[e.jsxs(U,{href:"#3d-animation-and-visualization",children:["Explore Our Work",e.jsx(d,{size:18})]}),e.jsxs(J,{children:[e.jsx(K,{children:"6 Core Services"}),e.jsx(Z,{children:"Enterprise-grade solutions"})]})]})]})})]}),e.jsx(_,{id:"3d-animation-and-visualization",children:e.jsx(ee,{children:e.jsxs(ie,{children:[e.jsx(te,{children:"Cutting-Edge 3D Animation Services"}),e.jsx(re,{children:"At Hyacinth Industries, we bring ideas to life through cutting-edge 3D animation and visualization. Our team combines artistic excellence with technical expertise to create stunning visual content that captivates audiences and communicates your message effectively."})]})})}),e.jsxs(ne,{children:[e.jsx(c,{}),e.jsx(a,{children:"Our Animation Services"}),e.jsx(ae,{children:"We offer a comprehensive range of 3D animation and visualization services to meet your creative needs, from concept development to final rendering and everything in between."}),e.jsx(oe,{children:H.map((t,r)=>e.jsxs(l,{children:[e.jsxs(se,{children:["0",r+1]}),e.jsx(de,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(ce,{children:t.title}),e.jsx(le,{children:t.items.map((g,p)=>e.jsx(me,{children:g},p))})]},r))})]}),e.jsxs(ge,{children:[e.jsx(a,{children:"Why Choose Our Animation Services?"}),e.jsx(pe,{children:"Our approach to 3D animation combines creativity, technical expertise, and strategic thinking to deliver visual content that not only looks impressive but also achieves your communication goals."}),e.jsx(he,{children:L.map((t,r)=>e.jsxs(m,{children:[e.jsx(xe,{children:e.jsx(t.icon,{size:24,strokeWidth:1.5})}),e.jsx(fe,{children:t.title}),e.jsx(ue,{children:t.description})]},r))})]}),e.jsxs(be,{children:[e.jsx(c,{}),e.jsx(a,{children:"Our Animation Process"}),e.jsx(ve,{children:"We follow a structured approach to 3D animation and visualization to ensure that every project is delivered on time, within budget, and exceeds expectations."}),e.jsxs(we,{children:[e.jsx(je,{children:e.jsx("img",{src:s,alt:"Animation Process",loading:"lazy"})}),e.jsx(ye,{children:[{t:"Concept & Storyboarding",d:"We begin by understanding your vision and developing concepts and storyboards that outline the visual narrative."},{t:"3D Modeling & Texturing",d:"Our artists create detailed 3D models and apply realistic textures to bring characters and environments to life."},{t:"Animation & Lighting",d:"We animate the models with fluid motion and apply professional lighting to create the desired mood and atmosphere."},{t:"Rendering & Post-Production",d:"The final stage involves high-quality rendering and post-production enhancements to deliver the finished animation."}].map((t,r)=>e.jsxs(Ce,{children:[e.jsxs(ze,{children:["0",r+1]}),e.jsxs(ke,{children:[e.jsx(Se,{children:t.t}),e.jsx(Ae,{children:t.d})]})]},r))})]})]}),e.jsxs(Ee,{children:[e.jsx(De,{}),e.jsxs(Pe,{children:[e.jsx(Te,{children:"Ready to Bring Your Vision to Life?"}),e.jsx(He,{children:"Let's discuss how our 3D animation services can help you create compelling visual content that engages your audience and achieves your goals."}),e.jsxs(Le,{href:"/contact/",children:["Start Your Project",e.jsx(d,{size:18})]}),e.jsxs(Be,{children:[e.jsxs(o,{children:[e.jsx(n,{size:16}),e.jsx("span",{children:"3D Modeling & Rendering"})]}),e.jsxs(o,{children:[e.jsx(n,{size:16}),e.jsx("span",{children:"Animation Production"})]}),e.jsxs(o,{children:[e.jsx(n,{size:16}),e.jsx("span",{children:"VFX & Post-Production"})]})]})]})]})]}),O=i.div`
   width: 100%;
   background: #ffffff;
   overflow-x: hidden;
-`,O=i.section`
+`,I=i.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -15,7 +15,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     min-height: auto;
     padding: 8rem 0 5rem;
   }
-`,E=i.div`
+`,W=i.div`
   position: absolute;
   inset: 0;
   background-image: url(${t=>t.src});
@@ -28,11 +28,11 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     background-position: 65% center;
     opacity: 0.45;
   }
-`,W=i.div`
+`,M=i.div`
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(158, 28, 36, 0.12) 0%, transparent 50%),
     radial-gradient(ellipse at 0% 100%, rgba(2, 6, 23, 0.98) 0%, transparent 60%),
     linear-gradient(
       115deg,
@@ -45,7 +45,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
 
   @media (max-width: 1024px) {
     background: 
-      radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 100% 0%, rgba(158, 28, 36, 0.1) 0%, transparent 40%),
       linear-gradient(
         115deg,
         rgba(2, 6, 23, 0.98) 0%,
@@ -63,13 +63,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
       rgba(2, 6, 23, 0.75) 100%
     );
   }
-`,I=i.div`
+`,V=i.div`
   position: absolute;
   inset: 0;
   background: 
     radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 6, 23, 0.4) 100%);
   pointer-events: none;
-`,M=i.div`
+`,G=i.div`
   position: relative;
   z-index: 3;
   width: 100%;
@@ -80,7 +80,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
-`,V=i.div`
+`,R=i.div`
   max-width: 720px;
   text-align: left;
 
@@ -89,50 +89,45 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     text-align: center;
   }
 `,q=i.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.5rem;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: #C9A227;
+  text-transform: uppercase;
   margin-bottom: 2.5rem;
 
   @media (max-width: 768px) {
-    justify-content: center;
-    gap: 0.75rem;
+    margin-bottom: 2rem;
   }
-`,R=i.span`
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-`,G=i.div`
-  width: 60px;
-  height: 1px;
-  background: #8b0d2a;
+`,F=i.span`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C9A227;
+`,X=i.span`
+  background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 `,Y=i.h1`
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(4rem, 6vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #ffffff;
 
-  span {
-    display: block;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
-    margin-top: 0.25rem;
-    font-size: 0.5em;
-    letter-spacing: 0.02em;
-  }
-
   @media (max-width: 768px) {
-    font-size: clamp(3rem, 10vw, 4rem);
-    line-height: 1;
-
-    span {
-      margin-top: 0.5rem;
-    }
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    line-height: 1.1;
   }
 `,$=i.p`
   margin: 2.25rem 0 0;
@@ -147,14 +142,14 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     margin: 1.75rem auto 0;
     max-width: 480px;
   }
-`,F=i.p`
+`,N=i.p`
   margin: 1.5rem 0 0;
   max-width: 560px;
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.55);
   padding-left: 1.25rem;
-  border-left: 2px solid rgba(139, 13, 42, 0.5);
+  border-left: 2px solid rgba(158, 28, 36, 0.5);
 
   @media (max-width: 768px) {
     margin: 1.25rem auto 0;
@@ -162,7 +157,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     padding-left: 1rem;
     font-size: 0.9rem;
   }
-`,N=i.div`
+`,Q=i.div`
   display: flex;
   align-items: center;
   margin-top: 3rem;
@@ -173,13 +168,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     align-items: stretch;
     margin-top: 2.5rem;
   }
-`,X=i.a`
+`,U=i.a`
   display: inline-flex;
   align-items: center;
   gap: 0.875rem;
   height: 64px;
   padding: 0 2.5rem;
-  background: #8b0d2a;
+  background: #9E1C24;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -193,7 +188,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   &:hover {
     background: #9f1239;
     transform: translateY(-1px);
-    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.35);
+    box-shadow: 0 12px 40px rgba(158, 28, 36, 0.35);
   }
 
   svg {
@@ -209,7 +204,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     justify-content: center;
     height: 56px;
   }
-`,Q=i.div`
+`,J=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,13 +222,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     margin-top: 1.5rem;
     padding-top: 1.5rem;
   }
-`,U=i.span`
+`,K=i.span`
   font-size: 0.8rem;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-`,J=i.span`
+`,Z=i.span`
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 0.25rem;
@@ -242,7 +237,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   @media (max-width: 640px) {
     margin-top: 0;
   }
-`,K=i.section`
+`,_=i.section`
   padding: 7rem 2rem;
   text-align: center;
   max-width: 860px;
@@ -253,25 +248,25 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     padding: 5rem 1.25rem;
     scroll-margin-top: 80px;
   }
-`,Z=i.div`
+`,ee=i.div`
   width: min(1180px, 100%);
   max-width: 1180px;
   margin: 0 auto;
-`,_=i.div`
+`,ie=i.div`
   max-width: 700px;
   margin: 0 auto 3rem;
   text-align: center;
-`,s=i.div`
+`,c=i.div`
   width: 100%;
   max-width: 1320px;
   margin: 0 auto 5rem;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.2), transparent);
 
   @media (max-width: 768px) {
     margin-bottom: 3rem;
   }
-`,r=i.h2`
+`,a=i.h2`
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.5rem);
   font-weight: 600;
@@ -280,7 +275,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   margin-bottom: 4rem;
   text-align: center;
   line-height: 1.15;
-`,ee=i.h2`
+`,te=i.h2`
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.5rem);
   font-weight: 600;
@@ -289,13 +284,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   margin-bottom: 1rem;
   text-align: center;
   line-height: 1.15;
-`,ie=i.p`
+`,re=i.p`
   font-size: 1.125rem;
   line-height: 1.7;
   color: #5a6578;
   margin: 0 auto;
   text-align: center;
-`,te=i.section`
+`,ne=i.section`
   padding: 7rem 2rem;
   background: #fafbfc;
   scroll-margin-top: 100px;
@@ -304,14 +299,14 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     padding: 5rem 1.25rem;
     scroll-margin-top: 80px;
   }
-`,ne=i.p`
+`,ae=i.p`
   font-size: 1.125rem;
   color: #5a6578;
   max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.7;
-`,re=i.div`
+`,oe=i.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -325,7 +320,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`,d=i.div`
+`,l=i.div`
   position: relative;
   background: #ffffff;
   border: 1px solid #e5e9ed;
@@ -334,7 +329,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   height: 100%;
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 20px 50px rgba(10, 22, 40, 0.1);
     transform: translateY(-6px);
   }
@@ -342,13 +337,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 1.75rem 1.5rem 1.5rem;
   }
-`,ae=i.span`
+`,se=i.span`
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #8b0d2a;
+  color: #9E1C24;
   font-family: var(--font-heading);
   letter-spacing: 0.1em;
   opacity: 0.7;
@@ -357,25 +352,25 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     top: 1rem;
     right: 1rem;
   }
-`,oe=i.div`
+`,de=i.div`
   width: 48px;
   height: 48px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${d}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+  ${l}:hover & {
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
     transform: scale(1.05);
   }
-`,se=i.h3`
+`,ce=i.h3`
   margin: 0 0 0.75rem;
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -383,13 +378,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   color: #0a1628;
   line-height: 1.25;
   letter-spacing: -0.01em;
-`,de=i.ul`
+`,le=i.ul`
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 1.25rem;
   border-top: 1px solid #e5e9ed;
-`,ce=i.li`
+`,me=i.li`
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
@@ -400,10 +395,10 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     content: "\2022";
     position: absolute;
     left: 0;
-    color: #8b0d2a;
+    color: #9E1C24;
     font-weight: bold;
   }
-`,le=i.section`
+`,ge=i.section`
   padding: 7rem 2rem;
   background: #fafbfc;
   position: relative;
@@ -415,20 +410,20 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.15), transparent);
+    background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.15), transparent);
   }
   
   @media (max-width: 768px) {
     padding: 5rem 1.25rem;
   }
-`,me=i.p`
+`,pe=i.p`
   font-size: 1.125rem;
   color: #5a6578;
   max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.7;
-`,ge=i.div`
+`,he=i.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -444,7 +439,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-`,c=i.div`
+`,m=i.div`
   position: relative;
   display: flex;
   gap: 1rem;
@@ -460,12 +455,12 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     left: 0;
     width: 3px;
     height: 0;
-    background: #8b0d2a;
+    background: #9E1C24;
     transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 16px 48px rgba(10, 22, 40, 0.08);
 
     &::before {
@@ -476,36 +471,36 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 1.5rem 1.25rem;
   }
-`,pe=i.div`
+`,xe=i.div`
   width: 40px;
   height: 40px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${c}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+  ${m}:hover & {
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
   }
-`,he=i.h3`
+`,fe=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,fe=i.p`
+`,ue=i.p`
   font-size: 0.925rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,xe=i.section`
+`,be=i.section`
   padding: 7rem 2rem;
   background: #ffffff;
   position: relative;
@@ -513,14 +508,14 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 5rem 1.25rem;
   }
-`,ue=i.p`
+`,ve=i.p`
   font-size: 1.125rem;
   color: #5a6578;
   max-width: 640px;
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.7;
-`,be=i.div`
+`,we=i.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -531,7 +526,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-`,ve=i.div`
+`,je=i.div`
   img {
     width: 100%;
     height: 100%;
@@ -544,11 +539,11 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
     max-height: 400px;
     overflow: hidden;
   }
-`,we=i.div`
+`,ye=i.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`,je=i.div`
+`,Ce=i.div`
   display: flex;
   gap: 1rem;
   align-items: flex-start;
@@ -558,34 +553,34 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     background: #ffffff;
     box-shadow: 0 8px 24px rgba(10, 22, 40, 0.06);
   }
-`,ye=i.div`
+`,ze=i.div`
   font-size: 0.7rem;
   font-weight: 600;
-  color: #8b0d2a;
+  color: #9E1C24;
   font-family: var(--font-heading);
   letter-spacing: 0.1em;
   padding: 0.25rem 0.5rem;
-  background: rgba(139, 13, 42, 0.1);
+  background: rgba(158, 28, 36, 0.1);
   flex-shrink: 0;
-`,ze=i.div`
+`,ke=i.div`
   flex: 1;
-`,ke=i.h3`
+`,Se=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,Se=i.p`
+`,Ae=i.p`
   font-size: 0.925rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,Ce=i.section`
+`,Ee=i.section`
   padding: 7rem 2rem;
   background: #020617;
   position: relative;
@@ -598,8 +593,8 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 50% 0%, rgba(139, 13, 42, 0.08) 0%, transparent 60%),
-    url(${P}) center / cover no-repeat;
+    radial-gradient(ellipse at 50% 0%, rgba(158, 28, 36, 0.08) 0%, transparent 60%),
+    url(${T}) center / cover no-repeat;
   opacity: 0.12;
 
   &::after {
@@ -613,7 +608,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
       rgba(2, 6, 23, 0.95) 100%
     );
   }
-`,Ae=i.div`
+`,Pe=i.div`
   position: relative;
   z-index: 2;
   max-width: 720px;
@@ -621,13 +616,40 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   text-align: center;
   padding: 3.5rem 3rem;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.2);
   backdrop-filter: blur(10px);
+  border-radius: 4px;
+  box-shadow: 
+    0 0 60px rgba(158, 28, 36, 0.15),
+    0 0 100px rgba(201, 162, 39, 0.08);
+
+  /* Gold corner accents */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #C9A227;
+    border-left: 2px solid #C9A227;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid #C9A227;
+    border-right: 2px solid #C9A227;
+  }
 
   @media (max-width: 768px) {
     padding: 2.5rem 1.5rem;
   }
-`,Pe=i.h2`
+`,Te=i.h2`
   font-size: clamp(1.75rem, 3.5vw, 2.25rem);
   font-weight: 600;
   color: #ffffff;
@@ -650,7 +672,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   gap: 0.75rem;
   height: 60px;
   padding: 0 3rem;
-  background: #8b0d2a;
+  background: #9E1C24;
   color: #ffffff;
   border: none;
   font-size: 0.9rem;
@@ -682,7 +704,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   &:hover {
     background: #9f1239;
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.4);
+    box-shadow: 0 12px 40px rgba(158, 28, 36, 0.4);
 
     &::before {
       left: 100%;
@@ -696,7 +718,29 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as g}from"./vendor-DPKrZd5H.js
   &:hover svg {
     transform: translateX(4px);
   }
-`;function Ve(){return g.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(Te,{id:"3d-animation",children:[e.jsx(p,{title:"3D Animation Services | Hyacinth Industries LLC",description:"3D animation services from Hyacinth Industries LLC delivering high-quality visual storytelling and professional animation solutions.",canonicalPath:"/3d-animation/"}),e.jsx(h,{}),e.jsx(f,{}),e.jsx(T,{}),e.jsx(x,{})]})}const Te=i.div`
+`,Be=i.div`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+  
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+`,o=i.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  
+  svg {
+    color: #C9A227;
+  }
+`;function qe(){return h.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(Oe,{id:"3d-animation",children:[e.jsx(x,{title:"3D Animation Services | Hyacinth Industries LLC",description:"3D animation services from Hyacinth Industries LLC delivering high-quality visual storytelling and professional animation solutions.",canonicalPath:"/3d-animation/"}),e.jsx(f,{}),e.jsx(u,{}),e.jsx(B,{}),e.jsx(b,{})]})}const Oe=i.div`
   width: 100vw;
   padding-top: 0;
-`;export{Ve as default};
+`;export{qe as default};

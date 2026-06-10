@@ -154,12 +154,17 @@ const CardWrapper = styled.div`
   min-height: 300px;
   height: 100%;
   flex-shrink: 0;
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: visible;
   cursor: ${({ $clickable }) => ($clickable ? "pointer" : "default")};
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &:hover {
+    transform: translateY(-6px);
+  }
 
   &:active {
-    transform: scale(0.985);
+    transform: scale(0.985) translateY(0);
   }
 `;
 
@@ -169,19 +174,24 @@ const CardContent = styled(motion.div)`
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 20px 18px 16px;
-  padding-top: 34px;
-  border-radius: 18px;
+  padding: 36px 20px 18px;
+  border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   background-color: rgba(255, 255, 255, 0.97);
   box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.08),
-    0 2px 6px rgba(0, 0, 0, 0.04);
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease;
+
+  ${CardWrapper}:hover & {
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.12),
+      0 4px 8px rgba(0, 0, 0, 0.06);
+  }
 
   @media (max-width: 768px) {
-    border-radius: 16px;
-    padding: 18px 16px 14px;
-    padding-top: 32px;
+    border-radius: 12px;
+    padding: 34px 16px 14px;
   }
 `;
 
@@ -192,7 +202,7 @@ const BackgroundImage = styled(motion.div)`
   background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: hidden;
 
   &::after {
@@ -205,14 +215,14 @@ const BackgroundImage = styled(motion.div)`
       rgba(0, 0, 0, 0.4) 46%,
       rgba(0, 0, 0, 0.7) 100%
     );
-    border-radius: 18px;
+    border-radius: 12px;
   }
 
   @media (max-width: 768px) {
-    border-radius: 16px;
+    border-radius: 12px;
 
     &::after {
-      border-radius: 16px;
+      border-radius: 12px;
     }
   }
 `;
@@ -238,7 +248,7 @@ const IconWrapper = styled(motion.div)`
   svg {
     width: 22px;
     height: 22px;
-    color: #ff0033;
+    color: #9E1C24;
     stroke-width: 2px;
     display: block;
   }
@@ -335,22 +345,23 @@ const LearnMoreText = styled.div`
   font-weight: ${({ theme }) => theme.typography.fontWeights.medium};
   font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   color: #ffffff;
-  padding: 0.72rem 1.1rem;
-  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
   border: 0;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.primary};
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-  transition: all 0.25s ease;
+  background-color: #9E1C24;
+  box-shadow: 0 4px 12px rgba(158, 28, 36, 0.25);
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primaryDeep};
-    transform: translateY(-1px);
+    background-color: #7a161c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(158, 28, 36, 0.35);
   }
 
   @media (max-width: 768px) {
     font-size: 0.82rem;
-    padding: 0.62rem 0.95rem;
+    padding: 0.6rem 0.9rem;
   }
 `;
 

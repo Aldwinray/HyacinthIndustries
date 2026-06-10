@@ -53,16 +53,15 @@ const HomeHeader = memo(() => {
           animate="show"
         >
           <Eyebrow as={motion.p} variants={itemVariants}>
-            FRACTIONAL EXECUTIVE SUPPORT
+            <EyebrowDot /> Fractional Executive Support
           </Eyebrow>
-          <EyebrowLine as={motion.div} variants={itemVariants} />
 
           <HeroTitle as={motion.h1} variants={titleVariants}>
-            Close bigger deals<span className="dot" />
+            Close bigger deals
             <br />
-            Build stronger brands<span className="dot" />
+            <GradientText>Build stronger brands</GradientText>
             <br />
-            Execute faster<span className="dot" />
+            Execute faster
           </HeroTitle>
 
           <HeroSubtitle as={motion.p} variants={itemVariants}>
@@ -250,69 +249,61 @@ const HeroRight = styled.div`
 `;
 
 const Eyebrow = styled.p`
-  margin: 0;
-  font-size: clamp(0.78rem, 1vw, 0.95rem);
-  letter-spacing: 0.1em;
-  font-weight: 800;
-  color: #e11d48;
+  margin: 0 0 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.5rem;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: #C9A227;
   text-transform: uppercase;
 
   @media (max-width: 640px) {
     font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
   }
 `;
 
-const EyebrowLine = styled.div`
-  width: clamp(36px, 5vw, 46px);
-  height: 2px;
-  background: #e11d48;
-  margin: 0.9rem 0 1.5rem;
-
-  @media (max-width: 640px) {
-    margin: 0.75rem 0 1.25rem;
-    width: 40px;
-  }
+const EyebrowDot = styled.span`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C9A227;
 `;
 
 const HeroTitle = styled.h1`
   margin: 0;
-  font-size: clamp(2rem, 3.6vw, 4.1rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-weight: 800;
-  color: #f8fafc;
-
-  .dot {
-    display: inline-block;
-    width: 0.15em;
-    height: 0.15em;
-    margin-left: 0.1em;
-    border-radius: 50%;
-    background: #e11d48;
-    vertical-align: 0.1em;
-  }
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: #fafaf9;
 
   @media (max-width: 980px) {
-    font-size: clamp(2.2rem, 6vw, 3.5rem);
-    line-height: 1.08;
+    font-size: clamp(2rem, 5.5vw, 3rem);
+    line-height: 1.1;
   }
 
   @media (max-width: 640px) {
-    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-
-    .dot {
-      width: 0.12em;
-      height: 0.12em;
-    }
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    line-height: 1.12;
   }
 
   @media (max-width: 380px) {
-    font-size: 1.65rem;
+    font-size: 1.6rem;
   }
+`;
+
+const GradientText = styled.span`
+  background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 `;
 
 const HeroSubtitle = styled.p`
@@ -344,7 +335,7 @@ const HeroSubtitle = styled.p`
 const HeroNote = styled.p`
   margin: 1.25rem 0 0;
   padding-left: 1rem;
-  border-left: 2px solid #e11d48;
+  border-left: 2px solid #9E1C24;
   font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   line-height: 1.6;
   color: #b8c0cf;
@@ -393,36 +384,29 @@ const PrimaryButton = styled.a`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 56px;
-  padding: 0 1.75rem;
-  border-radius: 10px;
-  background: #be123c;
+  min-height: 52px;
+  padding: 0 1.5rem;
+  border-radius: 12px;
+  background: #9E1C24;
   color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  text-transform: uppercase;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 14px rgba(190, 18, 60, 0.3);
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 12px rgba(158, 28, 36, 0.25);
 
   &:hover {
-    background: #e11d48;
+    background: #7a161c;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(190, 18, 60, 0.4);
+    box-shadow: 0 8px 20px rgba(158, 28, 36, 0.35);
   }
 
   @media (max-width: 640px) {
     width: 100%;
-    min-height: 52px;
-    font-size: 0.9rem;
-    padding: 0 1.5rem;
-    border-radius: 8px;
-    order: 1;
-  }
-
-  @media (max-width: 380px) {
-    font-size: 0.85rem;
     min-height: 48px;
+    font-size: 0.875rem;
+    order: 1;
   }
 `;
 
@@ -491,19 +475,19 @@ const HeroVisual = styled.div`
 
 const LogoContainer = styled.div`
   position: relative;
-  width: min(640px, 100%);
+  width: min(400px, 100%);
   aspect-ratio: 1.4 / 1;
-  border-radius: 24px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
 
   @media (max-width: 980px) {
-    width: min(280px, 50%);
+    width: min(260px, 50%);
     aspect-ratio: 1.5 / 1;
   }
 
   @media (max-width: 640px) {
-    width: 200px;
+    width: 180px;
     aspect-ratio: auto;
     height: auto;
     border-radius: 0;
@@ -512,14 +496,14 @@ const LogoContainer = styled.div`
   }
 
   @media (max-width: 380px) {
-    width: 160px;
+    width: 140px;
   }
 `;
 
 const LogoGlow = styled.div`
   position: absolute;
   inset: 10% 8%;
-  border-radius: 24px;
+  border-radius: 12px;
   background: radial-gradient(
     circle at center,
     rgba(255, 255, 255, 0.25) 0%,

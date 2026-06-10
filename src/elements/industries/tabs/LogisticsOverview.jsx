@@ -18,10 +18,9 @@ const LogisticsOverview = () => {
         <HeroInner>
           <HeroContent>
             <HeroEyebrow>
-              <EyebrowText>Hyacinth Industries</EyebrowText>
-              <EyebrowLine />
+              <EyebrowDot /> Industry Solutions
             </HeroEyebrow>
-            <HeroTitle>Logistics <span>Support</span></HeroTitle>
+            <HeroTitle>Logistics <GradientText>Support</GradientText></HeroTitle>
             <HeroSubtitle>
               Professional logistics support services designed to streamline your supply chain operations and enhance operational efficiency.
             </HeroSubtitle>
@@ -216,6 +215,20 @@ const LogisticsOverview = () => {
             Contact Us
             <ArrowRight size={18} />
           </ContactButton>
+          <TrustIndicators>
+            <TrustItem>
+              <CheckCircle2 size={16} />
+              <span>Real-Time Tracking</span>
+            </TrustItem>
+            <TrustItem>
+              <CheckCircle2 size={16} />
+              <span>24/7 Support</span>
+            </TrustItem>
+            <TrustItem>
+              <CheckCircle2 size={16} />
+              <span>Load Optimization</span>
+            </TrustItem>
+          </TrustIndicators>
         </ContactContent>
       </ContactSection>
     </Wrapper>
@@ -264,7 +277,7 @@ const HeroOverlay = styled.div`
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(158, 28, 36, 0.12) 0%, transparent 50%),
     radial-gradient(ellipse at 0% 100%, rgba(2, 6, 23, 0.98) 0%, transparent 60%),
     linear-gradient(
       115deg,
@@ -277,7 +290,7 @@ const HeroOverlay = styled.div`
 
   @media (max-width: 1024px) {
     background: 
-      radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 100% 0%, rgba(158, 28, 36, 0.1) 0%, transparent 40%),
       linear-gradient(
         115deg,
         rgba(2, 6, 23, 0.98) 0%,
@@ -338,56 +351,51 @@ const HeroContent = styled.div`
 `;
 
 const HeroEyebrow = styled.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.5rem;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: #C9A227;
+  text-transform: uppercase;
   margin-bottom: 2.5rem;
 
   @media (max-width: 768px) {
-    justify-content: center;
-    gap: 0.75rem;
+    margin-bottom: 2rem;
   }
 `;
 
-const EyebrowText = styled.span`
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+const EyebrowDot = styled.span`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C9A227;
 `;
 
-const EyebrowLine = styled.div`
-  width: 60px;
-  height: 1px;
-  background: #8b0d2a;
+const GradientText = styled.span`
+  background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 `;
 
 const HeroTitle = styled.h1`
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #ffffff;
 
-  span {
-    display: block;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
-    margin-top: 0.25rem;
-    font-size: 0.5em;
-    letter-spacing: 0.02em;
-  }
-
-  @media (min-width: 1440px) {
-    font-size: 6.5rem;
-  }
-
   @media (max-width: 768px) {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-    line-height: 1;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    line-height: 1.1;
 
     span {
       margin-top: 0.5rem;
@@ -418,7 +426,7 @@ const HeroNote = styled.p`
   margin: 1.5rem 0 0;
   max-width: 560px;
   padding-left: 1.25rem;
-  border-left: 2px solid rgba(139, 13, 42, 0.6);
+  border-left: 2px solid rgba(158, 28, 36, 0.6);
   font-size: 0.95rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.5);
@@ -451,7 +459,7 @@ const HeroPrimaryButton = styled.a`
   gap: 0.875rem;
   height: 64px;
   padding: 0 2.5rem;
-  background: #8b0d2a;
+  background: #9E1C24;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -465,7 +473,7 @@ const HeroPrimaryButton = styled.a`
   &:hover {
     background: #9f1239;
     transform: translateY(-1px);
-    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.35);
+    box-shadow: 0 12px 40px rgba(158, 28, 36, 0.35);
   }
 
   svg {
@@ -523,7 +531,7 @@ const SectionDivider = styled.div`
   max-width: 1320px;
   margin: 0 auto 5rem;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.2), transparent);
 
   @media (max-width: 768px) {
     margin-bottom: 3rem;
@@ -591,7 +599,7 @@ const ServiceCard = styled.div`
   flex-direction: column;
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 20px 50px rgba(10, 22, 40, 0.1);
     transform: translateY(-6px);
   }
@@ -607,7 +615,7 @@ const ServiceNumber = styled.span`
   right: 1.25rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #8b0d2a;
+  color: #9E1C24;
   font-family: var(--font-heading);
   letter-spacing: 0.1em;
   opacity: 0.7;
@@ -623,7 +631,7 @@ const ServiceIcon = styled.div`
   height: 48px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,8 +639,8 @@ const ServiceIcon = styled.div`
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   ${ServiceCard}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
     transform: scale(1.05);
   }
@@ -673,7 +681,7 @@ const ServiceFeature = styled.div`
   line-height: 1.5;
   
   svg {
-    color: #8b0d2a;
+    color: #9E1C24;
     flex-shrink: 0;
     width: 14px;
     height: 14px;
@@ -694,7 +702,7 @@ const BenefitsSection = styled.section`
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.15), transparent);
+    background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.15), transparent);
   }
   
   @media (max-width: 768px) {
@@ -743,12 +751,12 @@ const BenefitCard = styled.div`
     left: 0;
     width: 3px;
     height: 0;
-    background: #8b0d2a;
+    background: #9E1C24;
     transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 16px 48px rgba(10, 22, 40, 0.08);
 
     &::before {
@@ -766,7 +774,7 @@ const BenefitIcon = styled.div`
   height: 52px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -774,8 +782,8 @@ const BenefitIcon = styled.div`
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   ${BenefitCard}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
   }
 `;
@@ -812,7 +820,7 @@ const ContactSection = styled.section`
     position: absolute;
     inset: 0;
     background: 
-      radial-gradient(ellipse at 50% 0%, rgba(139, 13, 42, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 50% 0%, rgba(158, 28, 36, 0.08) 0%, transparent 60%),
       url(${bgImage}) center / cover no-repeat;
     opacity: 0.12;
   }
@@ -838,8 +846,35 @@ const ContactContent = styled.div`
   text-align: center;
   padding: 3.5rem 3rem;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.2);
   backdrop-filter: blur(10px);
+  border-radius: 4px;
+  box-shadow: 
+    0 0 60px rgba(158, 28, 36, 0.15),
+    0 0 100px rgba(201, 162, 39, 0.08);
+
+  /* Gold corner accents */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #C9A227;
+    border-left: 2px solid #C9A227;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid #C9A227;
+    border-right: 2px solid #C9A227;
+  }
 
   @media (max-width: 768px) {
     padding: 2.5rem 1.5rem;
@@ -873,7 +908,7 @@ const ContactButton = styled.a`
   gap: 0.75rem;
   height: 60px;
   padding: 0 3rem;
-  background: #8b0d2a;
+  background: #9E1C24;
   color: #ffffff;
   border: none;
   font-size: 0.9rem;
@@ -905,7 +940,7 @@ const ContactButton = styled.a`
   &:hover {
     background: #9f1239;
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.4);
+    box-shadow: 0 12px 40px rgba(158, 28, 36, 0.4);
 
     &::before {
       left: 100%;
@@ -918,6 +953,32 @@ const ContactButton = styled.a`
 
   &:hover svg {
     transform: translateX(4px);
+  }
+`;
+
+const TrustIndicators = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+  
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+`;
+
+const TrustItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  
+  svg {
+    color: #C9A227;
   }
 `;
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { Link, NavLink as RouterNavLink } from "react-router-dom";
+import { Link, NavLink as RouterNavLink, useLocation } from "react-router-dom";
 import {
   Mail,
   Phone,
@@ -18,7 +18,8 @@ export default function TopNavBar() {
   const [isMobile, setIsMobile] = useState(false);
   const [showIndustriesDropdown, setShowIndustriesDropdown] = useState(false);
 
-  const location = window.location.pathname;
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
     const checkIfMobile = () => setIsMobile(window.innerWidth <= 1024);
@@ -37,7 +38,7 @@ export default function TopNavBar() {
     { to: "/3d-animation/", text: "3D Animation" }
   ];
 
-  const isIndustryPageActive = industriesList.some(industry => location === industry.to);
+  const isIndustryPageActive = industriesList.some(industry => pathname === industry.to);
 
   return (
     <NavContainer>

@@ -1,8 +1,8 @@
-import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js";import{d as r}from"./styled-3-8BfJdI.js";import{S as W,T as C,a as H,F as B}from"./index-D8YeovzI.js";import{b as P}from"./office-Bip-LbGP.js";import{g as v,u as T,n as i,v as w,U as E,S as y,W as G,x as I,y as O,i as R,z as A}from"./icons-D9O8TY1s.js";const L="/assets/General%20Services-CiL_eQ52.webp",M=()=>e.jsxs(D,{children:[e.jsxs($,{children:[e.jsx(F,{src:P,"aria-hidden":!0}),e.jsx(Y,{}),e.jsx(N,{}),e.jsx(U,{children:e.jsxs(X,{children:[e.jsxs(q,{children:[e.jsx(Q,{children:"Hyacinth Industries"}),e.jsx(V,{})]}),e.jsxs(_,{children:["General ",e.jsx("span",{children:"Services"})]}),e.jsx(J,{children:"Comprehensive business support designed to stabilize daily operations and improve service delivery."}),e.jsx(ee,{children:"End-to-end support for facilities, administration, HR, and security operations."}),e.jsxs(K,{children:[e.jsxs(Z,{href:"#general-services",children:["Explore Services",e.jsx(v,{size:18})]}),e.jsxs(re,{children:[e.jsx(ie,{children:"4 Core Services"}),e.jsx(te,{children:"Enterprise-grade support"})]})]})]})})]}),e.jsxs(ne,{id:"general-services",children:[e.jsx(k,{}),e.jsx(f,{children:"Our General Services"}),e.jsxs(se,{children:[e.jsxs(n,{children:[e.jsx(o,{children:"01"}),e.jsx(a,{children:e.jsx(T,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Facility Management"}),e.jsx(c,{children:"Comprehensive facility management solutions to maintain and optimize your business environment."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Maintenance & Repairs"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Space Optimization"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Security Services"]})]})]}),e.jsxs(n,{children:[e.jsx(o,{children:"02"}),e.jsx(a,{children:e.jsx(w,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Office Administration"}),e.jsx(c,{children:"Streamline your office operations with our professional administrative support services."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Document Management"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Office Coordination"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Administrative Support"]})]})]}),e.jsxs(n,{children:[e.jsx(o,{children:"03"}),e.jsx(a,{children:e.jsx(E,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Human Resources"}),e.jsx(c,{children:"Comprehensive HR solutions to manage your workforce effectively and efficiently."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Recruitment & Onboarding"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Employee Relations"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Performance Management"]})]})]}),e.jsxs(n,{children:[e.jsx(o,{children:"04"}),e.jsx(a,{children:e.jsx(y,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Security Services"}),e.jsx(c,{children:"Protect your assets and ensure a safe working environment with our security solutions."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Access Control"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Surveillance Systems"]}),e.jsxs(t,{children:[e.jsx(i,{size:14,strokeWidth:2})," Security Personnel"]})]})]})]})]}),e.jsxs(oe,{children:[e.jsx(k,{}),e.jsx(f,{children:"Our Approach"}),e.jsx(ae,{children:"We follow a systematic approach to deliver exceptional general services that meet your business needs."}),e.jsxs(de,{children:[e.jsxs(s,{children:[e.jsx(m,{children:"01"}),e.jsx(p,{children:e.jsx(w,{size:24,strokeWidth:1.5})}),e.jsx(h,{children:"Assessment"}),e.jsx(x,{children:"We evaluate your current operations and identify areas for improvement."})]}),e.jsxs(s,{children:[e.jsx(m,{children:"02"}),e.jsx(p,{children:e.jsx(G,{size:24,strokeWidth:1.5})}),e.jsx(h,{children:"Planning"}),e.jsx(x,{children:"We develop a customized service plan tailored to your specific requirements."})]}),e.jsxs(s,{children:[e.jsx(m,{children:"03"}),e.jsx(p,{children:e.jsx(I,{size:24,strokeWidth:1.5})}),e.jsx(h,{children:"Implementation"}),e.jsx(x,{children:"We execute the plan with precision and attention to detail."})]}),e.jsxs(s,{children:[e.jsx(m,{children:"04"}),e.jsx(p,{children:e.jsx(O,{size:24,strokeWidth:1.5})}),e.jsx(h,{children:"Monitoring"}),e.jsx(x,{children:"We continuously monitor performance and make adjustments as needed."})]})]})]}),e.jsxs(ce,{children:[e.jsx(f,{children:"Why Choose Our General Services"}),e.jsxs(le,{children:[e.jsxs(g,{children:[e.jsx(b,{children:e.jsx(R,{size:24,strokeWidth:1.5})}),e.jsx(u,{children:"Time Efficiency"}),e.jsx(j,{children:"Free up valuable time for your core business activities by outsourcing general services to our experts."})]}),e.jsxs(g,{children:[e.jsx(b,{children:e.jsx(A,{size:24,strokeWidth:1.5})}),e.jsx(u,{children:"Cost Reduction"}),e.jsx(j,{children:"Lower operational costs through efficient resource allocation and streamlined processes."})]}),e.jsxs(g,{children:[e.jsx(b,{children:e.jsx(y,{size:24,strokeWidth:1.5})}),e.jsx(u,{children:"Enhanced Security"}),e.jsx(j,{children:"Protect your assets and ensure a safe working environment with our comprehensive security solutions."})]})]})]}),e.jsxs(me,{children:[e.jsx(pe,{}),e.jsxs(he,{children:[e.jsx(xe,{children:"Ready to Simplify Your Business Processes?"}),e.jsx(ge,{children:"We help you streamline operations, improve team productivity, and keep your business moving."}),e.jsxs(fe,{href:"/contact/",children:["Contact Us",e.jsx(v,{size:18})]})]})]})]}),D=r.div`
+import{j as e}from"./motion-Cy3Fut2F.js";import{r as S}from"./vendor-BQFpGxKL.js";import{d as i}from"./styled-CFUkIykv.js";import{S as W,T as E,a as A,F as P}from"./index-MTnuMEob.js";import{b as H}from"./office-Bip-LbGP.js";import{g as w,v as k,n as r,D as T,E as D,M as B,W as O,U as I,z,i as M,J as F}from"./icons-BMgoPnMN.js";const L="/assets/Administrative%20Support-Dw_kkO1p.webp",R=()=>e.jsxs($,{children:[e.jsxs(G,{children:[e.jsx(Y,{src:H,"aria-hidden":!0}),e.jsx(N,{}),e.jsx(U,{}),e.jsx(q,{children:e.jsxs(X,{children:[e.jsxs(J,{children:[e.jsx(Q,{})," Industry Solutions"]}),e.jsxs(_,{children:["Administrative ",e.jsx(V,{children:"Support"})]}),e.jsx(K,{children:"Professional business administration built to reduce operational drag and keep teams focused on execution."}),e.jsx(Z,{children:"End-to-end support for office management, documents, scheduling, and correspondence."}),e.jsxs(ee,{children:[e.jsxs(ie,{href:"#administrative-services",children:["Get Started",e.jsx(w,{size:18})]}),e.jsxs(re,{children:[e.jsx(te,{children:"4 Core Services"}),e.jsx(ne,{children:"Enterprise-grade support"})]})]})]})})]}),e.jsxs(oe,{id:"administrative-services",children:[e.jsx(y,{}),e.jsx(f,{children:"Our Administrative Services"}),e.jsxs(se,{children:[e.jsxs(n,{children:[e.jsx(s,{children:"01"}),e.jsx(a,{children:e.jsx(k,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Office Management"}),e.jsx(c,{children:"Comprehensive office management solutions to streamline your business operations."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Workflow Optimization"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Resource Allocation"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Office Coordination"]})]})]}),e.jsxs(n,{children:[e.jsx(s,{children:"02"}),e.jsx(a,{children:e.jsx(T,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Document Processing"}),e.jsx(c,{children:"Efficient document management and processing services for your business needs."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Document Creation"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Filing & Organization"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Data Entry"]})]})]}),e.jsxs(n,{children:[e.jsx(s,{children:"03"}),e.jsx(a,{children:e.jsx(D,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Scheduling & Planning"}),e.jsx(c,{children:"Professional scheduling and planning services to optimize your time and resources."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Appointment Setting"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Meeting Coordination"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Event Planning"]})]})]}),e.jsxs(n,{children:[e.jsx(s,{children:"04"}),e.jsx(a,{children:e.jsx(B,{size:24,strokeWidth:1.5})}),e.jsx(d,{children:"Correspondence Management"}),e.jsx(c,{children:"Efficient handling of business correspondence to maintain professional communications."}),e.jsxs(l,{children:[e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Email Management"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Letter Drafting"]}),e.jsxs(t,{children:[e.jsx(r,{size:14,strokeWidth:2})," Response Handling"]})]})]})]})]}),e.jsxs(ae,{children:[e.jsx(y,{}),e.jsx(f,{children:"Our Administrative Process"}),e.jsx(de,{children:"We follow a systematic approach to deliver exceptional administrative support that meets your business needs."}),e.jsxs(ce,{children:[e.jsxs(o,{children:[e.jsx(m,{children:"01"}),e.jsx(p,{children:e.jsx(k,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Assessment"}),e.jsx(h,{children:"We evaluate your current administrative processes and identify areas for improvement."})]}),e.jsxs(o,{children:[e.jsx(m,{children:"02"}),e.jsx(p,{children:e.jsx(O,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Planning"}),e.jsx(h,{children:"We develop a customized administrative support plan tailored to your specific requirements."})]}),e.jsxs(o,{children:[e.jsx(m,{children:"03"}),e.jsx(p,{children:e.jsx(I,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Implementation"}),e.jsx(h,{children:"We assign dedicated administrative professionals to execute the plan with precision."})]}),e.jsxs(o,{children:[e.jsx(m,{children:"04"}),e.jsx(p,{children:e.jsx(z,{size:24,strokeWidth:1.5})}),e.jsx(x,{children:"Optimization"}),e.jsx(h,{children:"We continuously monitor performance and optimize processes for maximum efficiency."})]})]})]}),e.jsxs(le,{children:[e.jsx(f,{children:"Why Choose Our Administrative Support"}),e.jsxs(me,{children:[e.jsxs(g,{children:[e.jsx(u,{children:e.jsx(M,{size:24,strokeWidth:1.5})}),e.jsx(b,{children:"Time Efficiency"}),e.jsx(j,{children:"Free up valuable time for core business activities by outsourcing administrative tasks to our experts."})]}),e.jsxs(g,{children:[e.jsx(u,{children:e.jsx(z,{size:24,strokeWidth:1.5})}),e.jsx(b,{children:"Cost Reduction"}),e.jsx(j,{children:"Lower operational costs through efficient resource allocation and streamlined administrative processes."})]}),e.jsxs(g,{children:[e.jsx(u,{children:e.jsx(F,{size:24,strokeWidth:1.5})}),e.jsx(b,{children:"Professional Quality"}),e.jsx(j,{children:"Ensure consistent, high-quality administrative support from experienced professionals."})]})]})]}),e.jsxs(pe,{children:[e.jsx(xe,{}),e.jsxs(he,{children:[e.jsx(ge,{children:"Ready to Streamline Your Administrative Processes?"}),e.jsx(fe,{children:"Contact us today to learn how our administrative support services can help your business thrive."}),e.jsxs(ue,{href:"/contact/",children:["Contact Us",e.jsx(w,{size:18})]}),e.jsxs(be,{children:[e.jsxs(v,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Document Management"})]}),e.jsxs(v,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Data Entry & Research"})]}),e.jsxs(v,{children:[e.jsx(r,{size:16}),e.jsx("span",{children:"Scheduling & Planning"})]})]})]})]})]}),$=i.div`
   width: 100%;
   background: #ffffff;
   overflow-x: hidden;
-`,$=r.section`
+`,G=i.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -15,10 +15,10 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     min-height: auto;
     padding: 8rem 0 5rem;
   }
-`,F=r.div`
+`,Y=i.div`
   position: absolute;
   inset: 0;
-  background-image: url(${z=>z.src});
+  background-image: url(${C=>C.src});
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -28,11 +28,11 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     background-position: 65% center;
     opacity: 0.45;
   }
-`,Y=r.div`
+`,N=i.div`
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(158, 28, 36, 0.12) 0%, transparent 50%),
     radial-gradient(ellipse at 0% 100%, rgba(2, 6, 23, 0.98) 0%, transparent 60%),
     linear-gradient(
       115deg,
@@ -45,7 +45,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
 
   @media (max-width: 1024px) {
     background: 
-      radial-gradient(ellipse at 100% 0%, rgba(139, 13, 42, 0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 100% 0%, rgba(158, 28, 36, 0.1) 0%, transparent 40%),
       linear-gradient(
         115deg,
         rgba(2, 6, 23, 0.98) 0%,
@@ -63,13 +63,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
       rgba(2, 6, 23, 0.75) 100%
     );
   }
-`,N=r.div`
+`,U=i.div`
   position: absolute;
   inset: 0;
   background: 
     radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 6, 23, 0.4) 100%);
   pointer-events: none;
-`,U=r.div`
+`,q=i.div`
   position: relative;
   z-index: 3;
   width: 100%;
@@ -80,7 +80,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
-`,X=r.div`
+`,X=i.div`
   max-width: 720px;
   text-align: left;
 
@@ -88,53 +88,48 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     max-width: 100%;
     text-align: center;
   }
-`,q=r.div`
-  display: flex;
+`,J=i.div`
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.5rem;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: #C9A227;
+  text-transform: uppercase;
   margin-bottom: 2.5rem;
 
   @media (max-width: 768px) {
-    justify-content: center;
-    gap: 0.75rem;
+    margin-bottom: 2rem;
   }
-`,Q=r.span`
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-`,V=r.div`
-  width: 60px;
-  height: 1px;
-  background: #8b0d2a;
-`,_=r.h1`
+`,Q=i.span`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C9A227;
+`,V=i.span`
+  background: linear-gradient(135deg, #C9A227 0%, #e8d58a 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+`,_=i.h1`
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(4rem, 6vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #ffffff;
 
-  span {
-    display: block;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
-    margin-top: 0.25rem;
-    font-size: 0.5em;
-    letter-spacing: 0.02em;
-  }
-
   @media (max-width: 768px) {
-    font-size: clamp(3rem, 10vw, 4rem);
-    line-height: 1;
-
-    span {
-      margin-top: 0.5rem;
-    }
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    line-height: 1.1;
   }
-`,J=r.p`
+`,K=i.p`
   margin: 2.25rem 0 0;
   max-width: 560px;
   font-size: 1.25rem;
@@ -147,7 +142,22 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     margin: 1.75rem auto 0;
     max-width: 480px;
   }
-`,K=r.div`
+`,Z=i.p`
+  margin: 1.5rem 0 0;
+  max-width: 560px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(158, 28, 36, 0.5);
+
+  @media (max-width: 768px) {
+    margin: 1.25rem auto 0;
+    max-width: 420px;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+`,ee=i.div`
   display: flex;
   align-items: center;
   margin-top: 3rem;
@@ -158,13 +168,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     align-items: stretch;
     margin-top: 2.5rem;
   }
-`,Z=r.a`
+`,ie=i.a`
   display: inline-flex;
   align-items: center;
   gap: 0.875rem;
   height: 64px;
   padding: 0 2.5rem;
-  background: #8b0d2a;
+  background: #9E1C24;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -178,7 +188,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   &:hover {
     background: #9f1239;
     transform: translateY(-1px);
-    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.35);
+    box-shadow: 0 12px 40px rgba(158, 28, 36, 0.35);
   }
 
   svg {
@@ -194,22 +204,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     justify-content: center;
     height: 56px;
   }
-`,ee=r.p`
-  margin: 1.5rem 0 0;
-  max-width: 560px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.55);
-  padding-left: 1.25rem;
-  border-left: 2px solid rgba(139, 13, 42, 0.5);
-
-  @media (max-width: 768px) {
-    margin: 1.25rem auto 0;
-    max-width: 420px;
-    padding-left: 1rem;
-    font-size: 0.9rem;
-  }
-`,re=r.div`
+`,re=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,13 +222,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     margin-top: 1.5rem;
     padding-top: 1.5rem;
   }
-`,ie=r.span`
+`,te=i.span`
   font-size: 0.8rem;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-`,te=r.span`
+`,ne=i.span`
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 0.25rem;
@@ -242,17 +237,17 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   @media (max-width: 640px) {
     margin-top: 0;
   }
-`,k=r.div`
+`,y=i.div`
   width: 100%;
   max-width: 1320px;
   margin: 0 auto 5rem;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.2), transparent);
 
   @media (max-width: 768px) {
     margin-bottom: 3rem;
   }
-`,f=r.h2`
+`,f=i.h2`
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.5rem);
   font-weight: 600;
@@ -261,7 +256,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   margin-bottom: 4rem;
   text-align: center;
   line-height: 1.15;
-`,ne=r.section`
+`,oe=i.section`
   padding: 7rem 2rem;
   background-color: #fafbfc;
   scroll-margin-top: 100px;
@@ -270,7 +265,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     padding: 5rem 1.5rem;
     scroll-margin-top: 80px;
   }
-`,se=r.div`
+`,se=i.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -281,7 +276,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
-`,n=r.div`
+`,n=i.div`
   position: relative;
   background: #ffffff;
   border: 1px solid #e5e9ed;
@@ -292,7 +287,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   flex-direction: column;
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 20px 50px rgba(10, 22, 40, 0.1);
     transform: translateY(-6px);
   }
@@ -300,13 +295,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 1.75rem 1.5rem 1.5rem;
   }
-`,o=r.span`
+`,s=i.span`
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #8b0d2a;
+  color: #9E1C24;
   font-family: var(--font-heading);
   letter-spacing: 0.1em;
   opacity: 0.7;
@@ -315,12 +310,12 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     top: 1rem;
     right: 1rem;
   }
-`,a=r.div`
+`,a=i.div`
   width: 48px;
   height: 48px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,12 +323,12 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   ${n}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
     transform: scale(1.05);
   }
-`,d=r.h3`
+`,d=i.h3`
   margin: 0 0 0.75rem;
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -341,19 +336,19 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   color: #0a1628;
   line-height: 1.25;
   letter-spacing: -0.01em;
-`,c=r.p`
+`,c=i.p`
   margin: 0 0 1.25rem;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #5a6578;
   flex-grow: 1;
-`,l=r.div`
+`,l=i.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid #e5e9ed;
-`,t=r.div`
+`,t=i.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -362,13 +357,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   line-height: 1.5;
   
   svg {
-    color: #8b0d2a;
+    color: #9E1C24;
     flex-shrink: 0;
     width: 14px;
     height: 14px;
     opacity: 0.8;
   }
-`,oe=r.section`
+`,ae=i.section`
   padding: 7rem 2rem;
   background-color: #ffffff;
   position: relative;
@@ -376,14 +371,14 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 5rem 1.5rem;
   }
-`,ae=r.p`
+`,de=i.p`
   text-align: center;
   max-width: 640px;
   margin: 0 auto 3rem;
   font-size: 1.125rem;
   color: #5a6578;
   line-height: 1.7;
-`,de=r.div`
+`,ce=i.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
@@ -399,7 +394,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-`,s=r.div`
+`,o=i.div`
   position: relative;
   background: #ffffff;
   border: 1px solid #e5e9ed;
@@ -408,50 +403,50 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 16px 40px rgba(10, 22, 40, 0.08);
     transform: translateY(-4px);
   }
-`,m=r.div`
+`,m=i.div`
   position: absolute;
   top: 1rem;
   right: 1rem;
   font-size: 0.7rem;
   font-weight: 600;
-  color: #8b0d2a;
+  color: #9E1C24;
   font-family: var(--font-heading);
   letter-spacing: 0.1em;
   opacity: 0.6;
-`,p=r.div`
+`,p=i.div`
   width: 52px;
   height: 52px;
   margin: 0 auto 1.25rem;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  ${s}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+  ${o}:hover & {
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
   }
-`,h=r.h3`
+`,x=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,x=r.p`
+`,h=i.p`
   font-size: 0.9rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,ce=r.section`
+`,le=i.section`
   padding: 7rem 2rem;
   background-color: #fafbfc;
   position: relative;
@@ -463,13 +458,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139, 13, 42, 0.15), transparent);
+    background: linear-gradient(90deg, transparent, rgba(158, 28, 36, 0.15), transparent);
   }
   
   @media (max-width: 768px) {
     padding: 5rem 1.5rem;
   }
-`,le=r.div`
+`,me=i.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -485,7 +480,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-`,g=r.div`
+`,g=i.div`
   position: relative;
   display: flex;
   gap: 1rem;
@@ -501,12 +496,12 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
     left: 0;
     width: 3px;
     height: 0;
-    background: #8b0d2a;
+    background: #9E1C24;
     transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
-    border-color: #8b0d2a;
+    border-color: #9E1C24;
     box-shadow: 0 16px 48px rgba(10, 22, 40, 0.08);
 
     &::before {
@@ -517,12 +512,12 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 1.5rem 1.25rem;
   }
-`,b=r.div`
+`,u=i.div`
   width: 40px;
   height: 40px;
   background: #f8fafc;
   border: 1px solid #e5e9ed;
-  color: #8b0d2a;
+  color: #9E1C24;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -530,23 +525,23 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   ${g}:hover & {
-    background: #8b0d2a;
-    border-color: #8b0d2a;
+    background: #9E1C24;
+    border-color: #9E1C24;
     color: #ffffff;
   }
-`,u=r.h3`
+`,b=i.h3`
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
   color: #0a1628;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
-`,j=r.p`
+`,j=i.p`
   font-size: 0.925rem;
   color: #5a6578;
   line-height: 1.65;
   margin: 0;
-`,me=r.section`
+`,pe=i.section`
   padding: 7rem 2rem;
   background: #020617;
   position: relative;
@@ -555,11 +550,11 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 5rem 1.5rem;
   }
-`,pe=r.div`
+`,xe=i.div`
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 50% 0%, rgba(139, 13, 42, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 0%, rgba(158, 28, 36, 0.08) 0%, transparent 60%),
     url(${L}) center / cover no-repeat;
   opacity: 0.12;
 
@@ -574,7 +569,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
       rgba(2, 6, 23, 0.95) 100%
     );
   }
-`,he=r.div`
+`,he=i.div`
   position: relative;
   z-index: 2;
   max-width: 720px;
@@ -582,13 +577,40 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   text-align: center;
   padding: 3.5rem 3rem;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.2);
   backdrop-filter: blur(10px);
+  border-radius: 4px;
+  box-shadow: 
+    0 0 60px rgba(158, 28, 36, 0.15),
+    0 0 100px rgba(201, 162, 39, 0.08);
+
+  /* Gold corner accents */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #C9A227;
+    border-left: 2px solid #C9A227;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid #C9A227;
+    border-right: 2px solid #C9A227;
+  }
 
   @media (max-width: 768px) {
     padding: 2.5rem 1.5rem;
   }
-`,xe=r.h2`
+`,ge=i.h2`
   font-size: clamp(1.75rem, 3.5vw, 2.25rem);
   font-weight: 600;
   color: #ffffff;
@@ -596,7 +618,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   line-height: 1.2;
   font-family: var(--font-heading);
   letter-spacing: -0.01em;
-`,ge=r.p`
+`,fe=i.p`
   font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
@@ -604,14 +626,14 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
-`,fe=r.a`
+`,ue=i.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
   height: 60px;
   padding: 0 3rem;
-  background: #8b0d2a;
+  background: #9E1C24;
   color: #ffffff;
   border: none;
   font-size: 0.9rem;
@@ -643,7 +665,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   &:hover {
     background: #9f1239;
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(139, 13, 42, 0.4);
+    box-shadow: 0 12px 40px rgba(158, 28, 36, 0.4);
 
     &::before {
       left: 100%;
@@ -657,9 +679,31 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as S}from"./vendor-DPKrZd5H.js
   &:hover svg {
     transform: translateX(4px);
   }
-`,be=()=>e.jsx(ue,{children:e.jsx(M,{})}),ue=r.div`
+`,be=i.div`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+  
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+`,v=i.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  
+  svg {
+    color: #C9A227;
+  }
+`,je=()=>e.jsx(ve,{children:e.jsx(R,{})}),ve=i.div`
   width: 100%;
-`;function We(){return S.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(je,{children:[e.jsx(W,{title:"General Business Services | Hyacinth Industries LLC",description:"General business services from Hyacinth Industries LLC designed to strengthen operations, support teams, and accelerate business growth.",canonicalPath:"/general-services/"}),e.jsx(C,{}),e.jsx(H,{}),e.jsx(be,{}),e.jsx(B,{})]})}const je=r.div`
+`;function Ee(){return S.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(we,{id:"administrative-support",children:[e.jsx(W,{title:"Administrative Support Services | Hyacinth Industries LLC",description:"Administrative support services from Hyacinth Industries LLC to streamline operations, improve productivity, and keep teams focused on growth.",canonicalPath:"/administrative-support/"}),e.jsx(E,{}),e.jsx(A,{}),e.jsx(je,{}),e.jsx(P,{})]})}const we=i.div`
   width: 100vw;
   padding-top: 0;
-`;export{We as default};
+`;export{Ee as default};

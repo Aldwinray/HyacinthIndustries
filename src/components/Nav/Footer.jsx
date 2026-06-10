@@ -135,7 +135,7 @@ const FooterContainer = styled.footer`
   overflow: hidden;
   color: rgba(255, 255, 255, 0.9);
   background:
-    radial-gradient(1000px 520px at 92% 0%, rgba(225, 29, 72, 0.18), transparent 55%),
+    radial-gradient(1000px 520px at 92% 0%, rgba(158, 28, 36, 0.15), transparent 55%),
     radial-gradient(700px 380px at 0% 100%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(180deg, #0b1018 0%, #090d14 100%);
   padding: clamp(3.5rem, 6vw, 5.5rem) 0 1.5rem;
@@ -366,7 +366,7 @@ const FooterLink = styled.a`
   }
 
   &:focus-visible {
-    outline: 2px solid rgba(225, 29, 72, 0.8);
+    outline: 2px solid rgba(158, 28, 36, 0.8);
     outline-offset: 4px;
     border-radius: 6px;
   }
@@ -413,13 +413,13 @@ const SocialIconLink = styled.a`
 
   &:hover {
     transform: translateY(-2px);
-    border-color: rgba(225, 29, 72, 0.5);
-    background: rgba(225, 29, 72, 0.16);
+    border-color: rgba(158, 28, 36, 0.5);
+    background: rgba(158, 28, 36, 0.15);
     color: #fff;
   }
 
   &:focus-visible {
-    outline: 2px solid rgba(225, 29, 72, 0.85);
+    outline: 2px solid rgba(158, 28, 36, 0.85);
     outline-offset: 3px;
   }
 `;

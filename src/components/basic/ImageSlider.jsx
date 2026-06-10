@@ -58,17 +58,6 @@ const ImageSlider = ({ images, autoPlayInterval, style }) => {
         ))}
       </SlideWrapper>
 
-      <DotContainer>
-        {images.map((_, index) => (
-          <Dot
-            key={index}
-            $active={index === currentIndex}
-            onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-            aria-current={index === currentIndex ? "true" : "false"}
-          />
-        ))}
-      </DotContainer>
     </SliderContainer>
   );
 };
@@ -78,7 +67,7 @@ const SliderContainer = styled.div`
   width: 100%;
   height: 60vh;
   overflow: hidden;
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); //clipping the image slider
+  border-radius: 20px;
   max-width: 100vw;
   @media (max-width: 768px) {
     height: 40vh;
@@ -109,31 +98,6 @@ const SlideImage = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center;
-`;
-
-const DotContainer = styled.div`
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 2;
-`;
-
-const Dot = styled.button`
-  font-size: 1px;
-  width: 16px;
-  height: 8px;
-  border-radius: 8px;   
-  border: none;
-  background: ${props => props.$active ? '#fff' : 'rgba(255, 255, 255, 0.5)'};
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background: ${props => props.$active ? '#fff' : 'rgba(255, 255, 255, 0.7)'};
-  }
 `;
 
 export default ImageSlider;

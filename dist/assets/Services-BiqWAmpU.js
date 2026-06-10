@@ -1,4 +1,4 @@
-import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js";import{d as r}from"./styled-3-8BfJdI.js";import{S as m,T as p,a as g,F as h,B as f}from"./index-D8YeovzI.js";import{g as t,p as x,q as u,B as b,r as v,s as n}from"./icons-D9O8TY1s.js";const w=[{icon:u,title:"Brand Strengthening",kicker:"Positioning & Messaging",includes:"This service includes work on brand narrative, positioning clarity, messaging refinement, executive-level presentation, and the commercial materials that shape how the market understands your business. It can involve clarifying what you want to be known for, tightening category language, improving how value is communicated across leadership and sales conversations, and identifying where your current presentation is weakening trust or creating confusion. The goal is not superficial branding work. It is to make sure the company is described in a way that supports stronger conversations, better-fit opportunities, and a more credible presence with serious buyers, partners, and stakeholders.",body:"Hyacinth Industries helps companies sharpen how they are understood in the market so their positioning, messaging, and outward presence support growth instead of slowing it down. This work can include clarifying brand narrative, tightening category positioning, refining how teams talk about value, and aligning commercial materials with the level of buyer you want to attract.",forWho:"Best for companies repositioning for growth, entering a new market, or trying to present a more credible executive profile to higher-value buyers.",outcomes:["Clearer market positioning and sharper category language","Better alignment between leadership messaging and sales materials","Stronger trust signals for partners, buyers, and investors"],cta:"Talk About Brand Strategy",accent:"#8b0d2a",accentLight:"rgba(139, 13, 42, 0.06)"},{icon:b,title:"Deal Strategy & Closing",kicker:"Commercial Execution",includes:"This service includes support across qualification, stakeholder mapping, opportunity strategy, offer framing, partnership structure, and the communication required to keep a deal moving. It can also include reviewing where momentum is breaking down, identifying weak points in the commercial process, and improving how teams manage decision-makers, objections, and next steps. The focus is on increasing discipline around complex opportunities rather than relying on reactive selling.",body:"This service is built for organizations that need more discipline and leverage across the deal cycle, especially when opportunities are strategic, high value, or operationally complex. Hyacinth Industries supports the work around qualification, stakeholder mapping, offer framing, partnership structuring, and the communication needed to keep momentum through closing.",forWho:"Best for commercial teams, founders, and principals pursuing larger accounts, partnerships, or strategic transactions where the process needs senior-level structure.",outcomes:["Improved deal qualification and stakeholder alignment","Stronger commercial messaging at key negotiation moments","Higher confidence and discipline in moving complex deals to close"],cta:"Discuss a Growth Opportunity",accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.06)"},{icon:v,title:"Product Improvement",kicker:"Execution & Prioritization",includes:"This service includes evaluating customer friction, clarifying product or service priorities, improving the handoff between teams, and turning market feedback into better operating decisions. It can cover where the current offer feels hard to use, hard to explain, or hard to scale, as well as where execution issues are creating product problems that are not purely technical.",body:"Product improvement work focuses on making what you already offer more effective, more usable, and more aligned with what customers actually need. That can mean identifying friction in the experience, tightening feature priorities, improving handoff between teams, or translating market feedback into clearer product decisions.",forWho:"Best for teams with an established product or service that needs sharper customer alignment, clearer prioritization, and stronger execution around delivery.",outcomes:["Reduced friction in customer experience and internal workflows","Stronger alignment between product decisions and business goals","More focused roadmaps tied to adoption, retention, and growth"],cta:"Start a Product Conversation",accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.06)"}],y=[{text:"Senior-level thinking translated into practical execution",icon:n},{text:"Structured support across brand, deals, and product decisions",icon:n},{text:"Clear commercial and operational outcomes, not generic advisory language",icon:n}];function je(){return l.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(j,{id:"services",children:[e.jsx(m,{title:"Services | Hyacinth Industries LLC",description:"Explore Hyacinth Industries services in brand strengthening, deal strategy and closing, and product improvement.",canonicalPath:"/services/"}),e.jsx(p,{}),e.jsx(g,{}),e.jsxs(k,{children:[e.jsx(S,{}),e.jsxs(z,{children:[e.jsxs(T,{children:[e.jsx(o,{}),"Services"]}),e.jsxs(I,{children:["Growth, execution, and",e.jsx("br",{}),e.jsx(B,{children:"commercial clarity."})]}),e.jsx(C,{children:"Hyacinth Industries supports companies that need sharper positioning, stronger deal execution, and better product decisions — without adding unnecessary complexity."}),e.jsxs(H,{children:[e.jsxs($,{href:"#services-list",children:["Explore Services",e.jsx(t,{size:17})]}),e.jsx(A,{href:"/contact/",children:"Get In Touch"})]})]})]}),e.jsx(W,{children:e.jsxs(E,{children:[e.jsxs(O,{children:[e.jsxs(L,{children:[e.jsx(o,{$color:"#8b0d2a"}),"What We Help Improve"]}),e.jsx(P,{children:"Consulting support built around the moments where clarity matters most."}),e.jsx(R,{children:"Our services are designed to help leadership teams move from broad ambition to clearer direction, stronger discipline, and outcomes that stand up under growth pressure."})]}),e.jsx(Y,{children:y.map(i=>e.jsxs(q,{children:[e.jsx(G,{children:e.jsx(i.icon,{size:18})}),e.jsx(D,{children:e.jsx(M,{children:i.text})}),e.jsx(F,{children:e.jsx(x,{size:16})})]},i.text))})]})}),e.jsx(N,{id:"services-list",children:e.jsx(K,{children:w.map((i,c)=>e.jsxs(J,{children:[e.jsx(Q,{$accent:i.accent,children:e.jsxs(U,{children:[e.jsx(V,{$bg:i.accentLight,$color:i.accent,children:e.jsx(i.icon,{size:22})}),e.jsxs(X,{children:[e.jsx(Z,{$color:i.accent,children:i.kicker}),e.jsx(_,{children:i.title})]}),e.jsx(ee,{$color:i.accent,children:String(c+1).padStart(2,"0")})]})}),e.jsxs(re,{children:[e.jsxs(ie,{children:[e.jsx(te,{children:i.body}),e.jsxs(ne,{children:[e.jsx(ae,{children:"What This Includes"}),e.jsx(oe,{children:i.includes})]})]}),e.jsxs(se,{children:[e.jsxs(s,{children:[e.jsx(d,{children:"Who It's For"}),e.jsx(de,{children:i.forWho})]}),e.jsxs(s,{children:[e.jsx(d,{children:"Typical Outcomes"}),e.jsx(ce,{$color:i.accent,children:i.outcomes.map(a=>e.jsx("li",{children:a},a))})]}),e.jsxs(le,{href:"/contact/",$accent:i.accent,children:[i.cta,e.jsx(t,{size:16})]})]})]})]},i.title))})}),e.jsx(me,{children:e.jsxs(pe,{children:[e.jsxs(ge,{children:[e.jsx(he,{children:"Ready to start a conversation?"}),e.jsx(fe,{children:"Every engagement begins with understanding context. Reach out and we'll figure out the best way to help."})]}),e.jsxs(xe,{href:"/contact/",children:["Get In Touch",e.jsx(t,{size:17})]})]})}),e.jsx(h,{})]})}const j=r.div`
+import{j as e}from"./motion-Cy3Fut2F.js";import{r as l}from"./vendor-BQFpGxKL.js";import{d as r,m}from"./styled-CFUkIykv.js";import{S as p,T as g,a as h,F as f,B as x}from"./index-MTnuMEob.js";import{P as u}from"./petals-BAgCU3Sq.js";import{g as t,p as b,q as v,B as w,r as y,s as n}from"./icons-BMgoPnMN.js";const j=[{icon:v,title:"Brand Strengthening",kicker:"Positioning & Messaging",includes:"This service includes work on brand narrative, positioning clarity, messaging refinement, executive-level presentation, and the commercial materials that shape how the market understands your business. It can involve clarifying what you want to be known for, tightening category language, improving how value is communicated across leadership and sales conversations, and identifying where your current presentation is weakening trust or creating confusion. The goal is not superficial branding work. It is to make sure the company is described in a way that supports stronger conversations, better-fit opportunities, and a more credible presence with serious buyers, partners, and stakeholders.",body:"Hyacinth Industries helps companies sharpen how they are understood in the market so their positioning, messaging, and outward presence support growth instead of slowing it down. This work can include clarifying brand narrative, tightening category positioning, refining how teams talk about value, and aligning commercial materials with the level of buyer you want to attract.",forWho:"Best for companies repositioning for growth, entering a new market, or trying to present a more credible executive profile to higher-value buyers.",outcomes:["Clearer market positioning and sharper category language","Better alignment between leadership messaging and sales materials","Stronger trust signals for partners, buyers, and investors"],cta:"Talk About Brand Strategy",accent:"#8b0d2a",accentLight:"rgba(139, 13, 42, 0.06)"},{icon:w,title:"Deal Strategy & Closing",kicker:"Commercial Execution",includes:"This service includes support across qualification, stakeholder mapping, opportunity strategy, offer framing, partnership structure, and the communication required to keep a deal moving. It can also include reviewing where momentum is breaking down, identifying weak points in the commercial process, and improving how teams manage decision-makers, objections, and next steps. The focus is on increasing discipline around complex opportunities rather than relying on reactive selling.",body:"This service is built for organizations that need more discipline and leverage across the deal cycle, especially when opportunities are strategic, high value, or operationally complex. Hyacinth Industries supports the work around qualification, stakeholder mapping, offer framing, partnership structuring, and the communication needed to keep momentum through closing.",forWho:"Best for commercial teams, founders, and principals pursuing larger accounts, partnerships, or strategic transactions where the process needs senior-level structure.",outcomes:["Improved deal qualification and stakeholder alignment","Stronger commercial messaging at key negotiation moments","Higher confidence and discipline in moving complex deals to close"],cta:"Discuss a Growth Opportunity",accent:"#1a5c3a",accentLight:"rgba(26, 92, 58, 0.06)"},{icon:y,title:"Product Improvement",kicker:"Execution & Prioritization",includes:"This service includes evaluating customer friction, clarifying product or service priorities, improving the handoff between teams, and turning market feedback into better operating decisions. It can cover where the current offer feels hard to use, hard to explain, or hard to scale, as well as where execution issues are creating product problems that are not purely technical.",body:"Product improvement work focuses on making what you already offer more effective, more usable, and more aligned with what customers actually need. That can mean identifying friction in the experience, tightening feature priorities, improving handoff between teams, or translating market feedback into clearer product decisions.",forWho:"Best for teams with an established product or service that needs sharper customer alignment, clearer prioritization, and stronger execution around delivery.",outcomes:["Reduced friction in customer experience and internal workflows","Stronger alignment between product decisions and business goals","More focused roadmaps tied to adoption, retention, and growth"],cta:"Start a Product Conversation",accent:"#7c3a15",accentLight:"rgba(124, 58, 21, 0.06)"}],k=[{text:"Senior-level thinking translated into practical execution",icon:n},{text:"Structured support across brand, deals, and product decisions",icon:n},{text:"Clear commercial and operational outcomes, not generic advisory language",icon:n}];function Te(){return l.useEffect(()=>{window.scrollTo(0,0)},[]),e.jsxs(S,{id:"services",children:[e.jsx(p,{title:"Services | Hyacinth Industries LLC",description:"Explore Hyacinth Industries services in brand strengthening, deal strategy and closing, and product improvement.",canonicalPath:"/services/"}),e.jsx(g,{}),e.jsx(h,{}),e.jsxs(z,{children:[e.jsx(T,{}),e.jsxs(B,{children:[e.jsxs(C,{children:[e.jsx(o,{}),"Services"]}),e.jsxs($,{children:["Growth, execution, and",e.jsx("br",{}),e.jsx(H,{children:"commercial clarity."})]}),e.jsx(E,{children:"Hyacinth Industries supports companies that need sharper positioning, stronger deal execution, and better product decisions — without adding unnecessary complexity."}),e.jsxs(A,{children:[e.jsxs(W,{href:"#services-list",children:["Explore Services",e.jsx(t,{size:17})]}),e.jsx(O,{href:"/contact/",children:"Get In Touch"})]})]})]}),e.jsx(L,{children:e.jsxs(P,{children:[e.jsxs(Y,{children:[e.jsxs(D,{children:[e.jsx(o,{$color:"#8b0d2a"}),"What We Help Improve"]}),e.jsx(R,{children:"Consulting support built around the moments where clarity matters most."}),e.jsx(q,{children:"Our services are designed to help leadership teams move from broad ambition to clearer direction, stronger discipline, and outcomes that stand up under growth pressure."})]}),e.jsx(G,{children:k.map(i=>e.jsxs(M,{children:[e.jsx(F,{children:e.jsx(i.icon,{size:18})}),e.jsx(N,{children:e.jsx(K,{children:i.text})}),e.jsx(U,{children:e.jsx(b,{size:16})})]},i.text))})]})}),e.jsx(X,{id:"services-list",children:e.jsx(J,{children:j.map((i,c)=>e.jsxs(Q,{children:[e.jsx(V,{$accent:i.accent,children:e.jsxs(Z,{children:[e.jsx(_,{$bg:i.accentLight,$color:i.accent,children:e.jsx(i.icon,{size:22})}),e.jsxs(ee,{children:[e.jsx(re,{$color:i.accent,children:i.kicker}),e.jsx(ie,{children:i.title})]}),e.jsx(te,{$color:i.accent,children:String(c+1).padStart(2,"0")})]})}),e.jsxs(ne,{children:[e.jsxs(ae,{children:[e.jsx(oe,{children:i.body}),e.jsxs(se,{children:[e.jsx(de,{children:"What This Includes"}),e.jsx(ce,{children:i.includes})]})]}),e.jsxs(le,{children:[e.jsxs(s,{children:[e.jsx(d,{children:"Who It's For"}),e.jsx(me,{children:i.forWho})]}),e.jsxs(s,{children:[e.jsx(d,{children:"Typical Outcomes"}),e.jsx(pe,{$color:i.accent,children:i.outcomes.map(a=>e.jsx("li",{children:a},a))})]}),e.jsxs(ge,{href:"/contact/",$accent:i.accent,children:[i.cta,e.jsx(t,{size:16})]})]})]})]},i.title))})}),e.jsx(he,{children:e.jsxs(fe,{children:[e.jsxs(xe,{children:[e.jsx(ue,{children:"Ready to start a conversation?"}),e.jsx(be,{children:"Every engagement begins with understanding context. Reach out and we'll figure out the best way to help."})]}),e.jsxs(ve,{href:"/contact/",children:[e.jsx("span",{children:"Get In Touch"}),e.jsx(t,{size:17,className:"cta-arrow"})]})]})}),e.jsx(f,{})]})}const S=r.div`
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -8,7 +8,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 1024px) {
     padding-top: 60px;
   }
-`,k=r.section`
+`,z=r.section`
   position: relative;
   width: 100%;
   padding: 5rem 2rem 4.5rem;
@@ -17,10 +17,10 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 3.5rem 1.25rem 3rem;
   }
-`,S=r.div`
+`,T=r.div`
   position: absolute;
   inset: 0;
-  background-image: url(${f});
+  background-image: url(${x});
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -36,13 +36,17 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
       rgba(250, 249, 247, 1) 100%
     );
   }
-`,z=r.div`
+`,I=m`
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+`,B=r.div`
   position: relative;
   z-index: 1;
   max-width: 860px;
   margin: 0 auto;
   text-align: center;
-`,T=r.div`
+  animation: ${I} 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+`,C=r.div`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -64,7 +68,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   box-shadow: 0 0 0 3px
     ${({$color:i})=>i?`${i}20`:"rgba(139, 13, 42, 0.12)"};
   flex-shrink: 0;
-`,I=r.h1`
+`,$=r.h1`
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(2.6rem, 5.5vw, 4.2rem);
@@ -79,16 +83,16 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
       display: none;
     }
   }
-`,B=r.span`
+`,H=r.span`
   color: #8b0d2a;
-`,C=r.p`
+`,E=r.p`
   margin: 1.25rem auto 0;
   max-width: 540px;
   font-family: var(--font-body);
   font-size: 1.08rem;
   line-height: 1.7;
   color: #6b7280;
-`,H=r.div`
+`,A=r.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +104,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
     flex-direction: column;
     align-items: stretch;
   }
-`,$=r.a`
+`,W=r.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +132,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   &:active {
     transform: translateY(0);
   }
-`,A=r.a`
+`,O=r.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -181,19 +185,19 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   width: 1px;
   height: 36px;
   background: rgba(0, 0, 0, 0.06);
-`;const W=r.section`
+`;const L=r.section`
   padding: 4rem 2rem 3rem;
 
   @media (max-width: 768px) {
     padding: 3rem 1.25rem 2rem;
   }
-`,E=r.div`
+`,P=r.div`
   max-width: 1180px;
   margin: 0 auto;
-`,O=r.div`
+`,Y=r.div`
   max-width: 620px;
   margin-bottom: 2.5rem;
-`,L=r.div`
+`,D=r.div`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -203,7 +207,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   color: #8b0d2a;
   letter-spacing: 0.04em;
   margin-bottom: 1rem;
-`,P=r.h2`
+`,R=r.h2`
   margin: 0 0 1rem;
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
@@ -211,13 +215,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   letter-spacing: -0.04em;
   font-weight: 800;
   color: #1a1d20;
-`,R=r.p`
+`,q=r.p`
   margin: 0;
   font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.72;
   color: #6b7280;
-`,Y=r.div`
+`,G=r.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -225,7 +229,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`,q=r.div`
+`,M=r.div`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -240,7 +244,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
     border-color: rgba(0, 0, 0, 0.08);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 8px 24px rgba(0, 0, 0, 0.04);
   }
-`,G=r.div`
+`,F=r.div`
   width: 40px;
   height: 40px;
   border-radius: 12px;
@@ -250,34 +254,34 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   background: rgba(139, 13, 42, 0.05);
   color: #8b0d2a;
   flex-shrink: 0;
-`,D=r.div`
+`,N=r.div`
   flex: 1;
   min-width: 0;
-`,M=r.p`
+`,K=r.p`
   margin: 0;
   font-family: var(--font-body);
   font-size: 0.93rem;
   line-height: 1.55;
   color: #374151;
   font-weight: 500;
-`,F=r.div`
+`,U=r.div`
   flex-shrink: 0;
   color: #d1d5db;
   display: flex;
   align-items: center;
-`,N=r.div`
+`,X=r.div`
   padding: 1rem 2rem 4rem;
   scroll-margin-top: 140px;
 
   @media (max-width: 768px) {
     padding: 1rem 1.25rem 3rem;
   }
-`,K=r.div`
+`,J=r.div`
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
   gap: 1.5rem;
-`,J=r.section`
+`,Q=r.section`
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 24px;
@@ -288,7 +292,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   &:hover {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 8px 32px rgba(0, 0, 0, 0.05);
   }
-`,Q=r.div`
+`,V=r.div`
   padding: 1.75rem 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   background: ${({$accent:i})=>`${i}03`};
@@ -296,11 +300,11 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 1.35rem 1.25rem;
   }
-`,U=r.div`
+`,Z=r.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-`,V=r.div`
+`,_=r.div`
   width: 48px;
   height: 48px;
   border-radius: 14px;
@@ -310,10 +314,10 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   background: ${({$bg:i})=>i};
   color: ${({$color:i})=>i};
   flex-shrink: 0;
-`,X=r.div`
+`,ee=r.div`
   flex: 1;
   min-width: 0;
-`,Z=r.p`
+`,re=r.p`
   margin: 0 0 0.15rem;
   font-family: var(--font-body);
   font-size: 0.78rem;
@@ -321,7 +325,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: ${({$color:i})=>i};
-`,_=r.h2`
+`,ie=r.h2`
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 2.5vw, 1.85rem);
@@ -329,7 +333,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   letter-spacing: -0.03em;
   font-weight: 800;
   color: #1a1d20;
-`,ee=r.div`
+`,te=r.div`
   font-family: var(--font-heading);
   font-size: 2.2rem;
   font-weight: 800;
@@ -341,7 +345,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 640px) {
     display: none;
   }
-`,re=r.div`
+`,ne=r.div`
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   gap: 0;
@@ -349,7 +353,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 920px) {
     grid-template-columns: 1fr;
   }
-`,ie=r.div`
+`,ae=r.div`
   padding: 2rem;
   border-right: 1px solid rgba(0, 0, 0, 0.04);
 
@@ -361,18 +365,18 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   @media (max-width: 768px) {
     padding: 1.5rem 1.25rem;
   }
-`,te=r.p`
+`,oe=r.p`
   margin: 0 0 1.5rem;
   font-family: var(--font-body);
   font-size: 1.02rem;
   line-height: 1.75;
   color: #374151;
-`,ne=r.div`
+`,se=r.div`
   padding: 1.25rem 1.35rem;
   background: #fafaf9;
   border: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: 16px;
-`,ae=r.p`
+`,de=r.p`
   margin: 0 0 0.5rem;
   font-family: var(--font-heading);
   font-size: 0.78rem;
@@ -380,13 +384,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #9ca3af;
-`,oe=r.p`
+`,ce=r.p`
   margin: 0;
   font-family: var(--font-body);
   font-size: 0.93rem;
   line-height: 1.72;
   color: #6b7280;
-`,se=r.div`
+`,le=r.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -408,13 +412,13 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #9ca3af;
-`,de=r.p`
+`,me=r.p`
   margin: 0;
   font-family: var(--font-body);
   font-size: 0.93rem;
   line-height: 1.68;
   color: #374151;
-`,ce=r.ul`
+`,pe=r.ul`
   margin: 0;
   padding-left: 1.1rem;
   display: grid;
@@ -430,7 +434,7 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   li::marker {
     color: ${({$color:i})=>i||"#8b0d2a"};
   }
-`,le=r.a`
+`,ge=r.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -460,33 +464,55 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   &:active {
     transform: translateY(0);
   }
-`,me=r.section`
+`,he=r.section`
   padding: 0 2rem 4rem;
 
   @media (max-width: 768px) {
     padding: 0 1.25rem 3rem;
   }
-`,pe=r.div`
+`,fe=r.div`
   max-width: 1180px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 2.5rem 2.5rem;
+  padding: 3rem 3rem;
   background: #1a1d20;
-  border-radius: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08), 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 380px;
+    background: url(${u}) center center/contain no-repeat;
+    opacity: 0.06;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
   }
-`,ge=r.div`
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+`,xe=r.div`
   flex: 1;
   min-width: 0;
-`,he=r.h3`
+`,ue=r.h3`
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 2.5vw, 1.85rem);
@@ -494,37 +520,63 @@ import{j as e}from"./motion-jLvT6sLY.js";import{r as l}from"./vendor-DPKrZd5H.js
   letter-spacing: -0.03em;
   color: #ffffff;
   line-height: 1.15;
-`,fe=r.p`
+`,be=r.p`
   margin: 0.5rem 0 0;
   font-family: var(--font-body);
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
-`,xe=r.a`
+`,ve=r.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  height: 50px;
-  padding: 0 1.6rem;
+  gap: 0.6rem;
+  height: 52px;
+  padding: 0 1.6rem 0 1.75rem;
   border-radius: 14px;
-  background: var(--primary);
+  background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);
   color: #ffffff;
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
   text-decoration: none;
   flex-shrink: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f43f5e 0%, #E11D48 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+  }
+
+  .cta-arrow {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+    padding: 0 1.5rem 0 1.75rem;
+
+    &::before {
+      opacity: 1;
+    }
+
+    .cta-arrow {
+      transform: translateX(3px);
+    }
   }
 
   &:active {
     transform: translateY(0);
   }
-`;export{je as default};
+`;export{Te as default};

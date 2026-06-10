@@ -1,4 +1,4 @@
-import{l as e}from"./styled-3-8BfJdI.js";const n=e`
+import{l as e}from"./styled-CFUkIykv.js";const n=e`
   padding: 6rem 2rem;
 
   @media (max-width: 768px) {
